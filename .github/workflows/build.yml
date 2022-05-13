@@ -2,9 +2,9 @@ name: Build and test
 
 on:
   push:
-    branches: main
+    branches: [main]
   pull_request:
-    branches: main
+    branches: [main]
 
 permissions:
   contents: read
@@ -25,3 +25,8 @@ jobs:
         uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
         with:
           arguments: build
+      - name: Upload built artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: build/libs
