@@ -3,61 +3,34 @@ package com.duffel.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.util.List;
+import java.net.URISyntaxException;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Aircraft {
-    @JsonProperty("meta")
-    private Meta meta;
+public class Aircraft extends Data<Aircraft> {
 
-    @JsonProperty("data")
-    private List<Data> data;
-
-    public static class Meta {
-        @JsonProperty("limit")
-        private Integer limit;
-
-        @JsonProperty("before")
-        private String before;
-
-        @JsonProperty("after")
-        private String after;
-
-        @Override
-        public String toString() {
-            return "Meta{" +
-                    "limit=" + limit +
-                    ", before='" + before + '\'' +
-                    ", after='" + after + '\'' +
-                    '}';
-        }
+    public static AircraftCollection get() throws URISyntaxException {
+        return get(Aircraft.class, AircraftCollection.class);
     }
 
-    public static class Data {
-        @JsonProperty("name")
-        private String name;
-
-        @JsonProperty("id")
-        private String id;
-
-        @JsonProperty("iata_code")
-        private String iata_code;
-
-        @Override
-        public String toString() {
-            return "Data{" +
-                    "name='" + name + '\'' +
-                    ", id='" + id + '\'' +
-                    ", iata_code='" + iata_code + '\'' +
-                    '}';
-        }
+    public static Aircraft getById(String id) throws URISyntaxException {
+        return getById(Aircraft.class, id).getData();
     }
+
+    @JsonProperty("name")
+    private String name;
+
+    @JsonProperty("id")
+    private String id;
+
+    @JsonProperty("iata_code")
+    private String iataCode;
 
     @Override
     public String toString() {
         return "Aircraft{" +
-                "meta=" + meta +
-                ", data=" + data +
+                "name='" + name + '\'' +
+                ", id='" + id + '\'' +
+                ", iataCode='" + iataCode + '\'' +
                 '}';
     }
 }
