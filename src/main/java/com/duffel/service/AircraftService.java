@@ -1,30 +1,28 @@
 package com.duffel.service;
 
-import com.duffel.Duffel;
 import com.duffel.model.Aircraft;
 import com.duffel.model.AircraftCollection;
 import com.duffel.net.HttpClient;
 
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Locale;
-import java.util.Map;
 
-public class AircraftService extends HttpClient {
+public class AircraftService extends Resource<Aircraft, AircraftCollection> {
 
+    private static final String ENDPOINT = "/aircraft";
 
-    public static AircraftCollection get() throws URISyntaxException {
-        new HttpClient(new URI(Duffel.API_ENDPOINT + "/" + clazz.getSimpleName().toLowerCase(Locale.ROOT))).get(collectionClazz);
-        return get(Aircraft.class, AircraftCollection.class);
+    public AircraftService(HttpClient httpClient) {
+        super(httpClient, ENDPOINT);
     }
 
-    public AircraftService(URI uri) {
-        super(uri);
+    public AircraftCollection get() throws URISyntaxException {
+        return super.get(AircraftCollection.class);
     }
 
-    public AircraftService(URI uri, Map<String, String> headers) {
-        super(uri, headers);
+    public Aircraft getById(String id) throws URISyntaxException {
+        return super.getById(Aircraft.class, id).getData();
     }
 
-
+    public AircraftCollection page(String before, String after, Integer limit) throws URISyntaxException {
+        return super.page(AircraftCollection.class, before, after, limit);
+    }
 }

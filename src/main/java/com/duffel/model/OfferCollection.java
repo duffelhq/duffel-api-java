@@ -1,20 +1,5 @@
 package com.duffel.model;
 
-import java.net.URISyntaxException;
+import com.duffel.model.response.Offer;
 
-public class OfferCollection extends PagedData<OfferResponse, OfferCollection> {
-
-    static String getType() {
-        return OfferResponse.class.getSimpleName();
-    }
-
-    public static OfferCollection get(String after) throws URISyntaxException {
-        return get(OfferCollection.class, getType(), after);
-    }
-
-    public OfferCollection next() throws URISyntaxException {
-        return next(OfferCollection.class, OfferResponse.class.getSimpleName());
-    }
-
-
-}
+public class OfferCollection extends PagedData<Offer> {}

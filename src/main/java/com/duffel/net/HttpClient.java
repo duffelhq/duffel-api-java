@@ -1,6 +1,6 @@
 package com.duffel.net;
 
-import com.duffel.Duffel;
+import com.duffel.DuffelApiClient;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.CharStreams;
@@ -21,8 +21,6 @@ public class HttpClient {
 
     private static final Logger logger = LogManager.getLogger(HttpClient.class);
     private static final String APPLICATION_JSON = "application/json";
-
-    private final URI uri;
     private final Map<String, String> headers;
 
     private final ObjectMapper objectMapper;
@@ -32,16 +30,16 @@ public class HttpClient {
         POST
     }
 
-    public HttpClient(URI uri) {
-        this(uri, new HashMap<>());
+    public HttpClient() {
+        this(new HashMap<>());
     }
 
-    public HttpClient(URI uri, Map<String, String> headers) {
-        this.uri = uri;
+    public HttpClient(Map<String, String> headers) {
         this.headers = headers;
         setAuthorizationHeader();
         setBasicHeaders();
         objectMapper = new ObjectMapper();
+        objectMapper.findAndRegisterModules();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
     }
 
@@ -63,25 +61,25 @@ public class HttpClient {
     }
 
     private void setAuthorizationHeader() {
-        headers.put("Authorization", "Bearer " + Duffel.apiKey);
+        headers.put("Authorization", "Bearer " + DuffelApiClient.apiKey);
     }
 
     private void setBasicHeaders() {
         headers.put("Accept", APPLICATION_JSON);
-        headers.put("User-Agent", Duffel.USER_AGENT);
-        headers.put("Duffel-Version", Duffel.API_VERSION);
+        headers.put("User-Agent", DuffelApiClient.USER_AGENT);
+        headers.put("Duffel-Version", DuffelApiClient.API_VERSION);
         headers.put("Content-Type", APPLICATION_JSON);
     }
 
-    public <T> T get(Class<T> clazz) {
-        return executeCall(RequestMethod.GET.name(), clazz, null);
+    public <T> T get(URI uri, Class<T> clazz) {
+        return executeCall(uri, RequestMethod.GET.name(), clazz, null);
     }
 
-    public <T, O> T post(Class<T> clazz, O postObject) {
-        return executeCall(RequestMethod.POST.name(), clazz, postObject);
+    public <T, O> T post(URI uri, Class<T> clazz, O postObject) {
+        return executeCall(uri, RequestMethod.POST.name(), clazz, postObject);
     }
 
-    private <T, O> T executeCall(String httpMethod, Class<T> responseType, O postObject ) {
+    private <T, O> T executeCall(URI uri, String httpMethod, Class<T> responseType, O postObject ) {
         HttpURLConnection connection;
         T response = null;
         try {
@@ -92,10 +90,8 @@ public class HttpClient {
             connection.connect();
 
             int responseCode = connection.getResponseCode();
-//            logger.info("Got response " + responseCode + " for " + uri);
             String responseBody = CharStreams.toString(new InputStreamReader(connection.getInputStream()));
             response = objectMapper.readValue(responseBody, responseType);
-//            logger.info(response);
         } catch (IOException e) {
             logger.error("Fail", e);
         }
