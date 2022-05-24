@@ -1,0 +1,92 @@
+{
+  "data": {
+    "cabin_class": "economy",
+    "created_at": "2022-05-23T09:36:36.579994Z",
+    "id": "orq_0000AJjvHnVrlmyXa6RqzY",
+    "live_mode": false,
+    "offers": [
+      {
+        "allowed_passenger_identity_document_types": [],
+        "base_amount": "261.03",
+        "base_currency": "GBP",
+        "created_at": "2022-05-23T09:36:36.626831Z",
+        "expires_at": "2022-05-23T10:06:36.623941Z",
+        "id": "off_0000AJjvHnmWlqIqPmF9xg",
+        "live_mode": false,
+        "partial": false,
+        "passenger_identity_documents_required": false,
+        "payment_requirements": {
+          "payment_required_by": "2022-05-26T09:36:36Z",
+          "price_guarantee_expires_at": "2022-05-25T09:36:36Z",
+          "requires_instant_payment": false
+        },
+        "tax_amount": "46.98",
+        "tax_currency": "GBP",
+        "total_amount": "308.01",
+        "total_currency": "GBP",
+        "total_emissions_kg": "683",
+        "updated_at": "2022-05-23T09:36:36.626831Z"
+      }
+    ],
+    "passengers": [
+      {
+        "age": null,
+        "family_name": "Test",
+        "given_name": "Test",
+        "id": "pas_0000AJjvHnWDkTG7bCc8Xp",
+        "loyalty_programme_accounts": [],
+        "type": "adult"
+      }
+    ],
+    "slices": [
+      {
+        "created_at": "2022-05-23T09:36:36.586348Z",
+        "departure_date": "2022-05-26",
+        "destination": {
+          "airports": null,
+          "city": null,
+          "city_name": "Stuttgart",
+          "iata_city_code": "STR",
+          "iata_code": "STR",
+          "iata_country_code": "DE",
+          "icao_code": "EDDS",
+          "id": "arp_str_de",
+          "latitude": 48.688717,
+          "longitude": 9.204025,
+          "name": "Stuttgart Airport",
+          "time_zone": "Europe/Berlin",
+          "type": "airport"
+        },
+        "destination_type": "airport",
+        "origin": {
+          "airports": null,
+          "city": {
+            "city_name": null,
+            "iata_city_code": "LON",
+            "iata_code": "LON",
+            "iata_country_code": "GB",
+            "icao_code": null,
+            "id": "cit_lon_gb",
+            "latitude": null,
+            "longitude": null,
+            "name": "London",
+            "time_zone": null,
+            "type": "city"
+          },
+          "city_name": "London",
+          "iata_city_code": "LON",
+          "iata_code": "LHR",
+          "iata_country_code": "GB",
+          "icao_code": "EGLL",
+          "id": "arp_lhr_gb",
+          "latitude": 51.470311,
+          "longitude": -0.458118,
+          "name": "Heathrow Airport",
+          "time_zone": "Europe/London",
+          "type": "airport"
+        },
+        "origin_type": "airport"
+      }
+    ]
+  }
+}

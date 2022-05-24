@@ -1,12 +1,10 @@
 package com.duffel.model.response;
 
 import com.duffel.model.Location;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Slice {
 
     @JsonProperty("created_at")

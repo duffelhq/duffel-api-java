@@ -2,13 +2,11 @@ package com.duffel.model.response;
 
 import com.duffel.model.Data;
 import com.duffel.model.Passenger;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class OfferResponse extends Data<OfferResponse> {
 
     @JsonProperty("id")
