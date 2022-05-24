@@ -1,6 +1,7 @@
 package com.duffel.model.response;
 
 import com.duffel.model.Location;
+import com.duffel.model.LocationType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
@@ -14,13 +15,13 @@ public class Slice {
     public Location origin;
 
     @JsonProperty("origin_type")
-    public Location.LocationType originType;
+    public LocationType originType;
 
     @JsonProperty("destination")
     public Location destination;
 
     @JsonProperty("destination_type")
-    public Location.LocationType destinationType;
+    public LocationType destinationType;
 
     @JsonProperty("departure_date")
     public String departureDate;

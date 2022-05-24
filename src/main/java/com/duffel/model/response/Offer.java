@@ -4,6 +4,7 @@ import com.duffel.model.Airline;
 import com.duffel.model.Conditions;
 import com.duffel.model.Data;
 import com.duffel.model.Passenger;
+import com.duffel.model.response.offer.Slice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.time.LocalDateTime;
