@@ -1,7 +1,13 @@
 package com.duffel.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class Conditions {
 
     ///  <summary>
@@ -12,7 +18,7 @@ public class Conditions {
     ///  airline hasn't provided any information about whether this offer can be changed then this property will be null.
     ///  </summary>
     @JsonProperty("change_before_departure")
-    public Condition changeBeforeDeparture;
+    private Condition changeBeforeDeparture;
 
     ///  <summary>
     ///  Whether the whole offer can be refunded before the departure of the first slice. If all the slices on the offer
@@ -21,14 +27,14 @@ public class Conditions {
     ///  provided any information about whether this offer can be refunded then this property will be null.
     ///  </summary>
     @JsonProperty("refund_before_departure")
-    public Condition refundBeforeDeparture;
+    private Condition refundBeforeDeparture;
 
     public static class Condition {
         ///  <summary>
         ///  Whether this kind of modification is allowed post-booking
         ///  </summary>
         @JsonProperty("allowed")
-        public boolean allowed;
+        private boolean allowed;
 
         ///  <summary>
         ///  If the modification is allowed then this is the amount payable to apply the modification to all passengers.
@@ -36,7 +42,7 @@ public class Conditions {
         ///  known then this field will be null. If this is null then the penalty_currency will also be null.
         ///  </summary>
         @JsonProperty("penalty_amount")
-        public Double penaltyAmount;
+        private Double penaltyAmount;
 
         ///  <summary>
         ///  The currency of the penalty_amount as an ISO 4217 currency code. This will be in a currency determined by
@@ -44,23 +50,6 @@ public class Conditions {
         ///  penalty_amount will also be null.
         ///  </summary>
         @JsonProperty("penalty_currency")
-        public String penaltyCurrency;
-
-        @Override
-        public String toString() {
-            return "Condition{" +
-                    "allowed=" + allowed +
-                    ", penaltyAmount=" + penaltyAmount +
-                    ", penaltyCurrency='" + penaltyCurrency + '\'' +
-                    '}';
-        }
-    }
-
-    @Override
-    public String toString() {
-        return "Conditions{" +
-                "changeBeforeDeparture=" + changeBeforeDeparture +
-                ", refundBeforeDeparture=" + refundBeforeDeparture +
-                '}';
+        private String penaltyCurrency;
     }
 }

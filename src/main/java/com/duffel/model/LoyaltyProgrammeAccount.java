@@ -1,7 +1,13 @@
 package com.duffel.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class LoyaltyProgrammeAccount {
 
     ///  <summary>
@@ -16,11 +22,4 @@ public class LoyaltyProgrammeAccount {
     @JsonProperty("airline_iata_code")
     public String airlineIataCode;
 
-    @Override
-    public String toString() {
-        return "LoyaltyProgrammeAccount{" +
-                "accountNumber='" + accountNumber + '\'' +
-                ", airlineIataCode='" + airlineIataCode + '\'' +
-                '}';
-    }
 }

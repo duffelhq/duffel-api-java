@@ -24,8 +24,8 @@ public class ExceptionTest {
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
         DuffelException exception = assertThrows(DuffelException.class, () -> client.offerRequestService.post(new OfferRequest()));
-        assertEquals( "401", exception.meta.status);
-        assertEquals("missing_authorization_header", exception.errors.get(0).code);
+        assertEquals( "401", exception.getMeta().getStatus());
+        assertEquals("missing_authorization_header", exception.getErrors().get(0).getCode());
     }
 
 }

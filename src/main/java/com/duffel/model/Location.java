@@ -1,7 +1,13 @@
 package com.duffel.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class Location {
 
     ///  <summary>
@@ -73,20 +79,4 @@ public class Location {
     @JsonProperty("type")
     public LocationType type;
 
-    @Override
-    public String toString() {
-        return "Location{" +
-                "city_name='" + city_name + '\'' +
-                ", iataCityCode='" + iataCityCode + '\'' +
-                ", iataCode='" + iataCode + '\'' +
-                ", iataCountryCode='" + iataCountryCode + '\'' +
-                ", icaoCode='" + icaoCode + '\'' +
-                ", id='" + id + '\'' +
-                ", latitude=" + latitude +
-                ", longitude=" + longitude +
-                ", name='" + name + '\'' +
-                ", timeZone='" + timeZone + '\'' +
-                ", type=" + type +
-                '}';
-    }
 }

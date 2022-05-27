@@ -1,7 +1,11 @@
 package com.duffel.exception;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.Getter;
+import lombok.ToString;
 
+@Getter
+@ToString
 public class Meta {
 
     ///  <summary>
@@ -9,19 +13,12 @@ public class Meta {
     ///  will assist in debugging.
     ///  </summary>
     @JsonProperty("request_id")
-    public String requestId;
+    private String requestId;
 
     ///  <summary>
     ///  The status code of the response
     ///  </summary>
     @JsonProperty("status")
-    public String status;
+    private String status;
 
-    @Override
-    public String toString() {
-        return "Meta{" +
-                "requestId='" + requestId + '\'' +
-                ", status='" + status + '\'' +
-                '}';
-    }
 }

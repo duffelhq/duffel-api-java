@@ -1,9 +1,15 @@
 package com.duffel.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.util.List;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class Passenger {
 
     ///  <summary>
@@ -57,14 +63,4 @@ public class Passenger {
         infant_without_seat
     }
 
-    @Override
-    public String toString() {
-        return "Passenger{" +
-                "familyName='" + familyName + '\'' +
-                ", givenName='" + givenName + '\'' +
-                ", type=" + type +
-                ", age=" + age +
-                ", loyaltyProgrammeAccountList=" + loyaltyProgrammeAccountList +
-                '}';
-    }
 }

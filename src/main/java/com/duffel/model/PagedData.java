@@ -1,10 +1,17 @@
 package com.duffel.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.util.List;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class PagedData<T> {
+
     @JsonProperty("meta")
     public PagedDataMeta meta;
 
@@ -31,15 +38,7 @@ public class PagedData<T> {
         return meta;
     }
 
-    @Override
-    public String toString() {
-        return "PagedData{" +
-                "meta=" + meta +
-                ", data=" + data +
-                '}';
-    }
-
-    static class PagedDataMeta {
+    public static class PagedDataMeta {
         @JsonProperty("limit")
         private Integer limit;
 
@@ -61,14 +60,6 @@ public class PagedData<T> {
             return after;
         }
 
-        @Override
-        public String toString() {
-            return "Meta{" +
-                    "limit=" + limit +
-                    ", before='" + before + '\'' +
-                    ", after='" + after + '\'' +
-                    '}';
-        }
     }
 
 }
