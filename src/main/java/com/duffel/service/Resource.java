@@ -1,37 +1,36 @@
 package com.duffel.service;
 
 import com.duffel.DuffelApiClient;
-import com.duffel.net.HttpClient;
-import com.google.common.base.Strings;
+import com.duffel.net.ApiClient;
 
 public class Resource<T, U> {
 
-    protected final HttpClient httpClient;
+    protected final ApiClient apiClient;
 
     protected final String endpoint;
 
-    protected Resource(HttpClient httpClient, String endpoint) {
-        this.httpClient = httpClient;
+    protected Resource(ApiClient apiClient, String endpoint) {
+        this.apiClient = apiClient;
         this.endpoint = endpoint;
     }
 
     protected U get(Class<U> clazz) {
-        return httpClient.get(endpoint, clazz);
+        return apiClient.get(endpoint, clazz);
     }
 
     protected T getById(Class<T> clazz, String id) {
-        return httpClient.get(endpoint + "/" + id, clazz);
+        return apiClient.get(endpoint + "/" + id, clazz);
     }
 
-    protected U page(Class<U> clazz, String before, String after, Integer limit) {
-        return page(clazz, "", before, after, limit);
+    protected U getPage(Class<U> clazz, String before, String after, Integer limit) {
+        return getPage(clazz, "", before, after, limit);
     }
 
-    protected U page(Class<U> clazz, String selector, String before, String after, Integer limit) {
-        String beforeParam = Strings.isNullOrEmpty(before) ? "" : "&before=" + before;
-        String afterParam = Strings.isNullOrEmpty(after) ? "" : "&after=" + after;
+    protected U getPage(Class<U> clazz, String selector, String before, String after, Integer limit) {
+        String beforeParam = (before == null || before.isEmpty()) ? "" : "&before=" + before;
+        String afterParam = (after == null || after.isEmpty()) ? "" : "&after=" + after;
         Integer limitParam = limit == null ? DuffelApiClient.DEFAULT_PAGE_LIMIT : limit;
         String queryParam = "?limit=" + limitParam + beforeParam + afterParam + selector;
-        return httpClient.get(endpoint + queryParam, clazz);
+        return apiClient.get(endpoint + queryParam, clazz);
     }
 }

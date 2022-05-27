@@ -1,6 +1,6 @@
 package com.duffel;
 
-import com.duffel.net.HttpClient;
+import com.duffel.net.ApiClient;
 import com.duffel.service.AircraftService;
 import com.duffel.service.OfferRequestService;
 import com.duffel.service.OfferService;
@@ -26,11 +26,11 @@ public class DuffelApiClient {
     }
 
     public DuffelApiClient(String apiKey, String endpoint) {
-        HttpClient httpClient = new HttpClient(apiKey, endpoint);
+        ApiClient apiClient = new ApiClient(apiKey, endpoint);
 
-        aircraftService = new AircraftService(httpClient);
-        offerService = new OfferService(httpClient);
-        offerRequestService = new OfferRequestService(httpClient);
+        aircraftService = new AircraftService(apiClient);
+        offerService = new OfferService(apiClient);
+        offerRequestService = new OfferRequestService(apiClient);
     }
 
 }

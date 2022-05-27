@@ -1,16 +1,16 @@
 package com.duffel.service;
 
 import com.duffel.model.request.PostData;
-import com.duffel.net.HttpClient;
+import com.duffel.net.ApiClient;
 
 public class PostResource<T> extends Resource<T, T> {
 
-    protected PostResource(HttpClient httpClient, String endpoint) {
-        super(httpClient, endpoint);
+    protected PostResource(ApiClient apiClient, String endpoint) {
+        super(apiClient, endpoint);
     }
 
     protected T post(Class<T> clazz, PostData request) {
-        return httpClient.post(endpoint, clazz, request);
+        return apiClient.post(endpoint, clazz, request);
     }
 
 }

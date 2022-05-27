@@ -1,0 +1,31 @@
+package com.duffel;
+
+import com.duffel.exception.DuffelException;
+import com.duffel.model.request.OfferRequest;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockserver.client.MockServerClient;
+import org.mockserver.junit.jupiter.MockServerExtension;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockserver.model.HttpRequest.request;
+import static org.mockserver.model.HttpResponse.response;
+
+@ExtendWith(MockServerExtension.class)
+public class ExceptionTest {
+
+    @Test
+    void authorization_failure(MockServerClient mockClient) {
+        mockClient.when(request().withMethod("POST"))
+                .respond(response().withStatusCode(401)
+                        .withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/exceptions/401_authorization.json")));
+
+        DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
+
+        DuffelException exception = assertThrows(DuffelException.class, () -> client.offerRequestService.post(new OfferRequest()));
+        assertEquals( "401", exception.meta.status);
+        assertEquals("missing_authorization_header", exception.errors.get(0).code);
+    }
+
+}

@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-public class DuffelException extends Exception {
+public class DuffelException extends RuntimeException {
 
     ///  <summary>
     ///  List of errors that caused the request to fail
