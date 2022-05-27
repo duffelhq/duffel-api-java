@@ -12,9 +12,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.net.HttpURLConnection;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.net.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -48,12 +46,12 @@ public class HttpClient {
     }
 
     private HttpURLConnection setupConnection(String endpoint, String httpMethod) throws IOException, URISyntaxException {
-//        TempAllCerts.install();
-//        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 8080));
+        TempAllCerts.install();
+        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("localhost", 8080));
 
         URI uri = new URI(baseEndpoint + endpoint);
 
-        HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection();
+        HttpURLConnection connection = (HttpURLConnection) uri.toURL().openConnection(proxy);
         connection.setRequestMethod(httpMethod);
         headers.forEach(connection::setRequestProperty);
         return connection;
@@ -99,6 +97,7 @@ public class HttpClient {
             int responseCode = connection.getResponseCode();
             logger.info(responseCode);
             String responseBody = CharStreams.toString(new InputStreamReader(connection.getInputStream()));
+            logger.info(responseBody);
             response = objectMapper.readValue(responseBody, responseType);
         } catch (IOException | URISyntaxException e) {
             logger.error("Fail", e);

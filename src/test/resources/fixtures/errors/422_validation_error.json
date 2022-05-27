@@ -1,0 +1,30 @@
+{
+  "errors": [
+    {
+      "code": "validation_required",
+      "documentation_url": "https://duffel.com/docs/api/overview/errors",
+      "message": "Field 'slices' can't be blank",
+      "source": {
+        "field": "slices",
+        "pointer": "/slices"
+      },
+      "title": "Required field",
+      "type": "validation_error"
+    },
+    {
+      "code": "validation_required",
+      "documentation_url": "https://duffel.com/docs/api/overview/errors",
+      "message": "Field 'passengers' can't be blank",
+      "source": {
+        "field": "passengers",
+        "pointer": "/passengers"
+      },
+      "title": "Required field",
+      "type": "validation_error"
+    }
+  ],
+  "meta": {
+    "request_id": "FvLtoRUrrHYgW9gAzMvB",
+    "status": 422
+  }
+}

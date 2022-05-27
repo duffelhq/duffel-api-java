@@ -32,7 +32,7 @@ class DuffelTest {
     private static final Logger LOG = LogManager.getLogger(DuffelTest.class);
 
     @Test
-    void aircraft(MockServerClient mockClient) throws URISyntaxException {
+    void aircraft(MockServerClient mockClient) {
         mockClient.when(request().withMethod("GET").withPath("/air/aircraft"))
                 .respond(response().withStatusCode(200).withBody(readFixture("/fixtures/aircraft.json")));
         mockClient.when(request().withMethod("GET").withPath("/air/aircraft/arc_00009oBdrPis4D1mAnkllK"))
@@ -48,7 +48,7 @@ class DuffelTest {
     }
 
     @Test
-    void offerRequest(MockServerClient mockClient) throws URISyntaxException {
+    void offerRequest(MockServerClient mockClient) {
         mockClient.when(request().withMethod("POST").withPath("/air/offer_requests"))
                 .respond(response().withStatusCode(200).withBody(readFixture("/fixtures/offer_request.json")));
         mockClient.when(request().withMethod("GET").withPath("/air/offer_requests/orq_0000AJjvHnVrlmyXa6RqzY"))
@@ -82,7 +82,7 @@ class DuffelTest {
     }
 
     @Test
-    void offer(MockServerClient mockClient) throws URISyntaxException {
+    void offer(MockServerClient mockClient) {
         mockClient.when(request().withMethod("GET").withPath("/air/offers/off_0000AJjwEHhflaMRlEm9NA"))
                 .respond(response().withStatusCode(200).withBody(readFixture("/fixtures/offers_by_id_with_services.json")));
         mockClient.when(request().withMethod("GET").withPath("/air/offers")
@@ -92,13 +92,19 @@ class DuffelTest {
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        String offerRequestId = "orq_0000AJjwEHPaqntorAJiC5";
-        String offerId = "off_0000AJjwEHhflaMRlEm9NA";
+        OfferRequest request = new OfferRequest();
+        request.maxConnections = 0;
+        request.cabinClass = "economy";
 
-        LOG.info(client.offerService.getById(offerId, true));
+        OfferResponse response = client.offerRequestService.post(request);
+    }
 
-        OfferCollection offers = client.offerService.page(offerRequestId, null, null, null);
-        LOG.info("offers " + offers);
+    @Test
+    void exception() {
+        DuffelApiClient client = new DuffelApiClient("duffel_test_opbVnrL-pihnqp-SkYssn2xtPhVsjHzn21SA8uGzPAy", true);
+
+        OfferRequest request = new OfferRequest();
+        client.offerRequestService.post(request);
     }
 
     private String readFixture(String fixture) {
