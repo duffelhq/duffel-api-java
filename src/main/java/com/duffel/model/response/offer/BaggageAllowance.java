@@ -1,7 +1,13 @@
 package com.duffel.model.response.offer;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class BaggageAllowance {
 
     ///  <summary>
@@ -17,11 +23,4 @@ public class BaggageAllowance {
     @JsonProperty("type")
     public BaggageType baggageType;
 
-    @Override
-    public String toString() {
-        return "BaggageAllowance{" +
-                "quantity=" + quantity +
-                ", baggageType=" + baggageType +
-                '}';
-    }
 }

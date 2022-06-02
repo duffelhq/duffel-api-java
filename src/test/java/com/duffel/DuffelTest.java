@@ -42,40 +42,6 @@ class DuffelTest {
     }
 
     @Test
-    void offerRequest(MockServerClient mockClient) {
-        mockClient.when(request().withMethod("POST").withPath("/air/offer_requests"))
-                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/offer_request.json")));
-        mockClient.when(request().withMethod("GET").withPath("/air/offer_requests/orq_0000AJjvHnVrlmyXa6RqzY"))
-                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/offer_request_by_id.json")));
-
-        DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
-
-        OfferRequest.Slice slice = new OfferRequest.Slice();
-        slice.departureDate = "2022-05-26";
-        slice.origin = "LHR";
-        slice.destination = "STR";
-        List<OfferRequest.Slice> slices = new ArrayList<>();
-        slices.add(slice);
-
-        Passenger passenger = new Passenger();
-        passenger.type = Passenger.PassengerType.adult;
-        passenger.givenName = "Test";
-        passenger.familyName = "Test";
-        List<Passenger> passengers = new ArrayList<>();
-        passengers.add(passenger);
-
-        OfferRequest request = new OfferRequest();
-        request.maxConnections = 0;
-        request.cabinClass = "economy";
-        request.slices = slices;
-        request.passengers = passengers;
-
-        OfferResponse response = client.offerRequestService.post(request);
-
-        LOG.info(client.offerRequestService.getById(response.id));
-    }
-
-    @Test
     void offer(MockServerClient mockClient) {
         mockClient.when(request().withMethod("GET").withPath("/air/offers/off_0000AJjwEHhflaMRlEm9NA"))
                 .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/offers_by_id_with_services.json")));

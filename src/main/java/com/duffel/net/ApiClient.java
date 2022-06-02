@@ -101,6 +101,8 @@ public class ApiClient {
             throw new RuntimeException(e);
         }
 
+        logger.info(response.body());
+
         try {
             if (response.statusCode() >= 200 && response.statusCode() < 300) {
                 return objectMapper.readValue(response.body(), responseType);

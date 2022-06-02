@@ -6,96 +6,76 @@ import com.duffel.model.Data;
 import com.duffel.model.Passenger;
 import com.duffel.model.response.offer.Slice;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
+@Getter
+@ToString
 public class Offer extends Data<Offer> {
 
     @JsonProperty("allowed_passenger_identity_document_types")
-    public List<String> allowedPassengerIdentityDocumentTypes;
+    private List<String> allowedPassengerIdentityDocumentTypes;
 
     @JsonProperty("conditions")
-    public Conditions conditions;
+    private Conditions conditions;
 
     @JsonProperty("base_amount")
-    public Double baseAmount;
+    private Double baseAmount;
 
     @JsonProperty("base_currency")
-    public String baseCurrency;
+    private String baseCurrency;
 
     @JsonProperty("created_at")
-    public LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @JsonProperty("expires_at")
-    public LocalDateTime expiresAt;
+    private LocalDateTime expiresAt;
 
     @JsonProperty("id")
-    public String id;
+    private String id;
 
     @JsonProperty("live_mode")
-    public boolean liveMode;
+    private boolean liveMode;
 
     @JsonProperty("owner")
-    public Airline owner;
+    private Airline owner;
 
     @JsonProperty("partial")
-    public boolean partial;
+    private boolean partial;
 
     @JsonProperty("passenger_identity_documents_required")
-    public boolean passengerIdentityDocumentsRequired;
+    private boolean passengerIdentityDocumentsRequired;
 
     @JsonProperty("passengers")
-    public List<Passenger> passengers;
+    private List<Passenger> passengers;
 
     @JsonProperty("payment_requirements")
-    public PaymentRequirements paymentRequirements;
+    private PaymentRequirements paymentRequirements;
 
     @JsonProperty("slices")
-    public List<Slice> slices;
+    private List<Slice> slices;
 
     @JsonProperty("tax_amount")
-    public Double taxAmount;
+    private Double taxAmount;
 
     @JsonProperty("tax_currency")
-    public String taxCurrency;
+    private String taxCurrency;
 
     @JsonProperty("total_amount")
-    public Double totalAmount;
+    private Double totalAmount;
 
     @JsonProperty("total_currency")
-    public String totalCurrency;
+    private String totalCurrency;
 
     @JsonProperty("total_emissions_kg")
-    public String totalEmissionsKg;
+    private String totalEmissionsKg;
 
     @JsonProperty("updated_at")
-    public LocalDateTime updatedAt;
-
-    @Override
-    public String toString() {
-        return "Offer{" +
-                "allowedPassengerIdentityDocumentTypes=" + allowedPassengerIdentityDocumentTypes +
-                ", conditions=" + conditions +
-                ", baseAmount=" + baseAmount +
-                ", baseCurrency='" + baseCurrency + '\'' +
-                ", createdAt=" + createdAt +
-                ", expiresAt=" + expiresAt +
-                ", id='" + id + '\'' +
-                ", liveMode=" + liveMode +
-                ", owner=" + owner +
-                ", partial=" + partial +
-                ", passengerIdentityDocumentsRequired=" + passengerIdentityDocumentsRequired +
-                ", passengers=" + passengers +
-                ", paymentRequirements=" + paymentRequirements +
-                ", slices=" + slices +
-                ", taxAmount=" + taxAmount +
-                ", taxCurrency='" + taxCurrency + '\'' +
-                ", totalAmount=" + totalAmount +
-                ", totalCurrency='" + totalCurrency + '\'' +
-                ", totalEmissionsKg=" + totalEmissionsKg +
-                ", updatedAt=" + updatedAt +
-                '}';
-    }
+    private LocalDateTime updatedAt;
 
 }

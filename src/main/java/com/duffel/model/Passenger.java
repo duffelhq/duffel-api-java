@@ -3,12 +3,14 @@ package com.duffel.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
 
 @EqualsAndHashCode
 @Getter
+@Setter
 @ToString
 public class Passenger {
 
@@ -21,7 +23,7 @@ public class Passenger {
     ///  This is only required if you're also including Loyalty Programme Accounts.
     ///  </summary>
     @JsonProperty("family_name")
-    public String familyName;
+    private String familyName;
 
     ///  <summary>
     ///  The passenger's given name. Only space, -, ', and letters from the ASCII, Latin-1 Supplement and
@@ -32,7 +34,7 @@ public class Passenger {
     ///  This is only required if you're also including Loyalty Programme Accounts.
     ///  </summary>
     @JsonProperty("given_name")
-    public String givenName;
+    private String givenName;
 
     ///  <summary>
     ///  The type of the passenger. If the passenger is aged 18 or over, you should specify a type of adult. If a
@@ -40,7 +42,7 @@ public class Passenger {
     ///  or an age, but not both.
     ///  </summary>
     @JsonProperty("type")
-    public PassengerType type;
+    private PassengerType type;
 
     ///  <summary>
     ///  The age of the passenger on the departure_date of the final slice. e.g. if you a searching for a round trip and
@@ -49,13 +51,13 @@ public class Passenger {
     ///  are under 18 years old. A passenger can have only a type or an age, but not both.
     ///  </summary>
     @JsonProperty("age")
-    public Integer age;
+    private Integer age;
 
     ///  <summary>
     ///  The Loyalty Programme Accounts for this passenger
     ///  </summary>
     @JsonProperty("loyalty_programme_accounts")
-    public List<LoyaltyProgrammeAccount> loyaltyProgrammeAccountList;
+    private List<LoyaltyProgrammeAccount> loyaltyProgrammeAccountList;
 
     public enum PassengerType {
         adult,

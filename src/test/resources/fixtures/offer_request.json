@@ -1,261 +1,2041 @@
 {
   "data": {
-    "cabin_class": "economy",
-    "created_at": "2022-05-23T09:36:36.579994Z",
-    "id": "orq_0000AJjvHnVrlmyXa6RqzY",
-    "live_mode": false,
-    "offers": [
+    "slices": [
       {
-        "allowed_passenger_identity_document_types": [],
-        "base_amount": "261.03",
-        "base_currency": "GBP",
-        "conditions": {
-          "change_before_departure": {
-            "allowed": false,
-            "penalty_amount": null,
-            "penalty_currency": null
+        "origin_type": "airport",
+        "origin": {
+          "type": "airport",
+          "time_zone": "Europe/London",
+          "name": "Heathrow Airport",
+          "longitude": -0.458118,
+          "latitude": 51.470311,
+          "id": "arp_lhr_gb",
+          "icao_code": "EGLL",
+          "iata_country_code": "GB",
+          "iata_code": "LHR",
+          "iata_city_code": "LON",
+          "city_name": "London",
+          "city": {
+            "type": "city",
+            "time_zone": null,
+            "name": "London",
+            "longitude": null,
+            "latitude": null,
+            "id": "cit_lon_gb",
+            "icao_code": null,
+            "iata_country_code": "GB",
+            "iata_code": "LON",
+            "iata_city_code": "LON",
+            "city_name": null
           },
-          "refund_before_departure": {
-            "allowed": false,
-            "penalty_amount": null,
-            "penalty_currency": null
-          }
+          "airports": null
         },
-        "created_at": "2022-05-23T09:36:36.626831Z",
-        "expires_at": "2022-05-23T10:06:36.623941Z",
-        "id": "off_0000AJjvHnmWlqIqPmF9xg",
-        "live_mode": false,
-        "owner": {
-          "iata_code": "ZZ",
-          "id": "arl_00009VME7D6ivUu8dn35WK",
-          "name": "Duffel Airways"
+        "destination_type": "airport",
+        "destination": {
+          "type": "airport",
+          "time_zone": "Europe/Berlin",
+          "name": "Stuttgart Airport",
+          "longitude": 9.204025,
+          "latitude": 48.688717,
+          "id": "arp_str_de",
+          "icao_code": "EDDS",
+          "iata_country_code": "DE",
+          "iata_code": "STR",
+          "iata_city_code": "STR",
+          "city_name": "Stuttgart",
+          "city": null,
+          "airports": null
         },
-        "partial": false,
-        "passenger_identity_documents_required": false,
-        "passengers": [
-          {
-            "age": null,
-            "family_name": "Test",
-            "given_name": "Test",
-            "id": "pas_0000AJjvHnWDkTG7bCc8Xp",
-            "loyalty_programme_accounts": [],
-            "type": "adult"
-          }
-        ],
-        "payment_requirements": {
-          "payment_required_by": "2022-05-26T09:36:36Z",
-          "price_guarantee_expires_at": "2022-05-25T09:36:36Z",
-          "requires_instant_payment": false
-        },
-        "slices": [
-          {
-            "conditions": {
-              "change_before_departure": {
-                "allowed": false,
-                "penalty_amount": null,
-                "penalty_currency": null
-              }
-            },
-            "destination": {
-              "airports": null,
-              "city": null,
-              "city_name": "Stuttgart",
-              "iata_city_code": "STR",
-              "iata_code": "STR",
-              "iata_country_code": "DE",
-              "icao_code": "EDDS",
-              "id": "arp_str_de",
-              "latitude": 48.688717,
-              "longitude": 9.204025,
-              "name": "Stuttgart Airport",
-              "time_zone": "Europe/Berlin",
-              "type": "airport"
-            },
-            "destination_type": "airport",
-            "duration": "PT1H43M",
-            "fare_brand_name": "Basic",
-            "id": "sli_0000AJjvHnmAnA1GOg4sPQ",
-            "origin": {
-              "airports": null,
-              "city": {
-                "city_name": null,
-                "iata_city_code": "LON",
-                "iata_code": "LON",
-                "iata_country_code": "GB",
-                "icao_code": null,
-                "id": "cit_lon_gb",
-                "latitude": null,
-                "longitude": null,
-                "name": "London",
-                "time_zone": null,
-                "type": "city"
-              },
-              "city_name": "London",
-              "iata_city_code": "LON",
-              "iata_code": "LHR",
-              "iata_country_code": "GB",
-              "icao_code": "EGLL",
-              "id": "arp_lhr_gb",
-              "latitude": 51.470311,
-              "longitude": -0.458118,
-              "name": "Heathrow Airport",
-              "time_zone": "Europe/London",
-              "type": "airport"
-            },
-            "origin_type": "airport",
-            "segments": [
-              {
-                "aircraft": {
-                  "iata_code": "773",
-                  "id": "arc_00009VMF8AhXSSRnQDI6HE",
-                  "name": "Boeing 777-300"
-                },
-                "arriving_at": "2022-05-27T00:43:00",
-                "departing_at": "2022-05-26T23:00:00",
-                "destination": {
-                  "airports": null,
-                  "city": null,
-                  "city_name": "Stuttgart",
-                  "iata_city_code": "STR",
-                  "iata_code": "STR",
-                  "iata_country_code": "DE",
-                  "icao_code": "EDDS",
-                  "id": "arp_str_de",
-                  "latitude": 48.688717,
-                  "longitude": 9.204025,
-                  "name": "Stuttgart Airport",
-                  "time_zone": "Europe/Berlin",
-                  "type": "airport"
-                },
-                "destination_terminal": "1",
-                "distance": "855.1036664434637",
-                "duration": "PT1H43M",
-                "id": "seg_0000AJjvHnlSpnS6MTkJIu",
-                "marketing_carrier": {
-                  "iata_code": "ZZ",
-                  "id": "arl_00009VME7D6ivUu8dn35WK",
-                  "name": "Duffel Airways"
-                },
-                "marketing_carrier_flight_number": "3394",
-                "operating_carrier": {
-                  "iata_code": "ZZ",
-                  "id": "arl_00009VME7D6ivUu8dn35WK",
-                  "name": "Duffel Airways"
-                },
-                "operating_carrier_flight_number": "3394",
-                "origin": {
-                  "airports": null,
-                  "city": {
-                    "city_name": null,
-                    "iata_city_code": "LON",
-                    "iata_code": "LON",
-                    "iata_country_code": "GB",
-                    "icao_code": null,
-                    "id": "cit_lon_gb",
-                    "latitude": null,
-                    "longitude": null,
-                    "name": "London",
-                    "time_zone": null,
-                    "type": "city"
-                  },
-                  "city_name": "London",
-                  "iata_city_code": "LON",
-                  "iata_code": "LHR",
-                  "iata_country_code": "GB",
-                  "icao_code": "EGLL",
-                  "id": "arp_lhr_gb",
-                  "latitude": 51.470311,
-                  "longitude": -0.458118,
-                  "name": "Heathrow Airport",
-                  "time_zone": "Europe/London",
-                  "type": "airport"
-                },
-                "origin_terminal": "2",
-                "passengers": [
-                  {
-                    "baggages": [
-                      {
-                        "quantity": 1,
-                        "type": "checked"
-                      }
-                    ],
-                    "cabin_class": "economy",
-                    "cabin_class_marketing_name": "Economy",
-                    "fare_basis_code": "Y20LGTN2",
-                    "passenger_id": "pas_0000AJjvHnWDkTG7bCc8Xp"
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "tax_amount": "46.98",
-        "tax_currency": "GBP",
-        "total_amount": "308.01",
-        "total_currency": "GBP",
-        "total_emissions_kg": "683",
-        "updated_at": "2022-05-23T09:36:36.626831Z"
+        "departure_date": "2022-06-15",
+        "created_at": "2022-05-30T10:00:14.501804Z"
       }
     ],
     "passengers": [
       {
-        "age": null,
-        "family_name": "Test",
-        "given_name": "Test",
-        "id": "pas_0000AJjvHnWDkTG7bCc8Xp",
+        "type": "adult",
         "loyalty_programme_accounts": [],
-        "type": "adult"
+        "id": "pas_0000AJySzYPdjSE0eU1kxd",
+        "given_name": "Test",
+        "family_name": "User",
+        "age": null
       }
     ],
-    "slices": [
+    "offers": [
       {
-        "created_at": "2022-05-23T09:36:36.586348Z",
-        "departure_date": "2022-05-26",
-        "destination": {
-          "airports": null,
-          "city": null,
-          "city_name": "Stuttgart",
-          "iata_city_code": "STR",
-          "iata_code": "STR",
-          "iata_country_code": "DE",
-          "icao_code": "EDDS",
-          "id": "arp_str_de",
-          "latitude": 48.688717,
-          "longitude": 9.204025,
-          "name": "Stuttgart Airport",
-          "time_zone": "Europe/Berlin",
-          "type": "airport"
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "31",
+        "total_currency": "GBP",
+        "total_amount": "80.99",
+        "tax_currency": "GBP",
+        "tax_amount": "42.16",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "OZ0RO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": []
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "920",
+                "operating_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "marketing_carrier_flight_number": "920",
+                "marketing_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "id": "seg_0000AJySzfAebZOfc24O4h",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T17:40:00",
+                "arriving_at": "2022-06-15T20:20:00",
+                "aircraft": {
+                  "name": "Airbus A319",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                  "iata_code": "319"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfAebZOfc24O4f",
+            "fare_brand_name": "Basic",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
         },
-        "destination_type": "airport",
-        "origin": {
-          "airports": null,
-          "city": {
-            "city_name": null,
-            "iata_city_code": "LON",
-            "iata_code": "LON",
-            "iata_country_code": "GB",
-            "icao_code": null,
-            "id": "cit_lon_gb",
-            "latitude": null,
-            "longitude": null,
-            "name": "London",
-            "time_zone": null,
-            "type": "city"
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "British Airways",
+          "id": "arl_00009VME7DBKeMags5CliQ",
+          "iata_code": "BA"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfAebZOfc24O4e",
+        "expires_at": "2022-05-30T10:15:15.522963Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "38.83",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "31",
+        "total_currency": "GBP",
+        "total_amount": "80.99",
+        "tax_currency": "GBP",
+        "tax_amount": "42.16",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "OZ0RO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": []
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "922",
+                "operating_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "marketing_carrier_flight_number": "922",
+                "marketing_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "id": "seg_0000AJySzfAebZOfc24O4k",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T20:00:00",
+                "arriving_at": "2022-06-15T22:40:00",
+                "aircraft": {
+                  "name": "Airbus A319",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                  "iata_code": "319"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfAebZOfc24O4i",
+            "fare_brand_name": "Basic",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "British Airways",
+          "id": "arl_00009VME7DBKeMags5CliQ",
+          "iata_code": "BA"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfAebZOfc24O4g",
+        "expires_at": "2022-05-30T10:15:15.524775Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "38.83",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "31",
+        "total_currency": "GBP",
+        "total_amount": "106.90",
+        "tax_currency": "GBP",
+        "tax_amount": "41.13",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "XNCWGOGB",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "2463",
+                "operating_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "marketing_carrier_flight_number": "2463",
+                "marketing_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "id": "seg_0000AJySzfB0aFgFd8Efcu",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T09:10:00",
+                "arriving_at": "2022-06-15T11:50:00",
+                "aircraft": {
+                  "name": "Airbus A319",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                  "iata_code": "319"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfAebZOfc24O4l",
+            "fare_brand_name": "Smart",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Eurowings",
+          "id": "arl_00009VME7DC2bj9quHXKoh",
+          "iata_code": "EW"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfAebZOfc24O4j",
+        "expires_at": "2022-05-30T10:15:15.526147Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "65.77",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "25",
+        "total_currency": "GBP",
+        "total_amount": "106.90",
+        "tax_currency": "GBP",
+        "tax_amount": "41.13",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "XNCWGOGB",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "2461",
+                "operating_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "marketing_carrier_flight_number": "2461",
+                "marketing_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "id": "seg_0000AJySzfB0aFgFd8Efcw",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T14:35:00",
+                "arriving_at": "2022-06-15T17:15:00",
+                "aircraft": {
+                  "name": "Airbus A320 (sharklets)",
+                  "id": "arc_00009Y7nq3J0w9nlhN3x3Y",
+                  "iata_code": "32A"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfB0aFgFd8Efcv",
+            "fare_brand_name": "Smart",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Eurowings",
+          "id": "arl_00009VME7DC2bj9quHXKoh",
+          "iata_code": "EW"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfAebZOfc24O4m",
+        "expires_at": "2022-05-30T10:15:15.528688Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "65.77",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "32",
+        "total_currency": "GBP",
+        "total_amount": "106.90",
+        "tax_currency": "GBP",
+        "tax_amount": "41.13",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "XNCWGOGB",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "2465",
+                "operating_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "marketing_carrier_flight_number": "2465",
+                "marketing_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "id": "seg_0000AJySzfB0aFgFd8Efd1",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T19:00:00",
+                "arriving_at": "2022-06-15T21:40:00",
+                "aircraft": {
+                  "name": "Airbus A320",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAr",
+                  "iata_code": "320"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfB0aFgFd8Efcz",
+            "fare_brand_name": "Smart",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Eurowings",
+          "id": "arl_00009VME7DC2bj9quHXKoh",
+          "iata_code": "EW"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfB0aFgFd8Efcx",
+        "expires_at": "2022-05-30T10:15:15.530303Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "65.77",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "31",
+        "total_currency": "GBP",
+        "total_amount": "98.42",
+        "tax_currency": "GBP",
+        "tax_amount": "42.16",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "OV2RO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "920",
+                "operating_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "marketing_carrier_flight_number": "920",
+                "marketing_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "id": "seg_0000AJySzfB0aFgFd8Efd3",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T17:40:00",
+                "arriving_at": "2022-06-15T20:20:00",
+                "aircraft": {
+                  "name": "Airbus A319",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                  "iata_code": "319"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfB0aFgFd8Efd2",
+            "fare_brand_name": "Plus",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "British Airways",
+          "id": "arl_00009VME7DBKeMags5CliQ",
+          "iata_code": "BA"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfB0aFgFd8Efcy",
+        "expires_at": "2022-05-30T10:15:15.536230Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "56.26",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "31",
+        "total_currency": "GBP",
+        "total_amount": "98.42",
+        "tax_currency": "GBP",
+        "tax_amount": "42.16",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "OV2RO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "922",
+                "operating_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "marketing_carrier_flight_number": "922",
+                "marketing_carrier": {
+                  "name": "British Airways",
+                  "id": "arl_00009VME7DBKeMags5CliQ",
+                  "iata_code": "BA"
+                },
+                "id": "seg_0000AJySzfB0aFgFd8Efd5",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T20:00:00",
+                "arriving_at": "2022-06-15T22:40:00",
+                "aircraft": {
+                  "name": "Airbus A319",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                  "iata_code": "319"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfB0aFgFd8Efd4",
+            "fare_brand_name": "Plus",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "British Airways",
+          "id": "arl_00009VME7DBKeMags5CliQ",
+          "iata_code": "BA"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfB0aFgFd8Efd0",
+        "expires_at": "2022-05-30T10:15:15.542270Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "56.26",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "31",
+        "total_currency": "GBP",
+        "total_amount": "412.80",
+        "tax_currency": "GBP",
+        "tax_amount": "41.13",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "IFLEXWGO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "2463",
+                "operating_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "marketing_carrier_flight_number": "2463",
+                "marketing_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "id": "seg_0000AJySzfCQUyoZhWtnq3",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T09:10:00",
+                "arriving_at": "2022-06-15T11:50:00",
+                "aircraft": {
+                  "name": "Airbus A319",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                  "iata_code": "319"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfCQUyoZhWtnq1",
+            "fare_brand_name": "Smart Flex",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Eurowings",
+          "id": "arl_00009VME7DC2bj9quHXKoh",
+          "iata_code": "EW"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfCQUyoZhWtnpz",
+        "expires_at": "2022-05-30T10:15:15.545148Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "371.67",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "25",
+        "total_currency": "GBP",
+        "total_amount": "412.80",
+        "tax_currency": "GBP",
+        "tax_amount": "41.13",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "IFLEXWGO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "2461",
+                "operating_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "marketing_carrier_flight_number": "2461",
+                "marketing_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "id": "seg_0000AJySzfCmTf69id45OC",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T14:35:00",
+                "arriving_at": "2022-06-15T17:15:00",
+                "aircraft": {
+                  "name": "Airbus A320 (sharklets)",
+                  "id": "arc_00009Y7nq3J0w9nlhN3x3Y",
+                  "iata_code": "32A"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfCQUyoZhWtnq4",
+            "fare_brand_name": "Smart Flex",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Eurowings",
+          "id": "arl_00009VME7DC2bj9quHXKoh",
+          "iata_code": "EW"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfCQUyoZhWtnq0",
+        "expires_at": "2022-05-30T10:15:15.548876Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "371.67",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:15.684759Z",
+        "total_emissions_kg": "32",
+        "total_currency": "GBP",
+        "total_amount": "412.80",
+        "tax_currency": "GBP",
+        "tax_amount": "41.13",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "IFLEXWGO",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": null,
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "2465",
+                "operating_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "marketing_carrier_flight_number": "2465",
+                "marketing_carrier": {
+                  "name": "Eurowings",
+                  "id": "arl_00009VME7DC2bj9quHXKoh",
+                  "iata_code": "EW"
+                },
+                "id": "seg_0000AJySzfCmTf69id45OI",
+                "duration": "PT1H40M",
+                "distance": null,
+                "destination_terminal": null,
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T19:00:00",
+                "arriving_at": "2022-06-15T21:40:00",
+                "aircraft": {
+                  "name": "Airbus A320",
+                  "id": "arc_00009VMF8AgpV5sdO0xXAr",
+                  "iata_code": "320"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzfCmTf69id45OG",
+            "fare_brand_name": "Smart Flex",
+            "duration": "PT1H40M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": null
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": true,
+          "price_guarantee_expires_at": null,
+          "payment_required_by": null
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Eurowings",
+          "id": "arl_00009VME7DC2bj9quHXKoh",
+          "iata_code": "EW"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzfCmTf69id45OE",
+        "expires_at": "2022-05-30T10:15:15.553002Z",
+        "created_at": "2022-05-30T10:00:15.684759Z",
+        "conditions": {
+          "refund_before_departure": null,
+          "change_before_departure": null
+        },
+        "base_currency": "GBP",
+        "base_amount": "371.67",
+        "allowed_passenger_identity_document_types": []
+      },
+      {
+        "updated_at": "2022-05-30T10:00:14.561350Z",
+        "total_emissions_kg": "129",
+        "total_currency": "GBP",
+        "total_amount": "178.02",
+        "tax_currency": "GBP",
+        "tax_amount": "27.16",
+        "slices": [
+          {
+            "segments": [
+              {
+                "passengers": [
+                  {
+                    "passenger_id": "pas_0000AJySzYPdjSE0eU1kxd",
+                    "fare_basis_code": "Y20LGTN2",
+                    "cabin_class_marketing_name": "Economy",
+                    "cabin_class": "economy",
+                    "baggages": [
+                      {
+                        "type": "checked",
+                        "quantity": 1
+                      }
+                    ]
+                  }
+                ],
+                "origin_terminal": "2",
+                "origin": {
+                  "type": "airport",
+                  "time_zone": "Europe/London",
+                  "name": "Heathrow Airport",
+                  "longitude": -0.458118,
+                  "latitude": 51.470311,
+                  "id": "arp_lhr_gb",
+                  "icao_code": "EGLL",
+                  "iata_country_code": "GB",
+                  "iata_code": "LHR",
+                  "iata_city_code": "LON",
+                  "city_name": "London",
+                  "city": {
+                    "type": "city",
+                    "time_zone": null,
+                    "name": "London",
+                    "longitude": null,
+                    "latitude": null,
+                    "id": "cit_lon_gb",
+                    "icao_code": null,
+                    "iata_country_code": "GB",
+                    "iata_code": "LON",
+                    "iata_city_code": "LON",
+                    "city_name": null
+                  },
+                  "airports": null
+                },
+                "operating_carrier_flight_number": "5619",
+                "operating_carrier": {
+                  "name": "Duffel Airways",
+                  "id": "arl_00009VME7D6ivUu8dn35WK",
+                  "iata_code": "ZZ"
+                },
+                "marketing_carrier_flight_number": "5619",
+                "marketing_carrier": {
+                  "name": "Duffel Airways",
+                  "id": "arl_00009VME7D6ivUu8dn35WK",
+                  "iata_code": "ZZ"
+                },
+                "id": "seg_0000AJySzYlcPjo1keJJDc",
+                "duration": "PT1H43M",
+                "distance": "855.1036664434637",
+                "destination_terminal": "1",
+                "destination": {
+                  "type": "airport",
+                  "time_zone": "Europe/Berlin",
+                  "name": "Stuttgart Airport",
+                  "longitude": 9.204025,
+                  "latitude": 48.688717,
+                  "id": "arp_str_de",
+                  "icao_code": "EDDS",
+                  "iata_country_code": "DE",
+                  "iata_code": "STR",
+                  "iata_city_code": "STR",
+                  "city_name": "Stuttgart",
+                  "city": null,
+                  "airports": null
+                },
+                "departing_at": "2022-06-15T23:00:00",
+                "arriving_at": "2022-06-16T00:43:00",
+                "aircraft": {
+                  "name": "Boeing 777-300",
+                  "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                  "iata_code": "773"
+                }
+              }
+            ],
+            "origin_type": "airport",
+            "origin": {
+              "type": "airport",
+              "time_zone": "Europe/London",
+              "name": "Heathrow Airport",
+              "longitude": -0.458118,
+              "latitude": 51.470311,
+              "id": "arp_lhr_gb",
+              "icao_code": "EGLL",
+              "iata_country_code": "GB",
+              "iata_code": "LHR",
+              "iata_city_code": "LON",
+              "city_name": "London",
+              "city": {
+                "type": "city",
+                "time_zone": null,
+                "name": "London",
+                "longitude": null,
+                "latitude": null,
+                "id": "cit_lon_gb",
+                "icao_code": null,
+                "iata_country_code": "GB",
+                "iata_code": "LON",
+                "iata_city_code": "LON",
+                "city_name": null
+              },
+              "airports": null
+            },
+            "id": "sli_0000AJySzYlcPjo1keJJDg",
+            "fare_brand_name": "Basic",
+            "duration": "PT1H43M",
+            "destination_type": "airport",
+            "destination": {
+              "type": "airport",
+              "time_zone": "Europe/Berlin",
+              "name": "Stuttgart Airport",
+              "longitude": 9.204025,
+              "latitude": 48.688717,
+              "id": "arp_str_de",
+              "icao_code": "EDDS",
+              "iata_country_code": "DE",
+              "iata_code": "STR",
+              "iata_city_code": "STR",
+              "city_name": "Stuttgart",
+              "city": null,
+              "airports": null
+            },
+            "conditions": {
+              "change_before_departure": {
+                "penalty_currency": "GBP",
+                "penalty_amount": "30.00",
+                "allowed": true
+              }
+            }
+          }
+        ],
+        "payment_requirements": {
+          "requires_instant_payment": false,
+          "price_guarantee_expires_at": "2022-06-01T10:00:14Z",
+          "payment_required_by": "2022-06-02T10:00:14Z"
+        },
+        "passengers": [
+          {
+            "type": "adult",
+            "loyalty_programme_accounts": [],
+            "id": "pas_0000AJySzYPdjSE0eU1kxd",
+            "given_name": "Test",
+            "family_name": "User",
+            "age": null
+          }
+        ],
+        "passenger_identity_documents_required": false,
+        "partial": false,
+        "owner": {
+          "name": "Duffel Airways",
+          "id": "arl_00009VME7D6ivUu8dn35WK",
+          "iata_code": "ZZ"
+        },
+        "live_mode": false,
+        "id": "off_0000AJySzYlyOQ5blkTam4",
+        "expires_at": "2022-05-30T10:30:14.558906Z",
+        "created_at": "2022-05-30T10:00:14.561350Z",
+        "conditions": {
+          "refund_before_departure": {
+            "penalty_currency": null,
+            "penalty_amount": null,
+            "allowed": false
           },
-          "city_name": "London",
-          "iata_city_code": "LON",
-          "iata_code": "LHR",
-          "iata_country_code": "GB",
-          "icao_code": "EGLL",
-          "id": "arp_lhr_gb",
-          "latitude": 51.470311,
-          "longitude": -0.458118,
-          "name": "Heathrow Airport",
-          "time_zone": "Europe/London",
-          "type": "airport"
+          "change_before_departure": {
+            "penalty_currency": "GBP",
+            "penalty_amount": "30.00",
+            "allowed": true
+          }
         },
-        "origin_type": "airport"
+        "base_currency": "GBP",
+        "base_amount": "150.86",
+        "allowed_passenger_identity_document_types": []
       }
-    ]
+    ],
+    "live_mode": false,
+    "id": "orq_0000AJySzYPHklwQdNrTPY",
+    "created_at": "2022-05-30T10:00:14.498018Z",
+    "cabin_class": "economy"
   }
 }

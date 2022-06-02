@@ -14,12 +14,12 @@ public class LoyaltyProgrammeAccount {
     ///  The passenger's account number for this Loyalty Programme Account
     ///  </summary>
     @JsonProperty("account_number")
-    public String accountNumber;
+    private String accountNumber;
 
     ///  <summary>
     ///  The IATA code for the airline that this Loyalty Programme Account belongs to
     ///  </summary>
     @JsonProperty("airline_iata_code")
-    public String airlineIataCode;
+    private String airlineIataCode;
 
 }

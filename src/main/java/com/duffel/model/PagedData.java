@@ -30,14 +30,9 @@ public class PagedData<T> {
         return meta.getAfter();
     }
 
-    public List<T> getData() {
-        return data;
-    }
-
-    public PagedDataMeta getMeta() {
-        return meta;
-    }
-
+    @EqualsAndHashCode
+    @Getter
+    @ToString
     public static class PagedDataMeta {
         @JsonProperty("limit")
         private Integer limit;
@@ -47,18 +42,6 @@ public class PagedData<T> {
 
         @JsonProperty("after")
         private String after;
-
-        public Integer getLimit() {
-            return limit;
-        }
-
-        public String getBefore() {
-            return before;
-        }
-
-        public String getAfter() {
-            return after;
-        }
 
     }
 
