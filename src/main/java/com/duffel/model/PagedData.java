@@ -13,10 +13,10 @@ import java.util.List;
 public class PagedData<T> {
 
     @JsonProperty("meta")
-    public PagedDataMeta meta;
+    private PagedDataMeta meta;
 
     @JsonProperty("data")
-    public List<T> data;
+    private List<T> data;
 
     public Integer getLimit() {
         return meta.getLimit();
