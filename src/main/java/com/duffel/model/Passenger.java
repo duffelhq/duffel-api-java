@@ -59,10 +59,7 @@ public class Passenger {
     @JsonProperty("loyalty_programme_accounts")
     private List<LoyaltyProgrammeAccount> loyaltyProgrammeAccountList;
 
-    public enum PassengerType {
-        adult,
-        child,
-        infant_without_seat
-    }
+    @JsonProperty("id")
+    private String id;
 
 }

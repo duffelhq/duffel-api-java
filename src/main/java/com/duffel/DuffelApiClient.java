@@ -1,10 +1,7 @@
 package com.duffel;
 
 import com.duffel.net.ApiClient;
-import com.duffel.service.AircraftService;
-import com.duffel.service.AirlineService;
-import com.duffel.service.OfferRequestService;
-import com.duffel.service.OfferService;
+import com.duffel.service.*;
 
 public class DuffelApiClient {
 
@@ -12,7 +9,7 @@ public class DuffelApiClient {
         STAGING("https://api.staging.duffel.com/"),
         PRODUCTION("https://api.duffel.com/");
 
-        private String endpoint;
+        private final String endpoint;
 
         Environment(String endpoint) {
             this.endpoint = endpoint;
@@ -28,6 +25,7 @@ public class DuffelApiClient {
     public final AirlineService airlineService;
     public final OfferService offerService;
     public final OfferRequestService offerRequestService;
+    public final OrderService orderService;
 
     public DuffelApiClient(String apiKey) {
         this(apiKey, Environment.STAGING);
@@ -44,6 +42,7 @@ public class DuffelApiClient {
         airlineService = new AirlineService(apiClient);
         offerService = new OfferService(apiClient);
         offerRequestService = new OfferRequestService(apiClient);
+        orderService = new OrderService(apiClient);
     }
 
 }

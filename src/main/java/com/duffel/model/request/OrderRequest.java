@@ -2,7 +2,6 @@ package com.duffel.model.request;
 
 import com.duffel.model.Data;
 import com.duffel.model.OrderType;
-import com.duffel.model.Passenger;
 import com.duffel.model.PaymentType;
 import com.duffel.model.response.Order;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -46,7 +45,7 @@ public class OrderRequest extends Data<Order> {
     /// The personal details of the passengers, expanding on the information initially provided when creating the offer request
     /// </summary>
     @JsonProperty("passengers")
-    private List<Passenger> passengers;
+    private List<OrderPassenger> passengers;
 
     /// <summary>
     /// The payment details to use to pay for the order. This key should be omitted when the order’s type is hold
