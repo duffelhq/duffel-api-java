@@ -13,8 +13,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
@@ -25,11 +23,14 @@ import static org.mockserver.model.HttpResponse.response;
 @ExtendWith(MockServerExtension.class)
 class OrderTest {
 
-    private static final Logger LOG = LoggerFactory.getLogger(OrderTest.class);
-
     @Test
     void post(MockServerClient mockClient) {
-        DuffelApiClient client = new DuffelApiClient("", DuffelApiClient.Environment.PRODUCTION);
+        mockClient.when(request().withMethod("POST").withPath("/air/offer_requests"))
+                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/offer_request.json")));
+        mockClient.when(request().withMethod("POST").withPath("/air/orders"))
+                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order.json")));
+
+        DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
         OfferRequest.Slice slice = new OfferRequest.Slice();
         slice.setDepartureDate("2022-06-15");
@@ -67,21 +68,25 @@ class OrderTest {
         orderRequest.setPassengers(List.of(orderPassenger));
 
         Order order = client.orderService.post(orderRequest);
-        LOG.info(order.toString());
+
+        assertEquals(1, order.getSlices().size());
+        assertEquals(1, order.getPassengers().size());
+        assertEquals(707.75d, order.getTotalAmount());
+        assertEquals("Q2UABJ", order.getBookingReference());
     }
 
     @Test
     void getById(MockServerClient mockClient) {
-        mockClient.when(request().withMethod("GET").withPath("/air/offer_requests/orq_0000AJyTUL2VxM0ciPFDRp"))
-                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/offer_request_by_id.json")));
+        mockClient.when(request().withMethod("GET").withPath("/air/orders/ord_0000AKLlRADDc3YBx6X5c0"))
+                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order.json")));
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        OfferResponse offerResponse = client.offerRequestService.getById("orq_0000AJyTUL2VxM0ciPFDRp");
+        Order order = client.orderService.getById("ord_0000AKLlRADDc3YBx6X5c0");
 
-        assertNotNull(offerResponse);
-        assertEquals(11, offerResponse.getOffers().size());
-        assertEquals("economy", offerResponse.getCabinClass());
-        assertFalse(offerResponse.isLiveMode());
+        assertEquals(1, order.getSlices().size());
+        assertEquals(1, order.getPassengers().size());
+        assertEquals(707.75d, order.getTotalAmount());
+        assertEquals("Q2UABJ", order.getBookingReference());
     }
 }

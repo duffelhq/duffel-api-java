@@ -1,6 +1,7 @@
 package com.duffel.model.response;
 
 import com.duffel.model.*;
+import com.duffel.model.response.order.Passenger;
 import com.duffel.model.response.order.PaymentStatus;
 import com.duffel.model.response.order.Service;
 import com.duffel.model.response.order.Slice;
@@ -52,7 +53,12 @@ public class Order extends Data<Order> {
     private LocalDateTime cancelledAt;
 
     ///  <summary>
-    ///  The conditions associated with this order, describing the kinds of modifications you can make to it and any penalties that will apply to those modifications. This information assumes the condition is applied to all of the slices and passengers associated with this order - for information at the slice level (e.g. "what happens if I just want to change the first slice?") refer to the slices. If a particular kind of modification is allowed, you may not always be able to take action through the Duffel API. In some cases, you may need to contact the Duffel support team or the airline directly.
+    ///  The conditions associated with this order, describing the kinds of modifications you can make to it and any
+    ///  penalties that will apply to those modifications. This information assumes the condition is applied to all of
+    ///  the slices and passengers associated with this order - for information at the slice level (e.g. "what happens
+    ///  if I just want to change the first slice?") refer to the slices. If a particular kind of modification is
+    ///  allowed, you may not always be able to take action through the Duffel API. In some cases, you may need to
+    ///  contact the Duffel support team or the airline directly.
     ///  </summary>
     @JsonProperty("conditions")
     private Conditions conditions;
@@ -103,7 +109,7 @@ public class Order extends Data<Order> {
     ///  The passengers who are travelling
     ///  </summary>
     @JsonProperty("passengers")
-    private List<PaymentStatus> passengers;
+    private List<Passenger> passengers;
 
     ///  <summary>
     ///  The payment status for this order
@@ -176,6 +182,12 @@ public class Order extends Data<Order> {
         /// </summary>
         @JsonProperty("unique_identifier")
         private String uniqueIdentifier;
+
+        ///  <summary>
+        ///  The list of passenger ids the document applies to
+        ///  </summary>
+        @JsonProperty("passenger_ids")
+        private List<String> passengerIds;
     }
 
 }

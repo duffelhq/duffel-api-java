@@ -9,12 +9,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.net.*;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,7 +27,23 @@ public class ApiClient {
 
     private static final Logger logger = LogManager.getLogger(ApiClient.class);
 
-    private static final HttpClient HTTP_CLIENT = HttpClient.newBuilder().build();
+    private static TrustManager[] trustAllCerts = new TrustManager[]{
+            new X509TrustManager() {
+                public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                    return null;
+                }
+
+                public void checkClientTrusted(
+                        java.security.cert.X509Certificate[] certs, String authType) {
+                }
+
+                public void checkServerTrusted(
+                        java.security.cert.X509Certificate[] certs, String authType) {
+                }
+            }
+    };
+
+    private HttpClient HTTP_CLIENT;
 
     private static final String APPLICATION_JSON = "application/json";
     private final Map<String, String> headers;
@@ -36,6 +57,19 @@ public class ApiClient {
     }
 
     public ApiClient(String apiKey, String baseEndpoint) {
+        SSLContext sslContext;
+        try {
+            sslContext = SSLContext.getInstance("TLS");
+            sslContext.init(null, trustAllCerts, new SecureRandom());
+        } catch (NoSuchAlgorithmException | KeyManagementException e) {
+            throw new RuntimeException(e);
+        }
+
+        HTTP_CLIENT = HttpClient.newBuilder()
+//                .proxy(ProxySelector.of(InetSocketAddress.createUnresolved("localhost", 8080)))
+//                .sslContext(sslContext)
+                .build();
+
         this.baseEndpoint = baseEndpoint;
         this.headers = new HashMap<>();
         addAuthorizationHeader(apiKey);

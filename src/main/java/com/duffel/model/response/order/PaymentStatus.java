@@ -1,9 +1,15 @@
 package com.duffel.model.response.order;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class PaymentStatus {
 
     ///  <summary>
