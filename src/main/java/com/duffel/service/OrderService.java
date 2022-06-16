@@ -1,6 +1,7 @@
 package com.duffel.service;
 
 import com.duffel.model.request.OrderRequest;
+import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.request.PostData;
 import com.duffel.model.response.Order;
 import com.duffel.net.ApiClient;
@@ -20,4 +21,9 @@ public class OrderService extends PostResource<Order> {
     public Order getById(String id) {
         return super.getById(Order.class, id).getData();
     }
+
+    public Order update(String id, OrderUpdate update) {
+        return super.update(Order.class, id, new PostData<>(update)).getData();
+    }
+
 }

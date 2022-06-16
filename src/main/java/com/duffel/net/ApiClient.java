@@ -27,7 +27,7 @@ public class ApiClient {
 
     private static final Logger logger = LogManager.getLogger(ApiClient.class);
 
-    private static TrustManager[] trustAllCerts = new TrustManager[]{
+    private static final TrustManager[] trustAllCerts = new TrustManager[]{
             new X509TrustManager() {
                 public java.security.cert.X509Certificate[] getAcceptedIssuers() {
                     return null;
@@ -43,7 +43,7 @@ public class ApiClient {
             }
     };
 
-    private HttpClient HTTP_CLIENT;
+    private final HttpClient HTTP_CLIENT;
 
     private static final String APPLICATION_JSON = "application/json";
     private final Map<String, String> headers;
@@ -53,6 +53,7 @@ public class ApiClient {
 
     public enum RequestMethod {
         GET,
+        PATCH,
         POST
     }
 
@@ -107,6 +108,10 @@ public class ApiClient {
 
     public <T, O> T post(String endpoint, Class<T> clazz, O postObject) {
         return executeCall(endpoint, RequestMethod.POST.name(), clazz, postObject);
+    }
+
+    public <T,O > T patch(String endpoint, Class<T> clazz, O postObject) {
+        return executeCall(endpoint, RequestMethod.PATCH.name(), clazz, postObject);
     }
 
     private <T, O> T executeCall(String endpoint, String httpMethod, Class<T> responseType, O postObject) throws DuffelException {

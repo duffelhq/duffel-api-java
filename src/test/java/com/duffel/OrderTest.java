@@ -1,13 +1,10 @@
 package com.duffel;
 
-import com.duffel.model.CabinClass;
 import com.duffel.model.OrderType;
-import com.duffel.model.Passenger;
 import com.duffel.model.PassengerType;
-import com.duffel.model.request.OfferRequest;
 import com.duffel.model.request.OrderPassenger;
 import com.duffel.model.request.OrderRequest;
-import com.duffel.model.response.OfferResponse;
+import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.response.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -15,8 +12,10 @@ import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
@@ -32,25 +31,6 @@ class OrderTest {
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        OfferRequest.Slice slice = new OfferRequest.Slice();
-        slice.setDepartureDate("2022-06-15");
-        slice.setOrigin("LHR");
-        slice.setDestination("STR");
-
-        Passenger passenger = new Passenger();
-        passenger.setType(PassengerType.adult);
-        passenger.setGivenName("Test");
-        passenger.setFamilyName("User");
-
-        OfferRequest request = new OfferRequest();
-        request.setMaxConnections(0);
-        request.setCabinClass(CabinClass.economy.name());
-        request.setSlices(List.of(slice));
-        request.setPassengers(List.of(passenger));
-
-        OfferResponse offerResponse = client.offerRequestService.post(request);
-        String offerId = offerResponse.getOffers().stream().filter(o -> !o.getPaymentRequirements().isRequiresInstantPayment()).findFirst().get().getId();
-
         OrderPassenger orderPassenger = new OrderPassenger();
         orderPassenger.setEmail("test@duffel.com");
         orderPassenger.setGivenName("Test");
@@ -58,13 +38,13 @@ class OrderTest {
         orderPassenger.setTitle("Mr");
         orderPassenger.setBornOn("1990-01-01");
         orderPassenger.setPassengerType(PassengerType.adult);
-        orderPassenger.setId(offerResponse.getPassengers().get(0).getId());
+        orderPassenger.setId("pas_0000AJySzYPdjSE0eU1kxd");
         orderPassenger.setPhoneNumber("+447888888888");
         orderPassenger.setGender("m");
 
         OrderRequest orderRequest = new OrderRequest();
         orderRequest.setType(OrderType.hold);
-        orderRequest.setSelectedOffers(List.of(offerId));
+        orderRequest.setSelectedOffers(List.of("off_0000AJySzfAebZOfc24O4e"));
         orderRequest.setPassengers(List.of(orderPassenger));
 
         Order order = client.orderService.post(orderRequest);
@@ -88,5 +68,23 @@ class OrderTest {
         assertEquals(1, order.getPassengers().size());
         assertEquals(707.75d, order.getTotalAmount());
         assertEquals("Q2UABJ", order.getBookingReference());
+    }
+
+    @Test
+    void update(MockServerClient mockClient) {
+        mockClient.when(request().withMethod("PATCH").withPath("/air/orders/ord_0000AKY0JiKODHllshwjaq"))
+                .respond(response().withStatusCode(200)
+                .withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_update.json")));
+
+        DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
+
+
+        OrderUpdate update = new OrderUpdate();
+        update.setMetadata(Map.of("myKey", "myValue"));
+
+        Order order = client.orderService.update("ord_0000AKY0JiKODHllshwjaq", update);
+
+        assertEquals("ord_0000AKY0JiKODHllshwjaq", order.getId());
+        assertEquals(Set.of("myKey"), order.getMetadata().keySet());
     }
 }
