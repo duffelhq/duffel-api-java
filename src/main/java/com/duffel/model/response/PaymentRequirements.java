@@ -1,25 +1,23 @@
 package com.duffel.model.response;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class PaymentRequirements {
     @JsonProperty("payment_required_by")
-    public LocalDateTime paymentRequiredBy;
+    private LocalDateTime paymentRequiredBy;
 
     @JsonProperty("price_guarantee_expires_at")
-    public LocalDateTime priceGuaranteeExpiresAt;
+    private LocalDateTime priceGuaranteeExpiresAt;
 
     @JsonProperty("requires_instant_payment")
-    public boolean requiresInstantPayment;
+    private boolean requiresInstantPayment;
 
-    @Override
-    public String toString() {
-        return "PaymentRequirements{" +
-                "paymentRequiredBy=" + paymentRequiredBy +
-                ", priceGuaranteeExpiresAt=" + priceGuaranteeExpiresAt +
-                ", requiresInstantPayment=" + requiresInstantPayment +
-                '}';
-    }
 }

@@ -13,8 +13,4 @@ public abstract class Data<T> {
     @JsonProperty("data")
     private T data;
 
-    public T getData() {
-        return data;
-    }
-
 }

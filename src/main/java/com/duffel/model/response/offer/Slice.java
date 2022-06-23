@@ -3,10 +3,16 @@ package com.duffel.model.response.offer;
 import com.duffel.model.Conditions;
 import com.duffel.model.Location;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.Duration;
 import java.util.List;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class Slice {
 
     ///  <summary>
@@ -16,25 +22,25 @@ public class Slice {
     ///  In some cases, you may need to contact the Duffel support team or the airline directly.
     ///  </summary>
     @JsonProperty("conditions")
-    public Conditions conditions;
+    private Conditions conditions;
 
     ///  <summary>
     ///  The <see cref="City"/> or <see cref="Airport"/> where this slice begins.
     ///  </summary>
     @JsonProperty("origin")
-    public Location origin;
+    private Location origin;
 
     ///  <summary>
     ///  The <see cref="City"/> or <see cref="Airport"/> where this slice ends.
     ///  </summary>
     @JsonProperty("destination")
-    public Location destination;
+    private Location destination;
 
     ///  <summary>
     ///  The duration of the slice, represented as a ISO 8601 duration
     ///  </summary>
     @JsonProperty("duration")
-    public Duration duration;
+    private Duration duration;
 
     ///  <summary>
     ///  The name of the fare brand associated with this slice.
@@ -46,31 +52,19 @@ public class Slice {
     ///  so for now, this field may be null in some offers. This will become a non-nullable attribute in the near future.
     ///  </summary>
     @JsonProperty("fare_brand_name")
-    public String fareBrandName;
+    private String fareBrandName;
 
     ///  <summary>
     ///  Duffel's unique identifier for the slice. It identifies the slice of an offer
     ///  (i.e. the same slice across offers will have different ids.)
     ///  </summary>
     @JsonProperty("id")
-    public String id;
+    private String id;
 
     ///  <summary>
     ///  The segments - that is, specific flights - that the airline is offering to get the passengers from the origin to the destination
     ///  </summary>
     @JsonProperty("segments")
-    public List<Segment> segments;
+    private List<Segment> segments;
 
-    @Override
-    public String toString() {
-        return "Slice{" +
-                "conditions=" + conditions +
-                ", origin=" + origin +
-                ", destination=" + destination +
-                ", duration=" + duration +
-                ", fareBrandName='" + fareBrandName + '\'' +
-                ", id='" + id + '\'' +
-                ", segments=" + segments +
-                '}';
-    }
 }

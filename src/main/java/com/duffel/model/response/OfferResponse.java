@@ -3,43 +3,37 @@ package com.duffel.model.response;
 import com.duffel.model.Data;
 import com.duffel.model.Passenger;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 import java.util.List;
 
+@EqualsAndHashCode(callSuper = true)
+@Getter
+@ToString
 public class OfferResponse extends Data<OfferResponse> {
 
     @JsonProperty("id")
-    public String id;
+    private String id;
 
     @JsonProperty("cabin_class")
-    public String cabinClass;
+    private String cabinClass;
 
     @JsonProperty("created_at")
-    public LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @JsonProperty("live_mode")
-    public boolean liveMode;
+    private boolean liveMode;
 
     @JsonProperty("offers")
-    public List<Offer> offers;
+    private List<Offer> offers;
 
     @JsonProperty("passengers")
-    public List<Passenger> passengers;
+    private List<Passenger> passengers;
 
     @JsonProperty("slices")
-    public List<Slice> slices;
+    private List<Slice> slices;
 
-    @Override
-    public String toString() {
-        return "OfferResponse{" +
-                "id='" + id + '\'' +
-                ", cabinClass='" + cabinClass + '\'' +
-                ", createdAt=" + createdAt +
-                ", liveMode=" + liveMode +
-                ", offers=" + offers +
-                ", passengers=" + passengers +
-                ", slices=" + slices +
-                '}';
-    }
 }

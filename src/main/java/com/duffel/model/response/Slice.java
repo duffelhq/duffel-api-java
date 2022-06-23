@@ -3,38 +3,33 @@ package com.duffel.model.response;
 import com.duffel.model.Location;
 import com.duffel.model.LocationType;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.ToString;
 
 import java.time.LocalDateTime;
 
+@EqualsAndHashCode
+@Getter
+@ToString
 public class Slice {
 
     @JsonProperty("created_at")
-    public LocalDateTime createdAt;
+    private LocalDateTime createdAt;
 
     @JsonProperty("origin")
-    public Location origin;
+    private Location origin;
 
     @JsonProperty("origin_type")
-    public LocationType originType;
+    private LocationType originType;
 
     @JsonProperty("destination")
-    public Location destination;
+    private Location destination;
 
     @JsonProperty("destination_type")
-    public LocationType destinationType;
+    private LocationType destinationType;
 
     @JsonProperty("departure_date")
-    public String departureDate;
+    private String departureDate;
 
-    @Override
-    public String toString() {
-        return "Slice{" +
-                "createdAt=" + createdAt +
-                ", origin=" + origin +
-                ", originType=" + originType +
-                ", destination=" + destination +
-                ", destinationType=" + destinationType +
-                ", departureDate=" + departureDate +
-                '}';
-    }
 }
