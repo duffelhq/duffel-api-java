@@ -1,16 +1,20 @@
 package com.duffel;
 
+import com.duffel.model.OrderCollection;
 import com.duffel.model.OrderType;
 import com.duffel.model.PassengerType;
 import com.duffel.model.request.OrderPassenger;
 import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.response.Order;
+import com.duffel.service.OrderService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
+import org.mockserver.model.Parameter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -56,6 +60,39 @@ class OrderTest {
     }
 
     @Test
+    void page(MockServerClient mockClient) {
+        mockClient.when(request().withMethod("GET").withPath("/air/orders").withQueryStringParameter(Parameter.param("limit", "10")))
+                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_page_unfiltered.json")));
+        mockClient.when(request().withMethod("GET").withPath("/air/orders")
+                        .withQueryStringParameter(Parameter.param("limit", "15"))
+                        .withQueryStringParameter(Parameter.param("before", "g3QAAAACZAACaWRtAAAAGm9yZF8wMDAwQUtoQVpuaGZVek1NOG92U2EwZAALaW5zZXJ0ZWRfYXR0AAAADWQACl9fc3RydWN0X19kAA9FbGl4aXIuRGF0ZVRpbWVkAAhjYWxlbmRhcmQAE0VsaXhpci5DYWxlbmRhci5JU09kAANkYXlhFGQABGhvdXJhF2QAC21pY3Jvc2Vjb25kaAJiAAVttmEGZAAGbWludXRlYSNkAAVtb250aGEGZAAGc2Vjb25kYTZkAApzdGRfb2Zmc2V0YQBkAAl0aW1lX3pvbmVtAAAAB0V0Yy9VVENkAAp1dGNfb2Zmc2V0YQBkAAR5ZWFyYgAAB-ZkAAl6b25lX2FiYnJtAAAAA1VUQw=="))
+                        .withQueryStringParameter(Parameter.param("awaiting_payment", "false"))
+                        .withQueryStringParameter(Parameter.param("sort", "total_amount"))
+                        .withQueryStringParameter(Parameter.param("departing_at[after]", "2022-01-01T10:00:00"))
+                        .withQueryStringParameter(Parameter.param("passenger_name[]", "Steve"))
+                        .withQueryStringParameter(Parameter.param("requires_action", "false"))
+                ).respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_page_filtered.json")));
+
+        DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
+
+        OrderCollection orderCollection = client.orderService.getPage(null, null, 10);
+        assertEquals(10, orderCollection.getData().size());
+        assertEquals("ord_0000AKmtVaxcYsF63cKPDd", orderCollection.getData().get(0).getId());
+        assertEquals("BCN", orderCollection.getData().get(0).getSlices().get(0).getOrigin().getIataCode());
+        assertEquals("LYS", orderCollection.getData().get(0).getSlices().get(0).getDestination().getIataCode());
+
+        OrderCollection filteredOrderCollection = client.orderService.getPage(
+                "g3QAAAACZAACaWRtAAAAGm9yZF8wMDAwQUtoQVpuaGZVek1NOG92U2EwZAALaW5zZXJ0ZWRfYXR0AAAADWQACl9fc3RydWN0X19kAA9FbGl4aXIuRGF0ZVRpbWVkAAhjYWxlbmRhcmQAE0VsaXhpci5DYWxlbmRhci5JU09kAANkYXlhFGQABGhvdXJhF2QAC21pY3Jvc2Vjb25kaAJiAAVttmEGZAAGbWludXRlYSNkAAVtb250aGEGZAAGc2Vjb25kYTZkAApzdGRfb2Zmc2V0YQBkAAl0aW1lX3pvbmVtAAAAB0V0Yy9VVENkAAp1dGNfb2Zmc2V0YQBkAAR5ZWFyYgAAB-ZkAAl6b25lX2FiYnJtAAAAA1VUQw==",
+                null, 15, null, false, OrderService.SortOptions.total_amount, OrderService.SortDirection.ascending,
+                null, null, null, new OrderService.DateTimeFilter(LocalDateTime.parse("2022-01-01T10:00:00"), OrderService.BeforeAfter.after),
+                null, null, List.of("Steve"), false);
+        assertEquals(2, filteredOrderCollection.getData().size());
+        assertEquals("ord_0000AKmtVaxcYsF63cKPDd", filteredOrderCollection.getData().get(0).getId());
+        assertEquals("BCN", filteredOrderCollection.getData().get(0).getSlices().get(0).getOrigin().getIataCode());
+        assertEquals("LYS", filteredOrderCollection.getData().get(0).getSlices().get(0).getDestination().getIataCode());
+    }
+
+    @Test
     void getById(MockServerClient mockClient) {
         mockClient.when(request().withMethod("GET").withPath("/air/orders/ord_0000AKLlRADDc3YBx6X5c0"))
                 .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order.json")));
@@ -74,7 +111,7 @@ class OrderTest {
     void update(MockServerClient mockClient) {
         mockClient.when(request().withMethod("PATCH").withPath("/air/orders/ord_0000AKY0JiKODHllshwjaq"))
                 .respond(response().withStatusCode(200)
-                .withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_update.json")));
+                        .withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_update.json")));
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 

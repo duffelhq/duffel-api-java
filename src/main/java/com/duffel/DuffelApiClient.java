@@ -10,7 +10,7 @@ public class DuffelApiClient {
 
     private static final Logger LOG = LogManager.getLogger();
 
-    public static final String DUFFEL_URL = "https://app.duffel.com";
+    public static final String DUFFEL_URL = "https://api.duffel.com";
     public static final String DUFFEL_TOKEN_URL = DUFFEL_URL + "/duffel/tokens";
     public static final String API_VERSION = "beta";
     public static final String USER_AGENT = "Duffel/beta duffel_api_java";
@@ -31,6 +31,10 @@ public class DuffelApiClient {
         if (apiKey == null || apiKey.isEmpty()) {
             LOG.error("Failed to provide API key, please generate one at " + DUFFEL_TOKEN_URL);
             throw new SdkException("Failed to provide API key, please generate one at " + DUFFEL_TOKEN_URL);
+        } else if (apiKey.startsWith("duffel_test_")) {
+            LOG.info("🚧 Using test API key");
+        } else {
+            LOG.info("⚡️ Using live API key");
         }
 
         ApiClient apiClient = new ApiClient(apiKey, endpoint);

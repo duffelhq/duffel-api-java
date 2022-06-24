@@ -20,6 +20,12 @@ import java.util.Map;
 public class Order extends Data<Order> {
 
     ///  <summary>
+    ///  The airline-initiated changes for this Order
+    ///  </summary>
+    @JsonProperty("airline_initiated_changes")
+    private List<AirlineInitiatedChange> airlineInitiatedChanges;
+
+    ///  <summary>
     ///  The base price of the order for all flights and services booked, excluding taxes
     ///  </summary>
     ///  <example>"30.20"</example>
