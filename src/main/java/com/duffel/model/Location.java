@@ -5,16 +5,18 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-@EqualsAndHashCode
+import java.util.List;
+
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class Location {
+public class Location  extends Data<Location> {
 
     ///  <summary>
     ///  The name of the city (or cities separated by a /) where the airport is located
     ///  </summary>
     @JsonProperty("city_name")
-    private String city_name;
+    private String cityName;
 
     ///  <summary>
     ///  The 3-letter IATA code for the city where the place is located. Only present for airports which are registered
@@ -78,5 +80,49 @@ public class Location {
     ///  </summary>
     @JsonProperty("type")
     private LocationType type;
+
+    ///  <summary>
+    ///  The metropolitan area where the airport is located. Only present for airports which are registered with IATA
+    ///  as belonging to a metropolitan area.
+    ///  </summary>
+    @JsonProperty("city")
+    private CityDetail city;
+
+    ///  <summary>
+    ///  The airports associated to a city. This will only be provided where the type is city.
+    ///  </summary>
+    @JsonProperty("airports")
+    private List<Location> airports;
+
+    @EqualsAndHashCode
+    @Getter
+    @ToString
+    public static class CityDetail {
+
+        ///  <summary>
+        ///  The three-character IATA code for the city
+        ///  </summary>
+        @JsonProperty("iata_code")
+        private String iataCode;
+
+        ///  <summary>
+        ///  The ISO 3166-1 alpha-2 code for the country where the city is located
+        ///  </summary>
+        @JsonProperty("iata_country_code")
+        private String iataCountryCode;
+
+        ///  <summary>
+        ///  Duffel's unique identifier for the city
+        ///  </summary>
+        @JsonProperty("id")
+        private String id;
+
+        ///  <summary>
+        ///  The name of the city
+        ///  </summary>
+        @JsonProperty("name")
+        private String name;
+
+    }
 
 }

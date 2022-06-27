@@ -1,0 +1,14 @@
+{
+  "data": {
+    "city": null,
+    "city_name": "Stuttgart",
+    "iata_code": "STR",
+    "iata_country_code": "DE",
+    "icao_code": "EDDS",
+    "id": "arp_str_de",
+    "latitude": 48.688717,
+    "longitude": 9.204025,
+    "name": "Stuttgart Airport",
+    "time_zone": "Europe/Berlin"
+  }
+}

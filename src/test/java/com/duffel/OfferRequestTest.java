@@ -1,5 +1,3 @@
-
-
 package com.duffel;
 
 import com.duffel.model.CabinClass;

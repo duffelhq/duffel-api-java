@@ -1,4 +1,3 @@
-
 package com.duffel;
 
 import com.duffel.model.Airline;

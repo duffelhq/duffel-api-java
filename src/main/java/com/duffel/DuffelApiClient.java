@@ -17,8 +17,8 @@ public class DuffelApiClient {
     public static final Integer DEFAULT_PAGE_LIMIT = 50;
 
     public final AircraftService aircraftService;
-
     public final AirlineService airlineService;
+    public final AirportService airportService;
     public final OfferService offerService;
     public final OfferRequestService offerRequestService;
     public final OrderService orderService;
@@ -41,6 +41,7 @@ public class DuffelApiClient {
 
         aircraftService = new AircraftService(apiClient);
         airlineService = new AirlineService(apiClient);
+        airportService = new AirportService(apiClient);
         offerService = new OfferService(apiClient);
         offerRequestService = new OfferRequestService(apiClient);
         orderService = new OrderService(apiClient);
