@@ -1,6 +1,6 @@
 package com.duffel.model;
 
-import com.duffel.model.response.order.Slice;
+import com.duffel.model.response.order.OrderSlice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -34,7 +34,7 @@ public class AirlineInitiatedChange {
     ///  as a result of the changes.
     ///  </summary>
     @JsonProperty("added")
-    private List<Slice> added;
+    private List<OrderSlice> added;
 
     ///  <summary>
     ///  The available actions you can take on this Airline-Initiated Change through our API.
@@ -69,7 +69,7 @@ public class AirlineInitiatedChange {
     ///  List of slices and segments as they were before the change.
     ///  </summary>
     @JsonProperty("removed")
-    private List<Slice> removed;
+    private List<OrderSlice> removed;
 
     ///  <summary>
     ///  The associated Travel Agent Ticket, if any, for this Airline-Initiated Change. This value will be present for
