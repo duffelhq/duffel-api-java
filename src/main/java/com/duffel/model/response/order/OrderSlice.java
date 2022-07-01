@@ -8,7 +8,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class Slice extends com.duffel.model.response.Slice {
+public class OrderSlice extends com.duffel.model.response.Slice {
 
     ///  <summary>
     ///  Whether this slice can be changed. This can only be true for paid orders.

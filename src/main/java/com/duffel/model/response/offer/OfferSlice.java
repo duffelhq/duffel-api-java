@@ -8,7 +8,7 @@ import lombok.ToString;
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class Slice extends com.duffel.model.response.Slice {
+public class OfferSlice extends com.duffel.model.response.Slice {
 
     ///  <summary>
     ///  The name of the fare brand associated with this slice. A fare brand specifies the travel conditions you get on

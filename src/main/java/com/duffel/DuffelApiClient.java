@@ -16,6 +16,8 @@ public class DuffelApiClient {
     public static final String USER_AGENT = "Duffel/beta duffel_api_java";
     public static final Integer DEFAULT_PAGE_LIMIT = 50;
 
+    private static final String NO_API_KEY_MESSAGE = "Failed to provide API key, please generate one at " + DUFFEL_TOKEN_URL;
+
     public final AircraftService aircraftService;
     public final AirlineService airlineService;
     public final AirportService airportService;
@@ -29,8 +31,8 @@ public class DuffelApiClient {
 
     public DuffelApiClient(String apiKey, String endpoint) {
         if (apiKey == null || apiKey.isEmpty()) {
-            LOG.error("Failed to provide API key, please generate one at " + DUFFEL_TOKEN_URL);
-            throw new SdkException("Failed to provide API key, please generate one at " + DUFFEL_TOKEN_URL);
+            LOG.error(NO_API_KEY_MESSAGE);
+            throw new SdkException(NO_API_KEY_MESSAGE);
         } else if (apiKey.startsWith("duffel_test_")) {
             LOG.info("🚧 Using test API key");
         } else {

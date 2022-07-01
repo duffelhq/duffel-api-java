@@ -4,7 +4,7 @@ import com.duffel.model.*;
 import com.duffel.model.response.order.Passenger;
 import com.duffel.model.response.order.PaymentStatus;
 import com.duffel.model.response.order.Service;
-import com.duffel.model.response.order.Slice;
+import com.duffel.model.response.order.OrderSlice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -134,7 +134,7 @@ public class Order extends Data<Order> {
     ///  whereas return trips will need two.
     ///  </summary>
     @JsonProperty("slices")
-    private List<Slice> slices;
+    private List<OrderSlice> slices;
 
     ///  <summary>
     ///  Airlines are always the source of truth for orders. The orders returned in the Duffel API are a view of those

@@ -13,7 +13,8 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
-import java.net.*;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -75,10 +76,17 @@ public class ApiClient {
         this.headers = new HashMap<>();
         addAuthorizationHeader(apiKey);
         addBasicHeaders();
-        objectMapper = new ObjectMapper();
+
+        this.objectMapper = setupObjectMapper();
+    }
+
+    private ObjectMapper setupObjectMapper() {
+        ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.findAndRegisterModules();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        return objectMapper;
     }
 
     private HttpRequest prepareRequest(String endpoint, String httpMethod, String requestBody) throws IOException, URISyntaxException {
