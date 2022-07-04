@@ -7,6 +7,8 @@ import com.duffel.model.request.OrderPassenger;
 import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.response.Order;
+import com.duffel.model.response.order.metadata.BaggageMetadata;
+import com.duffel.model.response.order.metadata.SeatMetadata;
 import com.duffel.service.OrderService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -55,8 +57,8 @@ class OrderTest {
 
         assertEquals(1, order.getSlices().size());
         assertEquals(1, order.getPassengers().size());
-        assertEquals(707.75d, order.getTotalAmount());
-        assertEquals("Q2UABJ", order.getBookingReference());
+        assertEquals(193.06d, order.getTotalAmount());
+        assertEquals("IXK4SC", order.getBookingReference());
     }
 
     @Test
@@ -94,17 +96,20 @@ class OrderTest {
 
     @Test
     void getById(MockServerClient mockClient) {
-        mockClient.when(request().withMethod("GET").withPath("/air/orders/ord_0000AKLlRADDc3YBx6X5c0"))
+        mockClient.when(request().withMethod("GET").withPath("/air/orders/ord_0000AL3E9lRtT7XMqrEHp8"))
                 .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order.json")));
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        Order order = client.orderService.getById("ord_0000AKLlRADDc3YBx6X5c0");
+        Order order = client.orderService.getById("ord_0000AL3E9lRtT7XMqrEHp8");
 
         assertEquals(1, order.getSlices().size());
         assertEquals(1, order.getPassengers().size());
-        assertEquals(707.75d, order.getTotalAmount());
-        assertEquals("Q2UABJ", order.getBookingReference());
+        assertEquals(193.06d, order.getTotalAmount());
+        assertEquals("IXK4SC", order.getBookingReference());
+        assertEquals(2, order.getServices().size());
+        assertEquals(23, ((BaggageMetadata) order.getServices().get(0).getMetadata()).getMaximumWeightKg());
+        assertEquals("32C", ((SeatMetadata) order.getServices().get(1).getMetadata()).getDesignator());
     }
 
     @Test
@@ -114,7 +119,6 @@ class OrderTest {
                         .withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_update.json")));
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
-
 
         OrderUpdate update = new OrderUpdate();
         update.setMetadata(Map.of("myKey", "myValue"));
