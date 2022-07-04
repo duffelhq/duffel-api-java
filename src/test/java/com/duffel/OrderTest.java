@@ -85,9 +85,11 @@ class OrderTest {
 
         OrderCollection filteredOrderCollection = client.orderService.getPage(
                 "g3QAAAACZAACaWRtAAAAGm9yZF8wMDAwQUtoQVpuaGZVek1NOG92U2EwZAALaW5zZXJ0ZWRfYXR0AAAADWQACl9fc3RydWN0X19kAA9FbGl4aXIuRGF0ZVRpbWVkAAhjYWxlbmRhcmQAE0VsaXhpci5DYWxlbmRhci5JU09kAANkYXlhFGQABGhvdXJhF2QAC21pY3Jvc2Vjb25kaAJiAAVttmEGZAAGbWludXRlYSNkAAVtb250aGEGZAAGc2Vjb25kYTZkAApzdGRfb2Zmc2V0YQBkAAl0aW1lX3pvbmVtAAAAB0V0Yy9VVENkAAp1dGNfb2Zmc2V0YQBkAAR5ZWFyYgAAB-ZkAAl6b25lX2FiYnJtAAAAA1VUQw==",
-                null, 15, null, false, OrderService.SortOptions.total_amount, OrderService.SortDirection.ascending,
-                null, null, null, new OrderService.DateTimeFilter(LocalDateTime.parse("2022-01-01T10:00:00"), OrderService.BeforeAfter.after),
-                null, null, List.of("Steve"), false);
+                null, 15, null, false,
+                new OrderService.SortOptions(OrderService.SortBy.total_amount, OrderService.SortDirection.ascending),
+                null, null, null,
+                new OrderService.DateTimeFilter(new OrderService.AfterBeforeDateTime(LocalDateTime.parse("2022-01-01T10:00:00"), LocalDateTime.parse("2022-01-01T12:00:00")), null, null),
+                List.of("Steve"), false);
         assertEquals(2, filteredOrderCollection.getData().size());
         assertEquals("ord_0000AKmtVaxcYsF63cKPDd", filteredOrderCollection.getData().get(0).getId());
         assertEquals("BCN", filteredOrderCollection.getData().get(0).getSlices().get(0).getOrigin().getIataCode());

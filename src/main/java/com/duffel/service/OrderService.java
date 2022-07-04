@@ -6,6 +6,8 @@ import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.request.PostData;
 import com.duffel.model.response.Order;
 import com.duffel.net.ApiClient;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -36,50 +38,66 @@ public class OrderService extends PostResource<Order, OrderCollection> {
     }
 
     public OrderCollection getPage(String before, String after, Integer limit, String bookingReference, Boolean awaitingPayment,
-                                   SortOptions sort, SortDirection sortDirection, List<String> ownerId,
+                                   SortOptions sortOptions, List<String> ownerId,
                                    List<String> originId, List<String> destinationId,
-                                   DateTimeFilter departingAt, DateTimeFilter arrivingAt, DateTimeFilter createdAt,
+                                   DateTimeFilter dateTimeFilter,
                                    List<String> passengerName, Boolean requiresAirlineInitiatedChangeAction) {
         String bookingReferenceParam = (bookingReference == null || bookingReference.isEmpty()) ? "" : "&booking_reference=" + bookingReference;
         String awaitingPaymentParam = (awaitingPayment == null) ? "" : "&awaiting_payment=" + awaitingPayment;
-        String sortParam = (sort == null) ? "" : "&sort=" + ((sortDirection == SortDirection.descending) ? "-" : "") + sort;
+        String sortParam = (sortOptions == null) ? "" : sortOptions.getSortQueryString();
         String ownerIdParam = (ownerId == null || ownerId.isEmpty()) ? "" : "&owner_id[]=" + String.join(",", ownerId);
         String originIdParam = (originId == null || originId.isEmpty()) ? "" : "&origin_id[]=" + String.join(",", originId);
-        String destinationIdParam = (originId == null || destinationId.isEmpty()) ? "" : "&destination_id[]=" + String.join(",", destinationId);
-        String departingAtParam = (departingAt == null) ? "" : "&departing_at" + departingAt.getParamString();
-        String arrivingAtParam = (arrivingAt == null) ? "" : "&arriving_at" + arrivingAt.getParamString();
-        String createdAtParam = (createdAt == null) ? "" : "&created_at" + createdAt.getParamString();
+        String destinationIdParam = (destinationId == null || destinationId.isEmpty()) ? "" : "&destination_id[]=" + String.join(",", destinationId);
+        String dateTimeFilterParam = (dateTimeFilter == null) ? "" : dateTimeFilter.getDateTimeQueryString();
         String passengerNameParam = (passengerName == null || passengerName.isEmpty()) ? "" : "&passenger_name[]=" + String.join(",", passengerName);
         String requiresActionParam = (requiresAirlineInitiatedChangeAction == null) ? "" : "&requires_action=" + requiresAirlineInitiatedChangeAction;
 
         String selectorParams = bookingReferenceParam + awaitingPaymentParam + sortParam + ownerIdParam + originIdParam + destinationIdParam
-            + departingAtParam + arrivingAtParam + createdAtParam + passengerNameParam + requiresActionParam;
+            + dateTimeFilterParam + passengerNameParam + requiresActionParam;
 
         return super.getPage(OrderCollection.class, selectorParams, before, after, limit);
     }
 
+    @Getter
+    @AllArgsConstructor
     public static class DateTimeFilter {
+        private AfterBeforeDateTime departingAt;
+        private AfterBeforeDateTime arrivingAt;
+        private AfterBeforeDateTime createdAt;
 
-        private final LocalDateTime time;
-        private final BeforeAfter beforeAfter;
-
-        public DateTimeFilter(LocalDateTime time, BeforeAfter beforeAfter) {
-            this.time = time;
-            this.beforeAfter = beforeAfter;
-        }
-
-        public String getParamString() {
-            return "[" + beforeAfter + "]=" + time.format(DateTimeFormatter.ISO_DATE_TIME);
+        public String getDateTimeQueryString() {
+            String departingAtParam = (departingAt == null) ? "" : departingAt.getBeforeAfterQueryString( "departing_at");
+            String arrivingAtParam = (arrivingAt == null) ? "" : arrivingAt.getBeforeAfterQueryString("arriving_at");
+            String createdAtParam = (createdAt == null) ? "" : createdAt.getBeforeAfterQueryString("created_at");
+            return departingAtParam + arrivingAtParam + createdAtParam;
         }
     }
 
-    public enum BeforeAfter {
+    @Getter
+    @AllArgsConstructor
+    public static class AfterBeforeDateTime {
+        private final LocalDateTime after;
+        private final LocalDateTime before;
 
-        before,
-        after
+        public String getBeforeAfterQueryString(String field) {
+            String afterParam = after == null ? "" : "&" + field + "[after]=" + after.format(DateTimeFormatter.ISO_DATE_TIME);
+            String beforeParam = before == null ? "" : "&" + field + "[before]=" + before.format(DateTimeFormatter.ISO_DATE_TIME);
+            return afterParam + beforeParam;
+        }
     }
 
-    public enum SortOptions {
+    @Getter
+    @AllArgsConstructor
+    public static class SortOptions {
+        private final SortBy sortby;
+        private final SortDirection direction;
+
+        public String getSortQueryString() {
+            return "&sort=" + ((direction == SortDirection.descending) ? "-" : "") + sortby;
+        }
+    }
+
+    public enum SortBy {
         payment_required_by,
         total_amount,
         created_at,
