@@ -22,15 +22,19 @@ public class Resource<T, U> {
         return apiClient.get(endpoint + "/" + id, clazz);
     }
 
+    protected T getById(Class<T> clazz, String id, String query) {
+        return apiClient.get(endpoint + "/" + id + query, clazz);
+    }
+
     protected U getPage(Class<U> clazz, String before, String after, Integer limit) {
         return getPage(clazz, "", before, after, limit);
     }
 
-    protected U getPage(Class<U> clazz, String selector, String before, String after, Integer limit) {
+    protected U getPage(Class<U> clazz, String query, String before, String after, Integer limit) {
         String beforeParam = (before == null || before.isEmpty()) ? "" : "&before=" + before;
         String afterParam = (after == null || after.isEmpty()) ? "" : "&after=" + after;
         Integer limitParam = limit == null ? DuffelApiClient.DEFAULT_PAGE_LIMIT : limit;
-        String queryParam = "?limit=" + limitParam + beforeParam + afterParam + selector;
+        String queryParam = "?limit=" + limitParam + beforeParam + afterParam + query;
         return apiClient.get(endpoint + queryParam, clazz);
     }
 }
