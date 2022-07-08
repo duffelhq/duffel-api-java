@@ -1,20 +1,12 @@
 package com.duffel.model.response.seatmap.element;
 
-import com.duffel.model.response.seatmap.ElementType;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class GenericElement implements Element {
-
-    ///  <summary>
-    ///  The type of this element
-    ///  </summary>
-    @JsonProperty("type")
-    private ElementType type;
+public class GenericElement extends Element {
 
 }

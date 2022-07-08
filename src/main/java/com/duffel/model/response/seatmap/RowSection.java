@@ -24,7 +24,8 @@ public class RowSection {
     @JsonTypeInfo(
             use = JsonTypeInfo.Id.NAME,
             property = "type",
-            defaultImpl = GenericElement.class
+            defaultImpl = GenericElement.class,
+            visible = true
     )
     @JsonSubTypes({
             @JsonSubTypes.Type(value = SeatElement.class, name = "seat")

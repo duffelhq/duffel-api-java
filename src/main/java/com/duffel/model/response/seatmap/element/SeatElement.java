@@ -1,6 +1,5 @@
 package com.duffel.model.response.seatmap.element;
 
-import com.duffel.model.response.seatmap.ElementType;
 import com.duffel.model.response.seatmap.SeatService;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
@@ -9,16 +8,10 @@ import lombok.ToString;
 
 import java.util.List;
 
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class SeatElement implements Element {
-
-    ///  <summary>
-    ///  The type of this element
-    ///  </summary>
-    @JsonProperty("type")
-    private ElementType type;
+public class SeatElement extends Element {
 
     ///  <summary>
     ///  Seats are considered a special kind of service. There will be at most one service per seat per passenger. A
