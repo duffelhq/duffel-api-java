@@ -21,6 +21,9 @@ public class Offer extends Data<Offer> {
     @JsonProperty("allowed_passenger_identity_document_types")
     private List<String> allowedPassengerIdentityDocumentTypes;
 
+    @JsonProperty("available_services")
+    private List<Service> availableServices;
+
     @JsonProperty("conditions")
     private Conditions conditions;
 

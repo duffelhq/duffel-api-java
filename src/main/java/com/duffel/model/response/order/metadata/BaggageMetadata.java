@@ -1,6 +1,6 @@
 package com.duffel.model.response.order.metadata;
 
-import com.duffel.model.response.offer.BaggageType;
+import com.duffel.model.response.BaggageType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

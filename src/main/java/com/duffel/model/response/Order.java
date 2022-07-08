@@ -3,7 +3,6 @@ package com.duffel.model.response;
 import com.duffel.model.*;
 import com.duffel.model.response.order.Passenger;
 import com.duffel.model.response.order.PaymentStatus;
-import com.duffel.model.response.order.Service;
 import com.duffel.model.response.order.OrderSlice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;

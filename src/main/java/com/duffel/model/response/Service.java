@@ -1,4 +1,4 @@
-package com.duffel.model.response.order;
+package com.duffel.model.response;
 
 import com.duffel.model.response.order.metadata.BaggageMetadata;
 import com.duffel.model.response.order.metadata.Metadata;
