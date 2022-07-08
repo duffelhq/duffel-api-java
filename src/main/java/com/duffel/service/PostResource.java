@@ -3,7 +3,7 @@ package com.duffel.service;
 import com.duffel.model.request.PostData;
 import com.duffel.net.ApiClient;
 
-public class PostResource<T> extends Resource<T, T> {
+public class PostResource<T, U> extends Resource<T, U> {
 
     protected PostResource(ApiClient apiClient, String endpoint) {
         super(apiClient, endpoint);
@@ -13,4 +13,7 @@ public class PostResource<T> extends Resource<T, T> {
         return apiClient.post(endpoint, clazz, request);
     }
 
+    protected T update(Class<T> clazz, String id, PostData request) {
+        return apiClient.patch(endpoint + "/" + id, clazz, request);
+    }
 }

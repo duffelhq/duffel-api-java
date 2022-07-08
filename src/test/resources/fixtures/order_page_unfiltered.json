@@ -1,0 +1,2348 @@
+{
+  "data": [
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "76.10",
+      "base_currency": "GBP",
+      "booking_reference": "K3DZ9M6",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "42.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-23T17:52:55.758318Z",
+      "documents": [],
+      "id": "ord_0000AKmtVaxcYsF63cKPDd",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "U2",
+        "id": "arl_00009VME7DC2bj9quHXKop",
+        "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U2.svg",
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U2.svg",
+        "name": "easyJet"
+      },
+      "passengers": [
+        {
+          "born_on": "1980-12-31",
+          "family_name": "Domin",
+          "gender": "m",
+          "given_name": "Steve",
+          "id": "pas_0000AKmtOZ68uZ0BXQAN73",
+          "infant_passenger_id": null,
+          "title": "mr",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": null
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LYS",
+              "iata_code": "LYS",
+              "iata_country_code": "FR",
+              "icao_code": null,
+              "id": "cit_lys_fr",
+              "latitude": null,
+              "longitude": null,
+              "name": "Lyon",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "Lyon",
+            "iata_city_code": "LYS",
+            "iata_code": "LYS",
+            "iata_country_code": "FR",
+            "icao_code": "LFLL",
+            "id": "arp_lys_fr",
+            "latitude": 45.723723,
+            "longitude": 5.082626,
+            "name": "Lyon-Saint-Exupéry Airport",
+            "time_zone": "Europe/Paris",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT1H30M",
+          "id": "sli_0000AKmtVb683F32U0JCTh",
+          "origin": {
+            "city": null,
+            "city_name": "Barcelona",
+            "iata_city_code": "BCN",
+            "iata_code": "BCN",
+            "iata_country_code": "ES",
+            "icao_code": "LEBL",
+            "id": "arp_bcn_es",
+            "latitude": 41.297273,
+            "longitude": 2.080877,
+            "name": "Barcelona–El Prat Josep Tarradellas Airport",
+            "time_zone": "Europe/Madrid",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": null,
+              "arrival_datetime": "2022-09-16T18:40:00",
+              "arrival_terminal": null,
+              "arriving_at": "2022-09-16T18:40:00",
+              "departing_at": "2022-09-16T17:10:00",
+              "departure_datetime": "2022-09-16T17:10:00",
+              "departure_terminal": null,
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LYS",
+                  "iata_code": "LYS",
+                  "iata_country_code": "FR",
+                  "icao_code": null,
+                  "id": "cit_lys_fr",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Lyon",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Lyon",
+                "iata_city_code": "LYS",
+                "iata_code": "LYS",
+                "iata_country_code": "FR",
+                "icao_code": "LFLL",
+                "id": "arp_lys_fr",
+                "latitude": 45.723723,
+                "longitude": 5.082626,
+                "name": "Lyon-Saint-Exupéry Airport",
+                "time_zone": "Europe/Paris",
+                "type": "airport"
+              },
+              "destination_terminal": null,
+              "distance": null,
+              "duration": "PT1H30M",
+              "id": "seg_0000AKmtVaxyXYWg4iUglm",
+              "marketing_carrier": {
+                "iata_code": "U2",
+                "id": "arl_00009VME7DC2bj9quHXKop",
+                "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U2.svg",
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U2.svg",
+                "name": "easyJet"
+              },
+              "marketing_carrier_flight_number": "4418",
+              "operating_carrier": {
+                "iata_code": "U2",
+                "id": "arl_00009VME7DC2bj9quHXKop",
+                "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U2.svg",
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U2.svg",
+                "name": "easyJet"
+              },
+              "operating_carrier_flight_number": "4418",
+              "origin": {
+                "city": null,
+                "city_name": "Barcelona",
+                "iata_city_code": "BCN",
+                "iata_code": "BCN",
+                "iata_country_code": "ES",
+                "icao_code": "LEBL",
+                "id": "arp_bcn_es",
+                "latitude": 41.297273,
+                "longitude": 2.080877,
+                "name": "Barcelona–El Prat Josep Tarradellas Airport",
+                "time_zone": "Europe/Madrid",
+                "type": "airport"
+              },
+              "origin_terminal": null,
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Inclusive",
+                  "passenger_id": "pas_0000AKmtOZ68uZ0BXQAN73"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-23T17:52:57Z",
+      "tax_amount": "0.00",
+      "tax_currency": "GBP",
+      "total_amount": "76.10",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "687.73",
+      "base_currency": "GBP",
+      "booking_reference": "HRQHFZ",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "140.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-23T13:57:17.076317Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKmYSqNU1UMorYEf7R"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        }
+      ],
+      "id": "ord_0000AKmYTitYccS5xszbfc",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1897-07-24",
+          "family_name": "Earhart",
+          "gender": "f",
+          "given_name": "Amelia",
+          "id": "pas_0000AKmYSqNU1UMorYEf7R",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": {
+              "allowed": true,
+              "penalty_amount": "140.00",
+              "penalty_currency": "GBP"
+            }
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "NYC",
+              "iata_code": "NYC",
+              "iata_country_code": "US",
+              "icao_code": null,
+              "id": "cit_nyc_us",
+              "latitude": null,
+              "longitude": null,
+              "name": "New York",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "New York",
+            "iata_city_code": "NYC",
+            "iata_code": "JFK",
+            "iata_country_code": "US",
+            "icao_code": "KJFK",
+            "id": "arp_jfk_us",
+            "latitude": 40.640556,
+            "longitude": -73.778519,
+            "name": "John F. Kennedy International Airport",
+            "time_zone": "America/New_York",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT8H8M",
+          "id": "sli_0000AKmYTitYccS5xszbfd",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2022-12-23T02:08:00",
+              "arrival_terminal": "1",
+              "arriving_at": "2022-12-23T02:08:00",
+              "departing_at": "2022-12-22T23:00:00",
+              "departure_datetime": "2022-12-22T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "NYC",
+                  "iata_code": "NYC",
+                  "iata_country_code": "US",
+                  "icao_code": null,
+                  "id": "cit_nyc_us",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "New York",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "New York",
+                "iata_city_code": "NYC",
+                "iata_code": "JFK",
+                "iata_country_code": "US",
+                "icao_code": "KJFK",
+                "id": "arp_jfk_us",
+                "latitude": 40.640556,
+                "longitude": -73.778519,
+                "name": "John F. Kennedy International Airport",
+                "time_zone": "America/New_York",
+                "type": "airport"
+              },
+              "destination_terminal": "1",
+              "distance": "5666.39351516012",
+              "duration": "PT8H8M",
+              "id": "seg_0000AKmYSqbfAli3ZWrzDk",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "2549",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "2549",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKmYSqNU1UMorYEf7R"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-23T13:57:17Z",
+      "tax_amount": "123.79",
+      "tax_currency": "GBP",
+      "total_amount": "811.52",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "404.00",
+      "base_currency": "GBP",
+      "booking_reference": "3YJDC7",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "60.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": true,
+          "penalty_amount": "60.00",
+          "penalty_currency": "GBP"
+        }
+      },
+      "created_at": "2022-06-21T23:59:59.086535Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEnN4L0PH2j8fYK"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEnN4L0PH2j8fYK"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        }
+      ],
+      "id": "ord_0000AKjHEtJ71JRF3ma1oW",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKjHEnN4L0PH2j8fYK",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": null
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKjHEuhxoOuZP9DOBp",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-07-19T23:44:00",
+              "arrival_terminal": "7",
+              "arriving_at": "2023-07-19T23:44:00",
+              "departing_at": "2023-07-19T23:00:00",
+              "departure_datetime": "2023-07-19T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "7",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKjHEuhxoOuZP9DOBo",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "2664",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "2664",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKjHEnN4L0PH2j8fYK"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-22T00:00:00Z",
+      "tax_amount": "100.00",
+      "tax_currency": "GBP",
+      "total_amount": "504.00",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "288.99",
+      "base_currency": "GBP",
+      "booking_reference": "SKDX5X",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        },
+        "refund_before_departure": {
+          "allowed": true,
+          "penalty_amount": "50.00",
+          "penalty_currency": "GBP"
+        }
+      },
+      "created_at": "2022-06-21T23:59:57.531115Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEcB38W6iIvidQe"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEcB38W6iIvidQe"
+          ],
+          "type": "electronic_miscellaneous_document_associated",
+          "unique_identifier": "2"
+        }
+      ],
+      "id": "ord_0000AKjHEkPRLjWLrDE1Ka",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKjHEcB38W6iIvidQe",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [
+        {
+          "id": "ser_0000AKjHEkPRLjWLrDE1Kb",
+          "metadata": {
+            "designator": "28C",
+            "disclosures": [
+              "Passenger must be an adult"
+            ],
+            "name": null
+          },
+          "passenger_ids": [
+            "pas_0000AKjHEcB38W6iIvidQe"
+          ],
+          "quantity": 1,
+          "segment_ids": [
+            "seg_0000AKjHEcLgUyc8puh80O"
+          ],
+          "total_amount": "20.0",
+          "total_currency": "GBP",
+          "type": "seat"
+        }
+      ],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": {
+              "allowed": false,
+              "penalty_amount": null,
+              "penalty_currency": null
+            }
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKjHEkPnKPnvsJOIsq",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-06-21T23:44:00",
+              "arrival_terminal": "1",
+              "arriving_at": "2023-06-21T23:44:00",
+              "departing_at": "2023-06-21T23:00:00",
+              "departure_datetime": "2023-06-21T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "1",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKjHEcLgUyc8puh80O",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "8739",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "8739",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKjHEcB38W6iIvidQe"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-21T23:59:57Z",
+      "tax_amount": "48.42",
+      "tax_currency": "GBP",
+      "total_amount": "347.41",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "295.14",
+      "base_currency": "GBP",
+      "booking_reference": "XAWUZO",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "60.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": true,
+          "penalty_amount": "60.00",
+          "penalty_currency": "GBP"
+        }
+      },
+      "created_at": "2022-06-21T23:59:54.929414Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEPsnfNWoCBnfg9"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "0123456789"
+        }
+      ],
+      "id": "ord_0000AKjHEVXOdryLjXpf9M",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKjHEPsnfNWoCBnfg9",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": {
+              "allowed": true,
+              "penalty_amount": "60.00",
+              "penalty_currency": "GBP"
+            }
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKjHEVXOdryLjXpf9N",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-06-21T23:44:00",
+              "arrival_terminal": "1",
+              "arriving_at": "2023-06-21T23:44:00",
+              "departing_at": "2023-06-21T23:00:00",
+              "departure_datetime": "2023-06-21T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "1",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKjHEQ3n0WJokGwRo8",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "8739",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "8739",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKjHEPsnfNWoCBnfg9"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-21T23:59:55Z",
+      "tax_amount": "53.12",
+      "tax_currency": "GBP",
+      "total_amount": "358.26",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "50.43",
+      "base_currency": "GBP",
+      "booking_reference": "EHEPQG",
+      "cancelled_at": "2022-06-21T23:59:53.485469Z",
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "10.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-21T23:59:52.993292Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEBLkS9P2jDTVoX"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKjHEBLkS9P2jDTVoX"
+          ],
+          "type": "electronic_miscellaneous_document_associated",
+          "unique_identifier": "2"
+        }
+      ],
+      "id": "ord_0000AKjHEKTAXvgd0q1488",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKjHEBLkS9P2jDTVoX",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [
+        {
+          "id": "ser_0000AKjHEKTAXvgd0q1489",
+          "metadata": {
+            "maximum_depth_cm": null,
+            "maximum_height_cm": null,
+            "maximum_length_cm": null,
+            "maximum_weight_kg": 23,
+            "type": "checked"
+          },
+          "passenger_ids": [
+            "pas_0000AKjHEBLkS9P2jDTVoX"
+          ],
+          "quantity": 1,
+          "segment_ids": [
+            "seg_0000AKjHEBXRkelDJUwr32"
+          ],
+          "total_amount": "20.00",
+          "total_currency": "GBP",
+          "type": "baggage"
+        }
+      ],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": {
+              "allowed": true,
+              "penalty_amount": "10.00",
+              "penalty_currency": "GBP"
+            }
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKjHEKTAXvgd0q148B",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-06-20T23:44:00",
+              "arrival_terminal": "1",
+              "arriving_at": "2023-06-20T23:44:00",
+              "departing_at": "2023-06-20T23:00:00",
+              "departure_datetime": "2023-06-20T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "1",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKjHEBXRkelDJUwr32",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "8739",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "8739",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKjHEBLkS9P2jDTVoX"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-21T23:59:52Z",
+      "tax_amount": "5.48",
+      "tax_currency": "GBP",
+      "total_amount": "65.91",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "274.25",
+      "base_currency": "GBP",
+      "booking_reference": "XNZWSC",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "40.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-21T08:53:53.530240Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKhyLKO21UsTcPA1Pt"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKhyLKO21UsTcPA1Pt"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        }
+      ],
+      "id": "ord_0000AKhyNGk20TUNVKuOoa",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1980-12-31",
+          "family_name": "Domin",
+          "gender": "m",
+          "given_name": "Steve",
+          "id": "pas_0000AKhyLKO21UsTcPA1Pt",
+          "infant_passenger_id": null,
+          "title": "mr",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": null
+          },
+          "destination": {
+            "city": null,
+            "city_name": "Edinburgh",
+            "iata_city_code": "EDI",
+            "iata_code": "EDI",
+            "iata_country_code": "GB",
+            "icao_code": "EGPH",
+            "id": "arp_edi_gb",
+            "latitude": 55.950392,
+            "longitude": -3.366976,
+            "name": "Edinburgh Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT1H21M",
+          "id": "sli_0000AKhyO5Ep05YxshfhOT",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2022-06-25T00:21:00",
+              "arrival_terminal": "7",
+              "arriving_at": "2022-06-25T00:21:00",
+              "departing_at": "2022-06-24T23:00:00",
+              "departure_datetime": "2022-06-24T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": null,
+                "city_name": "Edinburgh",
+                "iata_city_code": "EDI",
+                "iata_code": "EDI",
+                "iata_country_code": "GB",
+                "icao_code": "EGPH",
+                "id": "arp_edi_gb",
+                "latitude": 55.950392,
+                "longitude": -3.366976,
+                "name": "Edinburgh Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "7",
+              "distance": "583.7115139897909",
+              "duration": "PT1H21M",
+              "id": "seg_0000AKhyO5Ep05YxshfhOS",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "0595",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "0595",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKhyLKO21UsTcPA1Pt"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-21T08:54:42Z",
+      "tax_amount": "100.00",
+      "tax_currency": "GBP",
+      "total_amount": "374.25",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "412.35",
+      "base_currency": "GBP",
+      "booking_reference": "IHM7ZC",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "60.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": true,
+          "penalty_amount": "60.00",
+          "penalty_currency": "GBP"
+        }
+      },
+      "created_at": "2022-06-20T23:35:58.834885Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKhAa5u2C7ZS58pv1O"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKhAa5u2C7ZS58pv1O"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        }
+      ],
+      "id": "ord_0000AKhAaDJSdz4L41mp7u",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKhAa5u2C7ZS58pv1O",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": null
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKhAaErsV8ZMOIuUkA",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-07-18T23:44:00",
+              "arrival_terminal": "7",
+              "arriving_at": "2023-07-18T23:44:00",
+              "departing_at": "2023-07-18T23:00:00",
+              "departure_datetime": "2023-07-18T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "7",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKhAaErsV8ZMOIuUk9",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "5689",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "5689",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKhAa5u2C7ZS58pv1O"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-20T23:36:00Z",
+      "tax_amount": "100.00",
+      "tax_currency": "GBP",
+      "total_amount": "512.35",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "451.24",
+      "base_currency": "GBP",
+      "booking_reference": "DUG4FW",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "90.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-20T23:35:56.943448Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKhAZuYMOMhIsjbxD8"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKhAZuYMOMhIsjbxD8"
+          ],
+          "type": "electronic_miscellaneous_document_associated",
+          "unique_identifier": "2"
+        }
+      ],
+      "id": "ord_0000AKhAa2V6qKqnWy9TFo",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKhAZuYMOMhIsjbxD8",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [
+        {
+          "id": "ser_0000AKhAa2V6qKqnWy9TFp",
+          "metadata": {
+            "designator": "28C",
+            "disclosures": [
+              "Passenger must be an adult"
+            ],
+            "name": null
+          },
+          "passenger_ids": [
+            "pas_0000AKhAZuYMOMhIsjbxD8"
+          ],
+          "quantity": 1,
+          "segment_ids": [
+            "seg_0000AKhAZuizkpCjPiaRmq"
+          ],
+          "total_amount": "20.0",
+          "total_currency": "GBP",
+          "type": "seat"
+        }
+      ],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": {
+              "allowed": true,
+              "penalty_amount": "90.00",
+              "penalty_currency": "GBP"
+            }
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKhAa2V6qKqnWy9TFr",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-06-20T23:44:00",
+              "arrival_terminal": "1",
+              "arriving_at": "2023-06-20T23:44:00",
+              "departing_at": "2023-06-20T23:00:00",
+              "departure_datetime": "2023-06-20T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "1",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKhAZuizkpCjPiaRmq",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "6295",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "6295",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKhAZuYMOMhIsjbxD8"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-20T23:35:56Z",
+      "tax_amount": "77.62",
+      "tax_currency": "GBP",
+      "total_amount": "538.86",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "330.93",
+      "base_currency": "GBP",
+      "booking_reference": "6NVE2A",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        },
+        "refund_before_departure": {
+          "allowed": true,
+          "penalty_amount": "70.00",
+          "penalty_currency": "GBP"
+        }
+      },
+      "created_at": "2022-06-20T23:35:54.355766Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKhAZiMDjfrB3bq5cg"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "0123456789"
+        }
+      ],
+      "id": "ord_0000AKhAZnhfUzMM8ovSa0",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1976-01-21",
+          "family_name": "Corde",
+          "gender": "f",
+          "given_name": "Conelia",
+          "id": "pas_0000AKhAZiMDjfrB3bq5cg",
+          "infant_passenger_id": null,
+          "title": "ms",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": {
+              "allowed": false,
+              "penalty_amount": null,
+              "penalty_currency": null
+            }
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "STN",
+            "iata_country_code": "GB",
+            "icao_code": "EGSS",
+            "id": "arp_stn_gb",
+            "latitude": 51.885508,
+            "longitude": 0.236933,
+            "name": "London Stansted Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT44M",
+          "id": "sli_0000AKhAZni1Tfdw9v5k8G",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2023-06-20T23:44:00",
+              "arrival_terminal": "1",
+              "arriving_at": "2023-06-20T23:44:00",
+              "departing_at": "2023-06-20T23:00:00",
+              "departure_datetime": "2023-06-20T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "STN",
+                "iata_country_code": "GB",
+                "icao_code": "EGSS",
+                "id": "arp_stn_gb",
+                "latitude": 51.885508,
+                "longitude": 0.236933,
+                "name": "London Stansted Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "1",
+              "distance": "116.56256355551413",
+              "duration": "PT44M",
+              "id": "seg_0000AKhAZiXv2BDLdtJQrA",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "6295",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "6295",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKhAZiMDjfrB3bq5cg"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-20T23:35:54Z",
+      "tax_amount": "59.57",
+      "tax_currency": "GBP",
+      "total_amount": "400.50",
+      "total_currency": "GBP"
+    }
+  ],
+  "meta": {
+    "after": "g3QAAAACZAACaWRtAAAAGm9yZF8wMDAwQUtoQVpuaGZVek1NOG92U2EwZAALaW5zZXJ0ZWRfYXR0AAAADWQACl9fc3RydWN0X19kAA9FbGl4aXIuRGF0ZVRpbWVkAAhjYWxlbmRhcmQAE0VsaXhpci5DYWxlbmRhci5JU09kAANkYXlhFGQABGhvdXJhF2QAC21pY3Jvc2Vjb25kaAJiAAVttmEGZAAGbWludXRlYSNkAAVtb250aGEGZAAGc2Vjb25kYTZkAApzdGRfb2Zmc2V0YQBkAAl0aW1lX3pvbmVtAAAAB0V0Yy9VVENkAAp1dGNfb2Zmc2V0YQBkAAR5ZWFyYgAAB-ZkAAl6b25lX2FiYnJtAAAAA1VUQw==",
+    "before": null,
+    "limit": 10
+  }
+}

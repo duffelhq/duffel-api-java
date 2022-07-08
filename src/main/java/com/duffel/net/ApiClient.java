@@ -9,12 +9,20 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
+import java.net.InetSocketAddress;
+import java.net.ProxySelector;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.SecureRandom;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,7 +30,23 @@ public class ApiClient {
 
     private static final Logger logger = LogManager.getLogger(ApiClient.class);
 
-    private static final HttpClient HTTP_CLIENT = HttpClient.newBuilder().build();
+    private static final TrustManager[] trustAllCerts = new TrustManager[]{
+            new X509TrustManager() {
+                public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                    return null;
+                }
+
+                public void checkClientTrusted(
+                        java.security.cert.X509Certificate[] certs, String authType) {
+                }
+
+                public void checkServerTrusted(
+                        java.security.cert.X509Certificate[] certs, String authType) {
+                }
+            }
+    };
+
+    private final HttpClient HTTP_CLIENT;
 
     private static final String APPLICATION_JSON = "application/json";
     private final Map<String, String> headers;
@@ -32,18 +56,39 @@ public class ApiClient {
 
     public enum RequestMethod {
         GET,
+        PATCH,
         POST
     }
 
     public ApiClient(String apiKey, String baseEndpoint) {
+        SSLContext sslContext;
+        try {
+            sslContext = SSLContext.getInstance("TLS");
+            sslContext.init(null, trustAllCerts, new SecureRandom());
+        } catch (NoSuchAlgorithmException | KeyManagementException e) {
+            throw new RuntimeException(e);
+        }
+
+        HTTP_CLIENT = HttpClient.newBuilder()
+//                .proxy(ProxySelector.of(InetSocketAddress.createUnresolved("localhost", 8080)))
+//                .sslContext(sslContext)
+                .build();
+
         this.baseEndpoint = baseEndpoint;
         this.headers = new HashMap<>();
         addAuthorizationHeader(apiKey);
         addBasicHeaders();
-        objectMapper = new ObjectMapper();
+
+        this.objectMapper = setupObjectMapper();
+    }
+
+    private ObjectMapper setupObjectMapper() {
+        ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.findAndRegisterModules();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+
+        return objectMapper;
     }
 
     private HttpRequest prepareRequest(String endpoint, String httpMethod, String requestBody) throws IOException, URISyntaxException {
@@ -73,6 +118,10 @@ public class ApiClient {
 
     public <T, O> T post(String endpoint, Class<T> clazz, O postObject) {
         return executeCall(endpoint, RequestMethod.POST.name(), clazz, postObject);
+    }
+
+    public <T,O > T patch(String endpoint, Class<T> clazz, O postObject) {
+        return executeCall(endpoint, RequestMethod.PATCH.name(), clazz, postObject);
     }
 
     private <T, O> T executeCall(String endpoint, String httpMethod, Class<T> responseType, O postObject) throws DuffelException {

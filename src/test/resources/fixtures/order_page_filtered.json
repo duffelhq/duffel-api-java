@@ -1,0 +1,410 @@
+{
+  "data": [
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "76.10",
+      "base_currency": "GBP",
+      "booking_reference": "K3DZ9M6",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "42.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-23T17:52:55.758318Z",
+      "documents": [],
+      "id": "ord_0000AKmtVaxcYsF63cKPDd",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "U2",
+        "id": "arl_00009VME7DC2bj9quHXKop",
+        "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U2.svg",
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U2.svg",
+        "name": "easyJet"
+      },
+      "passengers": [
+        {
+          "born_on": "1980-12-31",
+          "family_name": "Domin",
+          "gender": "m",
+          "given_name": "Steve",
+          "id": "pas_0000AKmtOZ68uZ0BXQAN73",
+          "infant_passenger_id": null,
+          "title": "mr",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": null
+          },
+          "destination": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LYS",
+              "iata_code": "LYS",
+              "iata_country_code": "FR",
+              "icao_code": null,
+              "id": "cit_lys_fr",
+              "latitude": null,
+              "longitude": null,
+              "name": "Lyon",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "Lyon",
+            "iata_city_code": "LYS",
+            "iata_code": "LYS",
+            "iata_country_code": "FR",
+            "icao_code": "LFLL",
+            "id": "arp_lys_fr",
+            "latitude": 45.723723,
+            "longitude": 5.082626,
+            "name": "Lyon-Saint-Exupéry Airport",
+            "time_zone": "Europe/Paris",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT1H30M",
+          "id": "sli_0000AKmtVb683F32U0JCTh",
+          "origin": {
+            "city": null,
+            "city_name": "Barcelona",
+            "iata_city_code": "BCN",
+            "iata_code": "BCN",
+            "iata_country_code": "ES",
+            "icao_code": "LEBL",
+            "id": "arp_bcn_es",
+            "latitude": 41.297273,
+            "longitude": 2.080877,
+            "name": "Barcelona–El Prat Josep Tarradellas Airport",
+            "time_zone": "Europe/Madrid",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": null,
+              "arrival_datetime": "2022-09-16T18:40:00",
+              "arrival_terminal": null,
+              "arriving_at": "2022-09-16T18:40:00",
+              "departing_at": "2022-09-16T17:10:00",
+              "departure_datetime": "2022-09-16T17:10:00",
+              "departure_terminal": null,
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LYS",
+                  "iata_code": "LYS",
+                  "iata_country_code": "FR",
+                  "icao_code": null,
+                  "id": "cit_lys_fr",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Lyon",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Lyon",
+                "iata_city_code": "LYS",
+                "iata_code": "LYS",
+                "iata_country_code": "FR",
+                "icao_code": "LFLL",
+                "id": "arp_lys_fr",
+                "latitude": 45.723723,
+                "longitude": 5.082626,
+                "name": "Lyon-Saint-Exupéry Airport",
+                "time_zone": "Europe/Paris",
+                "type": "airport"
+              },
+              "destination_terminal": null,
+              "distance": null,
+              "duration": "PT1H30M",
+              "id": "seg_0000AKmtVaxyXYWg4iUglm",
+              "marketing_carrier": {
+                "iata_code": "U2",
+                "id": "arl_00009VME7DC2bj9quHXKop",
+                "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U2.svg",
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U2.svg",
+                "name": "easyJet"
+              },
+              "marketing_carrier_flight_number": "4418",
+              "operating_carrier": {
+                "iata_code": "U2",
+                "id": "arl_00009VME7DC2bj9quHXKop",
+                "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/U2.svg",
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/U2.svg",
+                "name": "easyJet"
+              },
+              "operating_carrier_flight_number": "4418",
+              "origin": {
+                "city": null,
+                "city_name": "Barcelona",
+                "iata_city_code": "BCN",
+                "iata_code": "BCN",
+                "iata_country_code": "ES",
+                "icao_code": "LEBL",
+                "id": "arp_bcn_es",
+                "latitude": 41.297273,
+                "longitude": 2.080877,
+                "name": "Barcelona–El Prat Josep Tarradellas Airport",
+                "time_zone": "Europe/Madrid",
+                "type": "airport"
+              },
+              "origin_terminal": null,
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Inclusive",
+                  "passenger_id": "pas_0000AKmtOZ68uZ0BXQAN73"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-23T17:52:57Z",
+      "tax_amount": "0.00",
+      "tax_currency": "GBP",
+      "total_amount": "76.10",
+      "total_currency": "GBP"
+    },
+    {
+      "airline_initiated_changes": [],
+      "base_amount": "274.25",
+      "base_currency": "GBP",
+      "booking_reference": "XNZWSC",
+      "cancelled_at": null,
+      "conditions": {
+        "change_before_departure": {
+          "allowed": true,
+          "penalty_amount": "40.00",
+          "penalty_currency": "GBP"
+        },
+        "refund_before_departure": {
+          "allowed": false,
+          "penalty_amount": null,
+          "penalty_currency": null
+        }
+      },
+      "created_at": "2022-06-21T08:53:53.530240Z",
+      "documents": [
+        {
+          "passenger_ids": [
+            "pas_0000AKhyLKO21UsTcPA1Pt"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        },
+        {
+          "passenger_ids": [
+            "pas_0000AKhyLKO21UsTcPA1Pt"
+          ],
+          "type": "electronic_ticket",
+          "unique_identifier": "1"
+        }
+      ],
+      "id": "ord_0000AKhyNGk20TUNVKuOoa",
+      "live_mode": false,
+      "metadata": null,
+      "owner": {
+        "iata_code": "ZZ",
+        "id": "arl_00009VME7D6ivUu8dn35WK",
+        "logo_lockup_url": null,
+        "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+        "name": "Duffel Airways"
+      },
+      "passengers": [
+        {
+          "born_on": "1980-12-31",
+          "family_name": "Domin",
+          "gender": "m",
+          "given_name": "Steve",
+          "id": "pas_0000AKhyLKO21UsTcPA1Pt",
+          "infant_passenger_id": null,
+          "title": "mr",
+          "type": "adult"
+        }
+      ],
+      "payment_status": {
+        "awaiting_payment": false,
+        "payment_required_by": null,
+        "price_guarantee_expires_at": null
+      },
+      "services": [],
+      "slices": [
+        {
+          "changeable": null,
+          "conditions": {
+            "change_before_departure": null
+          },
+          "destination": {
+            "city": null,
+            "city_name": "Edinburgh",
+            "iata_city_code": "EDI",
+            "iata_code": "EDI",
+            "iata_country_code": "GB",
+            "icao_code": "EGPH",
+            "id": "arp_edi_gb",
+            "latitude": 55.950392,
+            "longitude": -3.366976,
+            "name": "Edinburgh Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "destination_type": "airport",
+          "duration": "PT1H21M",
+          "id": "sli_0000AKhyO5Ep05YxshfhOT",
+          "origin": {
+            "city": {
+              "city_name": null,
+              "iata_city_code": "LON",
+              "iata_code": "LON",
+              "iata_country_code": "GB",
+              "icao_code": null,
+              "id": "cit_lon_gb",
+              "latitude": null,
+              "longitude": null,
+              "name": "London",
+              "time_zone": null,
+              "type": "city"
+            },
+            "city_name": "London",
+            "iata_city_code": "LON",
+            "iata_code": "LHR",
+            "iata_country_code": "GB",
+            "icao_code": "EGLL",
+            "id": "arp_lhr_gb",
+            "latitude": 51.470311,
+            "longitude": -0.458118,
+            "name": "Heathrow Airport",
+            "time_zone": "Europe/London",
+            "type": "airport"
+          },
+          "origin_type": "airport",
+          "segments": [
+            {
+              "aircraft": {
+                "iata_code": "773",
+                "id": "arc_00009VMF8AhXSSRnQDI6HE",
+                "name": "Boeing 777-300"
+              },
+              "arrival_datetime": "2022-06-25T00:21:00",
+              "arrival_terminal": "7",
+              "arriving_at": "2022-06-25T00:21:00",
+              "departing_at": "2022-06-24T23:00:00",
+              "departure_datetime": "2022-06-24T23:00:00",
+              "departure_terminal": "2",
+              "destination": {
+                "city": null,
+                "city_name": "Edinburgh",
+                "iata_city_code": "EDI",
+                "iata_code": "EDI",
+                "iata_country_code": "GB",
+                "icao_code": "EGPH",
+                "id": "arp_edi_gb",
+                "latitude": 55.950392,
+                "longitude": -3.366976,
+                "name": "Edinburgh Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "destination_terminal": "7",
+              "distance": "583.7115139897909",
+              "duration": "PT1H21M",
+              "id": "seg_0000AKhyO5Ep05YxshfhOS",
+              "marketing_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "marketing_carrier_flight_number": "0595",
+              "operating_carrier": {
+                "iata_code": "ZZ",
+                "id": "arl_00009VME7D6ivUu8dn35WK",
+                "logo_lockup_url": null,
+                "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/ZZ.svg",
+                "name": "Duffel Airways"
+              },
+              "operating_carrier_flight_number": "0595",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_terminal": "2",
+              "passengers": [
+                {
+                  "baggages": [
+                    {
+                      "quantity": 1,
+                      "type": "checked"
+                    }
+                  ],
+                  "cabin_class": "economy",
+                  "cabin_class_marketing_name": "Economy",
+                  "passenger_id": "pas_0000AKhyLKO21UsTcPA1Pt"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "synced_at": "2022-06-21T08:54:42Z",
+      "tax_amount": "100.00",
+      "tax_currency": "GBP",
+      "total_amount": "374.25",
+      "total_currency": "GBP"
+    }
+  ],
+  "meta": {
+    "after": "g3QAAAACZAACaWRtAAAAGm9yZF8wMDAwQUtoeU5HazIwVFVOVkt1T29hZAALaW5zZXJ0ZWRfYXR0AAAADWQACl9fc3RydWN0X19kAA9FbGl4aXIuRGF0ZVRpbWVkAAhjYWxlbmRhcmQAE0VsaXhpci5DYWxlbmRhci5JU09kAANkYXlhFWQABGhvdXJhCGQAC21pY3Jvc2Vjb25kaAJiAAgXQGEGZAAGbWludXRlYTVkAAVtb250aGEGZAAGc2Vjb25kYTVkAApzdGRfb2Zmc2V0YQBkAAl0aW1lX3pvbmVtAAAAB0V0Yy9VVENkAAp1dGNfb2Zmc2V0YQBkAAR5ZWFyYgAAB-ZkAAl6b25lX2FiYnJtAAAAA1VUQw==",
+    "before": null,
+    "limit": 15
+  }
+}

@@ -4,7 +4,7 @@ import com.duffel.model.Airline;
 import com.duffel.model.Conditions;
 import com.duffel.model.Data;
 import com.duffel.model.Passenger;
-import com.duffel.model.response.offer.Slice;
+import com.duffel.model.response.offer.OfferSlice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -58,7 +58,7 @@ public class Offer extends Data<Offer> {
     private PaymentRequirements paymentRequirements;
 
     @JsonProperty("slices")
-    private List<Slice> slices;
+    private List<OfferSlice> slices;
 
     @JsonProperty("tax_amount")
     private Double taxAmount;

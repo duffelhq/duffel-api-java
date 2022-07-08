@@ -1,9 +1,8 @@
-
-
 package com.duffel;
 
 import com.duffel.model.CabinClass;
 import com.duffel.model.Passenger;
+import com.duffel.model.PassengerType;
 import com.duffel.model.request.OfferRequest;
 import com.duffel.model.response.OfferResponse;
 import org.junit.jupiter.api.Test;
@@ -11,7 +10,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -32,21 +30,17 @@ class OfferRequestTest {
         slice.setDepartureDate("2022-06-15");
         slice.setOrigin("LHR");
         slice.setDestination("STR");
-        List<OfferRequest.Slice> slices = new ArrayList<>();
-        slices.add(slice);
 
         Passenger passenger = new Passenger();
-        passenger.setType(Passenger.PassengerType.adult);
+        passenger.setType(PassengerType.adult);
         passenger.setGivenName("Test");
         passenger.setFamilyName("User");
-        List<Passenger> passengers = new ArrayList<>();
-        passengers.add(passenger);
 
         OfferRequest request = new OfferRequest();
         request.setMaxConnections(0);
         request.setCabinClass(CabinClass.economy.name());
-        request.setSlices(slices);
-        request.setPassengers(passengers);
+        request.setSlices(List.of(slice));
+        request.setPassengers(List.of(passenger));
 
         OfferResponse offerResponse = client.offerRequestService.post(request);
 

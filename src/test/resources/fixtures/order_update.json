@@ -1,0 +1,205 @@
+{
+  "data": {
+    "airline_initiated_changes": [],
+    "base_amount": "478.13",
+    "base_currency": "GBP",
+    "booking_reference": "2GXT2F",
+    "cancelled_at": null,
+    "conditions": {
+      "change_before_departure": {
+        "allowed": false,
+        "penalty_amount": null,
+        "penalty_currency": null
+      },
+      "refund_before_departure": {
+        "allowed": true,
+        "penalty_amount": "100.00",
+        "penalty_currency": "GBP"
+      }
+    },
+    "created_at": "2022-06-16T13:28:32.797689Z",
+    "documents": [],
+    "id": "ord_0000AKY0JiKODHllshwjaq",
+    "live_mode": false,
+    "metadata": {
+      "myKey": "myValue"
+    },
+    "owner": {
+      "iata_code": "ZZ",
+      "id": "arl_00009VME7D6ivUu8dn35WK",
+      "logo_lockup_url": null,
+      "logo_symbol_url": null,
+      "name": "Duffel Airways"
+    },
+    "passengers": [
+      {
+        "born_on": "1990-01-01",
+        "family_name": "User",
+        "gender": "m",
+        "given_name": "Test",
+        "id": "pas_0000AKY0JHXnCpZ3VF0MxG",
+        "infant_passenger_id": null,
+        "loyalty_programme_accounts": null,
+        "title": "mr",
+        "type": "adult"
+      }
+    ],
+    "payment_status": {
+      "awaiting_payment": true,
+      "payment_required_by": "2022-06-19T13:28:28Z",
+      "price_guarantee_expires_at": "2022-06-19T13:28:28Z"
+    },
+    "services": [],
+    "slices": [
+      {
+        "changeable": false,
+        "conditions": {
+          "change_before_departure": {
+            "allowed": false,
+            "penalty_amount": null,
+            "penalty_currency": null
+          }
+        },
+        "destination": {
+          "city": null,
+          "city_name": "Stuttgart",
+          "iata_city_code": "STR",
+          "iata_code": "STR",
+          "iata_country_code": "DE",
+          "icao_code": "EDDS",
+          "id": "arp_str_de",
+          "latitude": 48.688717,
+          "longitude": 9.204025,
+          "name": "Stuttgart Airport",
+          "time_zone": "Europe/Berlin",
+          "type": "airport"
+        },
+        "destination_type": "airport",
+        "duration": "PT1H43M",
+        "id": "sli_0000AKY0JiKODHllshwjar",
+        "origin": {
+          "city": {
+            "city_name": null,
+            "iata_city_code": "LON",
+            "iata_code": "LON",
+            "iata_country_code": "GB",
+            "icao_code": null,
+            "id": "cit_lon_gb",
+            "latitude": null,
+            "longitude": null,
+            "name": "London",
+            "time_zone": null,
+            "type": "city"
+          },
+          "city_name": "London",
+          "iata_city_code": "LON",
+          "iata_code": "LHR",
+          "iata_country_code": "GB",
+          "icao_code": "EGLL",
+          "id": "arp_lhr_gb",
+          "latitude": 51.470311,
+          "longitude": -0.458118,
+          "name": "Heathrow Airport",
+          "time_zone": "Europe/London",
+          "type": "airport"
+        },
+        "origin_type": "airport",
+        "segments": [
+          {
+            "aircraft": {
+              "iata_code": "773",
+              "id": "arc_00009VMF8AhXSSRnQDI6HE",
+              "name": "Boeing 777-300"
+            },
+            "arrival_datetime": "2022-06-21T01:43:00",
+            "arrival_terminal": "1",
+            "arriving_at": "2022-06-21T01:43:00",
+            "departing_at": "2022-06-20T23:00:00",
+            "departure_datetime": "2022-06-20T23:00:00",
+            "departure_terminal": "2",
+            "destination": {
+              "city": null,
+              "city_name": "Stuttgart",
+              "iata_city_code": "STR",
+              "iata_code": "STR",
+              "iata_country_code": "DE",
+              "icao_code": "EDDS",
+              "id": "arp_str_de",
+              "latitude": 48.688717,
+              "longitude": 9.204025,
+              "name": "Stuttgart Airport",
+              "time_zone": "Europe/Berlin",
+              "type": "airport"
+            },
+            "destination_terminal": "1",
+            "distance": "855.1036664434637",
+            "duration": "PT1H43M",
+            "id": "seg_0000AKY0JHimXyM43K995E",
+            "marketing_carrier": {
+              "iata_code": "ZZ",
+              "id": "arl_00009VME7D6ivUu8dn35WK",
+              "logo_lockup_url": null,
+              "logo_symbol_url": null,
+              "name": "Duffel Airways"
+            },
+            "marketing_carrier_flight_number": "2905",
+            "operating_carrier": {
+              "iata_code": "ZZ",
+              "id": "arl_00009VME7D6ivUu8dn35WK",
+              "logo_lockup_url": null,
+              "logo_symbol_url": null,
+              "name": "Duffel Airways"
+            },
+            "operating_carrier_flight_number": "2905",
+            "origin": {
+              "city": {
+                "city_name": null,
+                "iata_city_code": "LON",
+                "iata_code": "LON",
+                "iata_country_code": "GB",
+                "icao_code": null,
+                "id": "cit_lon_gb",
+                "latitude": null,
+                "longitude": null,
+                "name": "London",
+                "time_zone": null,
+                "type": "city"
+              },
+              "city_name": "London",
+              "iata_city_code": "LON",
+              "iata_code": "LHR",
+              "iata_country_code": "GB",
+              "icao_code": "EGLL",
+              "id": "arp_lhr_gb",
+              "latitude": 51.470311,
+              "longitude": -0.458118,
+              "name": "Heathrow Airport",
+              "time_zone": "Europe/London",
+              "type": "airport"
+            },
+            "origin_terminal": "2",
+            "passengers": [
+              {
+                "baggages": [
+                  {
+                    "quantity": 1,
+                    "type": "checked"
+                  }
+                ],
+                "cabin_class": "economy",
+                "cabin_class_marketing_name": "Economy",
+                "passenger_id": "pas_0000AKY0JHXnCpZ3VF0MxG",
+                "seat": null
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "synced_at": "2022-06-16T13:28:32Z",
+    "tax_amount": "86.06",
+    "tax_currency": "GBP",
+    "total_amount": "564.19",
+    "total_currency": "GBP"
+  }
+}
