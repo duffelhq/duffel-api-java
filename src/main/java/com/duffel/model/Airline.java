@@ -28,7 +28,7 @@ public class Airline extends Data<Airline> {
     ///  Example: "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg"
     ///  </summary>
     @JsonProperty("logo_lockup_url")
-    private String logoLookupUrl;
+    private String logoLockupUrl;
 
     ///  <summary>
     ///  Path to a svg of the airline logo. This may be null if no logo is available.
