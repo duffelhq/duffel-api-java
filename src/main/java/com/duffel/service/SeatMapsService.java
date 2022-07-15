@@ -1,12 +1,12 @@
 package com.duffel.service;
 
 import com.duffel.model.response.SeatMap;
-import com.duffel.model.response.SeatMapSet;
+import com.duffel.model.response.SeatMapList;
 import com.duffel.net.ApiClient;
 
 import java.util.List;
 
-public class SeatMapsService extends Resource<SeatMapSet, SeatMapSet> {
+public class SeatMapsService extends Resource<SeatMapList, SeatMapList> {
 
     private static final String ENDPOINT = "/air/seat_maps";
 
@@ -15,7 +15,7 @@ public class SeatMapsService extends Resource<SeatMapSet, SeatMapSet> {
     }
 
     public List<SeatMap> getById(String offerId) {
-        return super.getById(SeatMapSet.class, "", "?offer_id=" + offerId).getData();
+        return super.getById(SeatMapList.class, "", "?offer_id=" + offerId).getData();
     }
 
 }
