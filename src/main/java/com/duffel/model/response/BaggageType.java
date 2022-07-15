@@ -1,4 +1,4 @@
-package com.duffel.model.response.offer;
+package com.duffel.model.response;
 
 public enum BaggageType {
 
