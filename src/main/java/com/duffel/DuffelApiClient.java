@@ -24,6 +24,7 @@ public class DuffelApiClient {
     public final OfferService offerService;
     public final OfferRequestService offerRequestService;
     public final OrderService orderService;
+    public final SeatMapsService seatMapsService;
 
     public DuffelApiClient(String apiKey) {
         this(apiKey, DUFFEL_URL);
@@ -47,6 +48,7 @@ public class DuffelApiClient {
         offerService = new OfferService(apiClient);
         offerRequestService = new OfferRequestService(apiClient);
         orderService = new OrderService(apiClient);
+        seatMapsService = new SeatMapsService(apiClient);
     }
 
 }

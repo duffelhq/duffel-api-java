@@ -1,0 +1,1465 @@
+{
+  "data": [
+    {
+      "cabins": [
+        {
+          "aisles": 1,
+          "cabin_class": "economy",
+          "deck": 0,
+          "rows": [
+            {
+              "id": "row_0000ALBRU58uxnc2rmgyN4",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoS",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "8A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU58uxnc2rmgyN6",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoT",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "8B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU58uxnc2rmgyN7",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoU",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "8C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU58uxnc2rmgyN8",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU58uxnc2rmgyN5"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoV",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "8D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU58uxnc2rmgyNA",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoW",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "8E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU58uxnc2rmgyNB",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoX",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "8F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU58uxnc2rmgyNC",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU58uxnc2rmgyN9"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU58uxnc2rmgyND",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoY",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "9A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFuy",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoZ",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "9B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFuz",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "9C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFv0",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU58uxnc2rmgyNE"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoa",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "9D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFv2",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgob",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "9E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFv3",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoc",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "9F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFv4",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFv1"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59GwTtcssrFv5",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": null,
+                      "disclosures": null,
+                      "id": "ele_0000ALBRU59GwTtcssrFv7",
+                      "name": null,
+                      "type": "exit_row"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFv6"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": null,
+                      "disclosures": null,
+                      "id": "ele_0000ALBRU59GwTtcssrFv9",
+                      "name": null,
+                      "type": "exit_row"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFv8"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59GwTtcssrFvA",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgod",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "20.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "10A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvC",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoe",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "20.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "10B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvD",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgof",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "20.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "10C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvE",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFvB"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgog",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "20.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "10D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvG",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoh",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "20.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "10E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvH",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoi",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "20.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "10F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvI",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFvF"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59GwTtcssrFvJ",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoj",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "11A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvL",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgok",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "11B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvM",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgol",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "11C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvN",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFvK"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "11D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvP",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgom",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "11E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvQ",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgon",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "11F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59GwTtcssrFvR",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFvO"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59GwTtcssrFvS",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoo",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "12A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTE",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgop",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "12B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTF",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoq",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "12C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTG",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59GwTtcssrFvT"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgor",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "12D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTI",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgos",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "12E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTJ",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgot",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "15.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "12F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTK",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTH"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59cvABCtz1XTL",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgou",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "14A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTN",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgov",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "14B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTO",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgow",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "14C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTP",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTM"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "14D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTR",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "14E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTS",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "14F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTT",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTQ"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59cvABCtz1XTU",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgox",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "15A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTW",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoy",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "15B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTX",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgoz",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "15C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTY",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTV"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgp0",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "15D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTa",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgp1",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "15E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTb",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgp2",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "15F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTc",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTZ"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59cvABCtz1XTd",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58Yz7KSqgWgp3",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "16A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTf",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMi",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "16B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTg",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMj",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "16C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTh",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTe"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMk",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "16D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTj",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMl",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "16E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTk",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMm",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "16F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTl",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTi"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59cvABCtz1XTm",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "18A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTo",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "18B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTp",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "18C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTq",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTn"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMn",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "18D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59cvABCtz1XTs",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMo",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "18E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1U",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMp",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "18F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1V",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59cvABCtz1XTr"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59ytqSmv5Bp1W",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "19A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1Y",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "19B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1Z",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "19C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1a",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1X"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "19D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1c",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "19E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1d",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "19F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1e",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1b"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59ytqSmv5Bp1f",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "20A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1h",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "20B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1i",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "20C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1j",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1g"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "20D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1l",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "20E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1m",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "20F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1n",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1k"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59ytqSmv5Bp1o",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "21A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1q",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "21B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1r",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "21C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1s",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1p"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "21D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1u",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "21E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1v",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "21F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1w",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1t"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59ytqSmv5Bp1x",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMq",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "22A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp1z",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMr",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "22B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp20",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMs",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "22C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp21",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp1y"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMt",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "22D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp23",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMu",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "22E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp24",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMv",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "22F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp25",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp22"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU59ytqSmv5Bp26",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMw",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "23A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp28",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMx",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "23B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU59ytqSmv5Bp29",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMy",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "23C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zk",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU59ytqSmv5Bp27"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyMz",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "23D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zm",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyN0",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "23E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zn",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [
+                        {
+                          "id": "ase_0000ALBRU58uxnc2rmgyN1",
+                          "passenger_id": "pas_0000ALBRPOLG9dZsxnEDhn",
+                          "total_amount": "10.00",
+                          "total_currency": "GBP"
+                        }
+                      ],
+                      "designator": "23F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zo",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU5AKsWkMwBM6Zl"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU5AKsWkMwBM6Zp",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "24A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zr",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "24B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zs",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "24C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zt",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU5AKsWkMwBM6Zq"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "24D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zv",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "24E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zw",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "24F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6Zx",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU5AKsWkMwBM6Zu"
+                }
+              ]
+            },
+            {
+              "id": "row_0000ALBRU5AKsWkMwBM6Zy",
+              "sections": [
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "25A",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6a0",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "25B",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6a1",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "25C",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6a2",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU5AKsWkMwBM6Zz"
+                },
+                {
+                  "elements": [
+                    {
+                      "available_services": [],
+                      "designator": "25D",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6a4",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "25E",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6a5",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    },
+                    {
+                      "available_services": [],
+                      "designator": "25F",
+                      "disclosures": [],
+                      "id": "ele_0000ALBRU5AKsWkMwBM6a6",
+                      "name": "SEAT RESERVATION",
+                      "type": "seat"
+                    }
+                  ],
+                  "id": "sec_0000ALBRU5AKsWkMwBM6a3"
+                }
+              ]
+            }
+          ],
+          "wings": null
+        }
+      ],
+      "id": "sea_0000ALBRU58uxnc2rmgyN2",
+      "segment_id": "seg_0000ALBRPYp3BjLjT5F9Wh",
+      "slice_id": "sli_0000ALBRPYp3BjLjT5F9Wd"
+    }
+  ],
+  "meta": null
+}
