@@ -30,6 +30,16 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
+sourceSets {
+    example {
+        java {
+            compileClasspath += main.output + test.output
+            runtimeClasspath += main.output + test.output
+            srcDir file('src/example/java')
+        }
+    }
+}
+
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 group = "com.duffel"

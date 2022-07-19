@@ -1,5 +1,6 @@
-package com.duffel;
+package com.duffel.service;
 
+import com.duffel.DuffelApiClient;
 import com.duffel.model.response.SeatMap;
 import com.duffel.model.response.seatmap.ElementType;
 import com.duffel.model.response.seatmap.SeatService;

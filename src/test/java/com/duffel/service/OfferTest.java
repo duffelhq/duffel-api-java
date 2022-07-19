@@ -1,5 +1,6 @@
-package com.duffel;
+package com.duffel.service;
 
+import com.duffel.DuffelApiClient;
 import com.duffel.model.OfferCollection;
 import com.duffel.model.response.Offer;
 import org.junit.jupiter.api.Test;
