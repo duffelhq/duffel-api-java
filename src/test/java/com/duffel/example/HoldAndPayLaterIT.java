@@ -18,11 +18,12 @@ import java.util.List;
 
 import static com.duffel.DuffelApiClient.DUFFEL_AIR_IATA;
 
-public class SearchAndBookIT {
+public class HoldAndPayLaterIT {
+
     private static final Logger LOG = LogManager.getLogger();
 
     @Test
-    void searchAndBook() {
+    void holdAndPayLater() {
         String testApiKey = System.getenv("DUFFEL_ACCESS_TOKEN");
 
         DuffelApiClient client = new DuffelApiClient(testApiKey);
@@ -66,21 +67,21 @@ public class SearchAndBookIT {
         orderPassenger.setPhoneNumber("+447888888888");
         orderPassenger.setGender("m");
 
-        OrderRequest.Payment payment = new OrderRequest.Payment();
-        payment.setType(PaymentType.balance);
-        payment.setAmount(offer.getTotalAmount());
-        payment.setCurrency(offer.getTotalCurrency());
-
         OrderRequest orderRequest = new OrderRequest();
-        orderRequest.setType(OrderType.instant);
-        orderRequest.setPayments(List.of(payment));
+        orderRequest.setType(OrderType.hold);
         orderRequest.setSelectedOffers(List.of(offer.getId()));
         orderRequest.setPassengers(List.of(orderPassenger));
 
         Order order = client.orderService.post(orderRequest);
-        LOG.info("🎉 Booked order {} with PNR {} successfully", order.getId(), order.getBookingReference());
+        LOG.info("🎉 Booked hold order {} with PNR {} successfully", order.getId(), order.getBookingReference());
 
-        // TODO cancel order
+        // Later, fetch the order again
+        order = client.orderService.getById(order.getId());
+        LOG.info("💶 Fetched up to date price of {}{} for order {}",
+                order.getTotalCurrency(), order.getTotalAmount(), order.getId());
+
+        // TODO pay for order and then cancel
+
     }
 
 }
