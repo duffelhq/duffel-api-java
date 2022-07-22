@@ -3,6 +3,8 @@ package com.duffel.service;
 import com.duffel.model.request.PostData;
 import com.duffel.net.ApiClient;
 
+// T post request body type
+// U post request paged body type
 public class PostResource<T, U> extends Resource<T, U> {
 
     protected PostResource(ApiClient apiClient, String endpoint) {

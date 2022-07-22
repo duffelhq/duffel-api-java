@@ -3,6 +3,8 @@ package com.duffel.service;
 import com.duffel.DuffelApiClient;
 import com.duffel.net.ApiClient;
 
+// T post request body type
+// U post request paged body type
 public class Resource<T, U> {
 
     protected final ApiClient apiClient;
