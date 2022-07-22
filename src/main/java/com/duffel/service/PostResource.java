@@ -13,7 +13,12 @@ public class PostResource<T, U> extends Resource<T, U> {
         return apiClient.post(endpoint, clazz, request);
     }
 
+    protected T post(Class<T> clazz, String id, PostData request) {
+        return apiClient.post(endpoint + "/" + id, clazz, request);
+    }
+
     protected T update(Class<T> clazz, String id, PostData request) {
         return apiClient.patch(endpoint + "/" + id, clazz, request);
     }
+
 }

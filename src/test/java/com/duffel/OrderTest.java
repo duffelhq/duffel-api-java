@@ -3,7 +3,7 @@ package com.duffel;
 import com.duffel.model.OrderCollection;
 import com.duffel.model.OrderType;
 import com.duffel.model.PassengerType;
-import com.duffel.model.request.OrderPassenger;
+import com.duffel.model.OrderPassenger;
 import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.response.Order;
