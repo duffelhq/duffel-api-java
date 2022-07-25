@@ -1,6 +1,7 @@
 package com.duffel.model.request;
 
 import com.duffel.model.Data;
+import com.duffel.model.OrderPassenger;
 import com.duffel.model.OrderType;
 import com.duffel.model.PaymentType;
 import com.duffel.model.response.Order;

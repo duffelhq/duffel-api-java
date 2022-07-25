@@ -1,4 +1,4 @@
-package com.duffel.model.request;
+package com.duffel.model;
 
 import com.duffel.model.PassengerType;
 import com.fasterxml.jackson.annotation.JsonProperty;
