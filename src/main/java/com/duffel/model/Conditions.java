@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
+
 @EqualsAndHashCode
 @Getter
 @ToString
@@ -42,7 +44,7 @@ public class Conditions {
         ///  known then this field will be null. If this is null then the penalty_currency will also be null.
         ///  </summary>
         @JsonProperty("penalty_amount")
-        private Double penaltyAmount;
+        private BigDecimal penaltyAmount;
 
         ///  <summary>
         ///  The currency of the penalty_amount as an ISO 4217 currency code. This will be in a currency determined by

@@ -11,6 +11,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Map;
 
@@ -77,7 +78,7 @@ public class OrderRequest extends Data<Order> {
         /// selected_offers, plus the total_amount of all the services specified in services.
         /// </summary>
         @JsonProperty("amount")
-        private Double amount;
+        private BigDecimal amount;
 
         /// <summary>
         /// The currency of the amount, as an ISO 4217 currency code. This should be the same as the total_currency of

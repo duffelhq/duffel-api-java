@@ -9,6 +9,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public class Order extends Data<Order> {
     ///  </summary>
     ///  <example>"30.20"</example>
     @JsonProperty("base_amount")
-    private Double baseAmount;
+    private BigDecimal baseAmount;
 
     ///  <summary>
     ///  The currency of the base_amount, as an ISO 4217 currency code. It will match your organisation's billing
@@ -147,7 +148,7 @@ public class Order extends Data<Order> {
     ///  The amount of tax payable on the order for all the flights booked
     ///  </summary>
     @JsonProperty("tax_amount")
-    private Double taxAmount;
+    private BigDecimal taxAmount;
 
     ///  <summary>
     ///  The currency of the tax_amount, as an ISO 4217 currency code. It will match your organisation's billing
@@ -161,7 +162,7 @@ public class Order extends Data<Order> {
     ///  The total price of the order for all the flights and services booked, including taxes
     ///  </summary>
     @JsonProperty("total_amount")
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     ///  <summary>
     ///  The currency of the total_amount, as an ISO 4217 currency code. It will match your organisation's billing

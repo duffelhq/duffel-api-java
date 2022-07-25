@@ -6,6 +6,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode
@@ -56,7 +57,7 @@ public class OrderCancellation {
     ///  the flights and the services booked.
     ///  </summary>
     @JsonProperty("refund_amount")
-    private Double refundAmount;
+    private BigDecimal refundAmount;
 
     ///  <summary>
     ///  The currency of the refund_amount, as an ISO 4217 currency code. It will match your organisation's billing

@@ -10,6 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @EqualsAndHashCode
@@ -65,7 +66,7 @@ public class Service {
     ///  for a single unit of the service.
     ///  </summary>
     @JsonProperty("total_amount")
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     ///  <summary>
     ///  The currency of the total_amount, as an ISO 4217 currency code. It will match your organisation's billing
