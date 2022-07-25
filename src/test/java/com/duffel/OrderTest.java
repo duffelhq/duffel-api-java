@@ -16,6 +16,7 @@ import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
 import org.mockserver.model.Parameter;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
@@ -57,7 +58,7 @@ class OrderTest {
 
         assertEquals(1, order.getSlices().size());
         assertEquals(1, order.getPassengers().size());
-        assertEquals(193.06d, order.getTotalAmount());
+        assertEquals(new BigDecimal("193.06"), order.getTotalAmount());
         assertEquals("IXK4SC", order.getBookingReference());
     }
 
@@ -107,7 +108,7 @@ class OrderTest {
 
         assertEquals(1, order.getSlices().size());
         assertEquals(1, order.getPassengers().size());
-        assertEquals(193.06d, order.getTotalAmount());
+        assertEquals(new BigDecimal("193.06"), order.getTotalAmount());
         assertEquals("IXK4SC", order.getBookingReference());
         assertEquals(2, order.getServices().size());
         assertEquals(23, ((BaggageMetadata) order.getServices().get(0).getMetadata()).getMaximumWeightKg());
