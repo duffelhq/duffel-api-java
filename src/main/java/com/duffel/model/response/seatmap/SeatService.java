@@ -5,6 +5,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
+
 @EqualsAndHashCode
 @Getter
 @ToString
@@ -27,7 +29,7 @@ public class SeatService {
     ///  The total price of the seat, including taxes
     ///  </summary>
     @JsonProperty("total_amount")
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     ///  <summary>
     ///  The currency of the total_amount, as an ISO 4217 currency code. It will match your organisation's billing

@@ -8,6 +8,8 @@ import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
 import org.mockserver.model.Parameter;
 
+import java.math.BigDecimal;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
@@ -24,7 +26,7 @@ class OfferTest {
 
         Offer offer = client.offerService.getById("off_0000AJjwEHhflaMRlEm9NA", true);
 
-        assertEquals(524.3, offer.getTotalAmount());
+        assertEquals(new BigDecimal("524.30"), offer.getTotalAmount());
         assertEquals(1, offer.getSlices().size());
     }
 

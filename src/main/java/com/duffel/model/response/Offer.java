@@ -10,6 +10,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class Offer extends Data<Offer> {
     private Conditions conditions;
 
     @JsonProperty("base_amount")
-    private Double baseAmount;
+    private BigDecimal baseAmount;
 
     @JsonProperty("base_currency")
     private String baseCurrency;
@@ -64,13 +65,13 @@ public class Offer extends Data<Offer> {
     private List<OfferSlice> slices;
 
     @JsonProperty("tax_amount")
-    private Double taxAmount;
+    private BigDecimal taxAmount;
 
     @JsonProperty("tax_currency")
     private String taxCurrency;
 
     @JsonProperty("total_amount")
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     @JsonProperty("total_currency")
     private String totalCurrency;
