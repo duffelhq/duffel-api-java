@@ -1,0 +1,11 @@
+{
+  "data": {
+    "amount": "458.92",
+    "created_at": "2022-07-27T14:08:41.969868Z",
+    "currency": "GBP",
+    "id": "pay_0000ALv2y0HVLbnmjIx7Ng",
+    "live_mode": false,
+    "type": "balance"
+  },
+  "meta": null
+}

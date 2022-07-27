@@ -1,5 +1,6 @@
 package com.duffel.model.response;
 
+import com.duffel.model.Data;
 import com.duffel.model.PaymentType;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
@@ -9,10 +10,10 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class Payment {
+public class PaymentResponse extends Data<PaymentResponse> {
 
     ///  <summary>
     ///  The price of the payment
