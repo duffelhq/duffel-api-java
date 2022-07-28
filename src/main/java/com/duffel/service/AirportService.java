@@ -5,6 +5,8 @@ import com.duffel.model.Location;
 import com.duffel.model.LocationCollection;
 import com.duffel.net.ApiClient;
 
+import java.util.List;
+
 public class AirportService extends Resource<Location, LocationCollection> {
 
     private static final String ENDPOINT = "/air/airports";
@@ -27,5 +29,9 @@ public class AirportService extends Resource<Location, LocationCollection> {
 
     public LocationCollection getPage(String before, String after, Integer limit) {
         return super.getPage(LocationCollection.class, before, after, limit);
+    }
+
+    public List<Location> getAll() {
+        return super.getAll(LocationCollection.class);
     }
 }

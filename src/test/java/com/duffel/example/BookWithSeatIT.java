@@ -1,4 +1,4 @@
 package com.duffel.example;
 
-public class BookWithSeat {
+public class BookWithSeatIT {
 }

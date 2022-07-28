@@ -3,11 +3,13 @@ package com.duffel.example;
 import com.duffel.DuffelApiClient;
 import com.duffel.model.*;
 import com.duffel.model.request.OfferRequest;
-import com.duffel.model.request.OrderPassenger;
 import com.duffel.model.request.OrderRequest;
+import com.duffel.model.request.Payment;
+import com.duffel.model.request.PaymentRequest;
 import com.duffel.model.response.Offer;
 import com.duffel.model.response.OfferResponse;
 import com.duffel.model.response.Order;
+import com.duffel.model.response.PaymentResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -80,8 +82,23 @@ public class HoldAndPayLaterIT {
         LOG.info("💶 Fetched up to date price of {}{} for order {}",
                 order.getTotalCurrency(), order.getTotalAmount(), order.getId());
 
-        // TODO pay for order and then cancel
+        // Pay for the order
+        Payment payment = new Payment();
+        payment.setType(PaymentType.balance);
+        payment.setAmount(order.getTotalAmount());
+        payment.setCurrency(order.getTotalCurrency());
 
+        PaymentRequest paymentRequest = new PaymentRequest();
+        paymentRequest.setPayment(payment);
+        paymentRequest.setOrderId(order.getId());
+        PaymentResponse paymentResponse = client.paymentsService.create(paymentRequest);
+        LOG.info("💶 Successfully paid {}{} for order {}",
+                paymentResponse.getCurrency(), paymentResponse.getAmount(), order.getId());
+
+        // Post payment, fetch the documents
+        order = client.orderService.getById(order.getId());
+        LOG.info("📃 Fetched {} documents for order {}",
+                order.getDocuments().size(), order.getId());
     }
 
 }

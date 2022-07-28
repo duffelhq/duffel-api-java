@@ -3,11 +3,13 @@ package com.duffel.example;
 import com.duffel.DuffelApiClient;
 import com.duffel.model.*;
 import com.duffel.model.request.OfferRequest;
-import com.duffel.model.request.OrderPassenger;
+import com.duffel.model.request.OrderCancellationRequest;
 import com.duffel.model.request.OrderRequest;
+import com.duffel.model.request.Payment;
 import com.duffel.model.response.Offer;
 import com.duffel.model.response.OfferResponse;
 import com.duffel.model.response.Order;
+import com.duffel.model.response.OrderCancellation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -66,7 +68,7 @@ public class SearchAndBookIT {
         orderPassenger.setPhoneNumber("+447888888888");
         orderPassenger.setGender("m");
 
-        OrderRequest.Payment payment = new OrderRequest.Payment();
+        Payment payment = new Payment();
         payment.setType(PaymentType.balance);
         payment.setAmount(offer.getTotalAmount());
         payment.setCurrency(offer.getTotalCurrency());
@@ -80,7 +82,14 @@ public class SearchAndBookIT {
         Order order = client.orderService.post(orderRequest);
         LOG.info("🎉 Booked order {} with PNR {} successfully", order.getId(), order.getBookingReference());
 
-        // TODO cancel order
+        // Cancel the order
+        OrderCancellationRequest orderCancel = new OrderCancellationRequest();
+        orderCancel.setOrderId(order.getId());
+
+        OrderCancellation cancellation = client.orderCancellationService.post(orderCancel);
+        cancellation = client.orderCancellationService.confirm(cancellation.getId());
+        LOG.info("🙅 Cancelled order {} with cancellation {} at {}",
+                cancellation.getOrderId(), cancellation.getId(), cancellation.getConfirmedAt());
     }
 
 }
