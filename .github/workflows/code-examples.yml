@@ -13,7 +13,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  examples:
     runs-on: ubuntu-latest
     env:
       DUFFEL_ACCESS_TOKEN: ${{ secrets.DUFFEL_ACCESS_TOKEN }}
