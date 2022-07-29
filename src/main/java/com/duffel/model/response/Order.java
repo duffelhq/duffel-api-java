@@ -138,8 +138,8 @@ public class Order extends Data<Order> {
 
     ///  <summary>
     ///  Airlines are always the source of truth for orders. The orders returned in the Duffel API are a view of those
-    /// orders. This field is the ISO 8601 datetime at which the Order was last synced with the airline. If this
-    /// datetime is in the last minute you can consider the order up to date.
+    ///  orders. This field is the ISO 8601 datetime at which the Order was last synced with the airline. If this
+    ///  datetime is in the last minute you can consider the order up to date.
     ///  </summary>
     @JsonProperty("synced_at")
     private LocalDateTime syncedAt;

@@ -1,6 +1,7 @@
 plugins {
     id 'idea'
     id 'java'
+    id 'jvm-test-suite'
     id "io.freefair.lombok" version "6.4.3"
 }
 
@@ -30,14 +31,43 @@ tasks.named('test') {
     useJUnitPlatform()
 }
 
-sourceSets {
-    example {
-        java {
-            compileClasspath += main.output + test.output
-            runtimeClasspath += main.output + test.output
-            srcDir file('src/example/java')
+test {
+    filter {
+        // Don't execute the examples by default, as these create test orders and need a token to run
+        excludeTestsMatching("com.duffel.example.*")
+    }
+}
+
+testing {
+    suites {
+        test {}
+
+        example(JvmTestSuite) {
+            testType = TestSuiteType.INTEGRATION_TEST
+            dependencies {
+                implementation project
+            }
+
+            sources {
+                java {
+                    srcDirs = ["src/test/java/com/duffel/example"]
+                }
+            }
+
+            targets {
+                all {
+                    testTask.configure {
+                        shouldRunAfter(test)
+                    }
+                }
+            }
         }
     }
+}
+
+configurations {
+    exampleImplementation.extendsFrom(testImplementation)
+    exampleRuntimeOnly.extendsFrom(testRuntimeOnly)
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
