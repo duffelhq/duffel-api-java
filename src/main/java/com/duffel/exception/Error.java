@@ -1,6 +1,9 @@
 package com.duffel.exception;
 
+import com.duffel.model.response.seatmap.ElementType;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -27,7 +30,16 @@ public class Error {
     private String message;
 
     @JsonProperty("source")
-    private ErrorSource source;
+//    @JsonTypeInfo(
+//            use = JsonTypeInfo.Id.NAME,
+//            property = "type",
+//            defaultImpl = String.class,
+//            visible = true
+//    )
+//    @JsonSubTypes({
+//            @JsonSubTypes.Type(value = ValidationErrorSource.class, name = "validation_error")
+//    })
+    private String source;
 
     ///  <summary>
     ///  A quick and simple description of what went wrong
@@ -41,14 +53,28 @@ public class Error {
     @JsonProperty("type")
     private String errorType;
 
-    public static class ErrorSource {
-
-        @JsonProperty("field")
-        private String field;
-
-        @JsonProperty("pointer")
-        private String pointer;
-
-    }
+//    public static class ErrorSource {
+//
+//        ///  <summary>
+//        ///  The type of this element
+//        ///  </summary>
+//        @JsonProperty("type")
+//        private ElementType type;
+//
+//    }
+//
+//    public static class StandardErrorSource extends ErrorSource {
+//
+//    }
+//
+//    public static class ValidationErrorSource extends ErrorSource {
+//
+//        @JsonProperty("field")
+//        private String field;
+//
+//        @JsonProperty("pointer")
+//        private String pointer;
+//
+//    }
 
 }

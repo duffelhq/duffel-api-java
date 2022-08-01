@@ -27,6 +27,22 @@ public class ExceptionTest {
         DuffelException exception = assertThrows(DuffelException.class, () -> client.offerRequestService.post(new OfferRequest()));
         assertEquals( "401", exception.getMeta().getStatus());
         assertEquals("missing_authorization_header", exception.getErrors().get(0).getCode());
+
+        mockClient.reset();
+    }
+
+    @Test
+    void airline_internal(MockServerClient mockClient) {
+        mockClient.when(request().withMethod("POST"))
+                .respond(response().withStatusCode(500)
+                        .withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/exceptions/500_airline_internal.json")));
+
+        DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
+
+        DuffelException exception = assertThrows(DuffelException.class, () -> client.offerRequestService.post(new OfferRequest()));
+        assertEquals( "500", exception.getMeta().getStatus());
+
+        mockClient.reset();
     }
 
 }

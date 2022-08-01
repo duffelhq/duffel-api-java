@@ -1,0 +1,1749 @@
+{
+  "data": {
+    "created_at": "2022-08-01T09:52:40.327225Z",
+    "id": "ocr_0000AM52gchB3zeY8gF2Hp",
+    "live_mode": false,
+    "order_change_offers": [
+      {
+        "available_payment_types": [
+          "card",
+          "balance"
+        ],
+        "change_total_amount": "81.60",
+        "change_total_currency": "GBP",
+        "created_at": "2022-08-01T09:52:40.332410Z",
+        "expires_at": "2022-08-01T10:22:40Z",
+        "id": "oco_0000AM52gciayimsD4uAUv",
+        "live_mode": false,
+        "new_total_amount": "0.00",
+        "new_total_currency": "GBP",
+        "order_change_id": null,
+        "penalty_total_amount": "0.00",
+        "penalty_total_currency": "GBP",
+        "refund_to": "original_form_of_payment",
+        "slices": {
+          "add": [
+            {
+              "destination": {
+                "city": null,
+                "city_name": "Stuttgart",
+                "iata_city_code": "STR",
+                "iata_code": "STR",
+                "iata_country_code": "DE",
+                "icao_code": "EDDS",
+                "id": "arp_str_de",
+                "latitude": 48.688717,
+                "longitude": 9.204025,
+                "name": "Stuttgart Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H40M",
+              "fare_brand_name": "Economy Basic",
+              "id": "sli_0000AM52gchB3zeY8gF2Hu",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "319",
+                    "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                    "name": "Airbus A319"
+                  },
+                  "arriving_at": "2022-08-30T20:05:00",
+                  "departing_at": "2022-08-30T17:25:00",
+                  "destination": {
+                    "city": null,
+                    "city_name": "Stuttgart",
+                    "iata_city_code": "STR",
+                    "iata_code": "STR",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDS",
+                    "id": "arp_str_de",
+                    "latitude": 48.688717,
+                    "longitude": 9.204025,
+                    "name": "Stuttgart Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "3",
+                  "distance": null,
+                  "duration": "PT1H40M",
+                  "id": "seg_0000AM52gchB3zeY8gF2Hr",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0920",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0920",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ],
+          "remove": [
+            {
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "FRA",
+                  "iata_code": "FRA",
+                  "iata_country_code": "DE",
+                  "icao_code": null,
+                  "id": "cit_fra_de",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Frankfurt",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Frankfurt",
+                "iata_city_code": "FRA",
+                "iata_code": "FRA",
+                "iata_country_code": "DE",
+                "icao_code": "EDDF",
+                "id": "arp_fra_de",
+                "latitude": 50.034866,
+                "longitude": 8.567755,
+                "name": "Frankfurt am Main Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H45M",
+              "fare_brand_name": null,
+              "id": "sli_0000AM52GZXHxmzu2l8Bj4",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "32N",
+                    "id": "arc_00009lcSPZuSbgKG1u4Pkn",
+                    "name": "Airbus A320neo"
+                  },
+                  "arriving_at": "2022-10-18T17:50:00",
+                  "departing_at": "2022-10-18T15:05:00",
+                  "destination": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "FRA",
+                      "iata_code": "FRA",
+                      "iata_country_code": "DE",
+                      "icao_code": null,
+                      "id": "cit_fra_de",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "Frankfurt",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "Frankfurt",
+                    "iata_city_code": "FRA",
+                    "iata_code": "FRA",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDF",
+                    "id": "arp_fra_de",
+                    "latitude": 50.034866,
+                    "longitude": 8.567755,
+                    "name": "Frankfurt am Main Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "2",
+                  "distance": null,
+                  "duration": "PT1H45M",
+                  "id": "seg_0000AM52GZUS8KjFtxnvJ3",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0910",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0910",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ]
+        },
+        "updated_at": "2022-08-01T09:52:40.332410Z"
+      },
+      {
+        "available_payment_types": [
+          "card",
+          "balance"
+        ],
+        "change_total_amount": "98.60",
+        "change_total_currency": "GBP",
+        "created_at": "2022-08-01T09:52:40.345867Z",
+        "expires_at": "2022-08-01T10:22:40Z",
+        "id": "oco_0000AM52gck0tRvCHTZIhu",
+        "live_mode": false,
+        "new_total_amount": "0.00",
+        "new_total_currency": "GBP",
+        "order_change_id": null,
+        "penalty_total_amount": "0.00",
+        "penalty_total_currency": "GBP",
+        "refund_to": "original_form_of_payment",
+        "slices": {
+          "add": [
+            {
+              "destination": {
+                "city": null,
+                "city_name": "Stuttgart",
+                "iata_city_code": "STR",
+                "iata_code": "STR",
+                "iata_country_code": "DE",
+                "icao_code": "EDDS",
+                "id": "arp_str_de",
+                "latitude": 48.688717,
+                "longitude": 9.204025,
+                "name": "Stuttgart Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H40M",
+              "fare_brand_name": "Economy Plus",
+              "id": "sli_0000AM52gchB3zeY8gF2I7",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "319",
+                    "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                    "name": "Airbus A319"
+                  },
+                  "arriving_at": "2022-08-30T22:40:00",
+                  "departing_at": "2022-08-30T20:00:00",
+                  "destination": {
+                    "city": null,
+                    "city_name": "Stuttgart",
+                    "iata_city_code": "STR",
+                    "iata_code": "STR",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDS",
+                    "id": "arp_str_de",
+                    "latitude": 48.688717,
+                    "longitude": 9.204025,
+                    "name": "Stuttgart Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "3",
+                  "distance": null,
+                  "duration": "PT1H40M",
+                  "id": "seg_0000AM52gchB3zeY8gF2I1",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0922",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0922",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ],
+          "remove": [
+            {
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "FRA",
+                  "iata_code": "FRA",
+                  "iata_country_code": "DE",
+                  "icao_code": null,
+                  "id": "cit_fra_de",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Frankfurt",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Frankfurt",
+                "iata_city_code": "FRA",
+                "iata_code": "FRA",
+                "iata_country_code": "DE",
+                "icao_code": "EDDF",
+                "id": "arp_fra_de",
+                "latitude": 50.034866,
+                "longitude": 8.567755,
+                "name": "Frankfurt am Main Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H45M",
+              "fare_brand_name": null,
+              "id": "sli_0000AM52GZXHxmzu2l8Bj4",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "32N",
+                    "id": "arc_00009lcSPZuSbgKG1u4Pkn",
+                    "name": "Airbus A320neo"
+                  },
+                  "arriving_at": "2022-10-18T17:50:00",
+                  "departing_at": "2022-10-18T15:05:00",
+                  "destination": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "FRA",
+                      "iata_code": "FRA",
+                      "iata_country_code": "DE",
+                      "icao_code": null,
+                      "id": "cit_fra_de",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "Frankfurt",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "Frankfurt",
+                    "iata_city_code": "FRA",
+                    "iata_code": "FRA",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDF",
+                    "id": "arp_fra_de",
+                    "latitude": 50.034866,
+                    "longitude": 8.567755,
+                    "name": "Frankfurt am Main Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "2",
+                  "distance": null,
+                  "duration": "PT1H45M",
+                  "id": "seg_0000AM52GZUS8KjFtxnvJ3",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0910",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0910",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ]
+        },
+        "updated_at": "2022-08-01T09:52:40.345867Z"
+      },
+      {
+        "available_payment_types": [
+          "card",
+          "balance"
+        ],
+        "change_total_amount": "81.60",
+        "change_total_currency": "GBP",
+        "created_at": "2022-08-01T09:52:40.351727Z",
+        "expires_at": "2022-08-01T10:22:40Z",
+        "id": "oco_0000AM52gcmqiuBqQGtZ7w",
+        "live_mode": false,
+        "new_total_amount": "0.00",
+        "new_total_currency": "GBP",
+        "order_change_id": null,
+        "penalty_total_amount": "0.00",
+        "penalty_total_currency": "GBP",
+        "refund_to": "original_form_of_payment",
+        "slices": {
+          "add": [
+            {
+              "destination": {
+                "city": null,
+                "city_name": "Stuttgart",
+                "iata_city_code": "STR",
+                "iata_code": "STR",
+                "iata_country_code": "DE",
+                "icao_code": "EDDS",
+                "id": "arp_str_de",
+                "latitude": 48.688717,
+                "longitude": 9.204025,
+                "name": "Stuttgart Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H40M",
+              "fare_brand_name": "Economy Basic",
+              "id": "sli_0000AM52gchX2fw89mPJqM",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "319",
+                    "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                    "name": "Airbus A319"
+                  },
+                  "arriving_at": "2022-08-30T22:40:00",
+                  "departing_at": "2022-08-30T20:00:00",
+                  "destination": {
+                    "city": null,
+                    "city_name": "Stuttgart",
+                    "iata_city_code": "STR",
+                    "iata_code": "STR",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDS",
+                    "id": "arp_str_de",
+                    "latitude": 48.688717,
+                    "longitude": 9.204025,
+                    "name": "Stuttgart Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "3",
+                  "distance": null,
+                  "duration": "PT1H40M",
+                  "id": "seg_0000AM52gchX2fw89mPJqD",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0922",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0922",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ],
+          "remove": [
+            {
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "FRA",
+                  "iata_code": "FRA",
+                  "iata_country_code": "DE",
+                  "icao_code": null,
+                  "id": "cit_fra_de",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Frankfurt",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Frankfurt",
+                "iata_city_code": "FRA",
+                "iata_code": "FRA",
+                "iata_country_code": "DE",
+                "icao_code": "EDDF",
+                "id": "arp_fra_de",
+                "latitude": 50.034866,
+                "longitude": 8.567755,
+                "name": "Frankfurt am Main Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H45M",
+              "fare_brand_name": null,
+              "id": "sli_0000AM52GZXHxmzu2l8Bj4",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "32N",
+                    "id": "arc_00009lcSPZuSbgKG1u4Pkn",
+                    "name": "Airbus A320neo"
+                  },
+                  "arriving_at": "2022-10-18T17:50:00",
+                  "departing_at": "2022-10-18T15:05:00",
+                  "destination": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "FRA",
+                      "iata_code": "FRA",
+                      "iata_country_code": "DE",
+                      "icao_code": null,
+                      "id": "cit_fra_de",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "Frankfurt",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "Frankfurt",
+                    "iata_city_code": "FRA",
+                    "iata_code": "FRA",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDF",
+                    "id": "arp_fra_de",
+                    "latitude": 50.034866,
+                    "longitude": 8.567755,
+                    "name": "Frankfurt am Main Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "2",
+                  "distance": null,
+                  "duration": "PT1H45M",
+                  "id": "seg_0000AM52GZUS8KjFtxnvJ3",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0910",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0910",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ]
+        },
+        "updated_at": "2022-08-01T09:52:40.351727Z"
+      },
+      {
+        "available_payment_types": [
+          "card",
+          "balance"
+        ],
+        "change_total_amount": "98.60",
+        "change_total_currency": "GBP",
+        "created_at": "2022-08-01T09:52:40.356479Z",
+        "expires_at": "2022-08-01T10:22:40Z",
+        "id": "oco_0000AM52gcpKZgAuXy3Xzr",
+        "live_mode": false,
+        "new_total_amount": "0.00",
+        "new_total_currency": "GBP",
+        "order_change_id": null,
+        "penalty_total_amount": "0.00",
+        "penalty_total_currency": "GBP",
+        "refund_to": "original_form_of_payment",
+        "slices": {
+          "add": [
+            {
+              "destination": {
+                "city": null,
+                "city_name": "Stuttgart",
+                "iata_city_code": "STR",
+                "iata_code": "STR",
+                "iata_country_code": "DE",
+                "icao_code": "EDDS",
+                "id": "arp_str_de",
+                "latitude": 48.688717,
+                "longitude": 9.204025,
+                "name": "Stuttgart Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H40M",
+              "fare_brand_name": "Economy Plus",
+              "id": "sli_0000AM52gcht1MDiAsZbOY",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "319",
+                    "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                    "name": "Airbus A319"
+                  },
+                  "arriving_at": "2022-08-30T20:05:00",
+                  "departing_at": "2022-08-30T17:25:00",
+                  "destination": {
+                    "city": null,
+                    "city_name": "Stuttgart",
+                    "iata_city_code": "STR",
+                    "iata_code": "STR",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDS",
+                    "id": "arp_str_de",
+                    "latitude": 48.688717,
+                    "longitude": 9.204025,
+                    "name": "Stuttgart Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "3",
+                  "distance": null,
+                  "duration": "PT1H40M",
+                  "id": "seg_0000AM52gcht1MDiAsZbOP",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0920",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0920",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ],
+          "remove": [
+            {
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "FRA",
+                  "iata_code": "FRA",
+                  "iata_country_code": "DE",
+                  "icao_code": null,
+                  "id": "cit_fra_de",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Frankfurt",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Frankfurt",
+                "iata_city_code": "FRA",
+                "iata_code": "FRA",
+                "iata_country_code": "DE",
+                "icao_code": "EDDF",
+                "id": "arp_fra_de",
+                "latitude": 50.034866,
+                "longitude": 8.567755,
+                "name": "Frankfurt am Main Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H45M",
+              "fare_brand_name": null,
+              "id": "sli_0000AM52GZXHxmzu2l8Bj4",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "32N",
+                    "id": "arc_00009lcSPZuSbgKG1u4Pkn",
+                    "name": "Airbus A320neo"
+                  },
+                  "arriving_at": "2022-10-18T17:50:00",
+                  "departing_at": "2022-10-18T15:05:00",
+                  "destination": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "FRA",
+                      "iata_code": "FRA",
+                      "iata_country_code": "DE",
+                      "icao_code": null,
+                      "id": "cit_fra_de",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "Frankfurt",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "Frankfurt",
+                    "iata_city_code": "FRA",
+                    "iata_code": "FRA",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDF",
+                    "id": "arp_fra_de",
+                    "latitude": 50.034866,
+                    "longitude": 8.567755,
+                    "name": "Frankfurt am Main Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "2",
+                  "distance": null,
+                  "duration": "PT1H45M",
+                  "id": "seg_0000AM52GZUS8KjFtxnvJ3",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0910",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0910",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ]
+        },
+        "updated_at": "2022-08-01T09:52:40.356479Z"
+      },
+      {
+        "available_payment_types": [
+          "card",
+          "balance"
+        ],
+        "change_total_amount": "222.10",
+        "change_total_currency": "GBP",
+        "created_at": "2022-08-01T09:52:40.368106Z",
+        "expires_at": "2022-08-01T10:22:40Z",
+        "id": "oco_0000AM52gcsAP8RYglNoPr",
+        "live_mode": false,
+        "new_total_amount": "0.00",
+        "new_total_currency": "GBP",
+        "order_change_id": null,
+        "penalty_total_amount": "0.00",
+        "penalty_total_currency": "GBP",
+        "refund_to": "original_form_of_payment",
+        "slices": {
+          "add": [
+            {
+              "destination": {
+                "city": null,
+                "city_name": "Stuttgart",
+                "iata_city_code": "STR",
+                "iata_code": "STR",
+                "iata_country_code": "DE",
+                "icao_code": "EDDS",
+                "id": "arp_str_de",
+                "latitude": 48.688717,
+                "longitude": 9.204025,
+                "name": "Stuttgart Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H40M",
+              "fare_brand_name": "Business",
+              "id": "sli_0000AM52gciF02VIByjswq",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "319",
+                    "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                    "name": "Airbus A319"
+                  },
+                  "arriving_at": "2022-08-30T22:40:00",
+                  "departing_at": "2022-08-30T20:00:00",
+                  "destination": {
+                    "city": null,
+                    "city_name": "Stuttgart",
+                    "iata_city_code": "STR",
+                    "iata_code": "STR",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDS",
+                    "id": "arp_str_de",
+                    "latitude": 48.688717,
+                    "longitude": 9.204025,
+                    "name": "Stuttgart Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "3",
+                  "distance": null,
+                  "duration": "PT1H40M",
+                  "id": "seg_0000AM52gciF02VIByjswf",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0922",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0922",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ],
+          "remove": [
+            {
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "FRA",
+                  "iata_code": "FRA",
+                  "iata_country_code": "DE",
+                  "icao_code": null,
+                  "id": "cit_fra_de",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Frankfurt",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Frankfurt",
+                "iata_city_code": "FRA",
+                "iata_code": "FRA",
+                "iata_country_code": "DE",
+                "icao_code": "EDDF",
+                "id": "arp_fra_de",
+                "latitude": 50.034866,
+                "longitude": 8.567755,
+                "name": "Frankfurt am Main Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H45M",
+              "fare_brand_name": null,
+              "id": "sli_0000AM52GZXHxmzu2l8Bj4",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "32N",
+                    "id": "arc_00009lcSPZuSbgKG1u4Pkn",
+                    "name": "Airbus A320neo"
+                  },
+                  "arriving_at": "2022-10-18T17:50:00",
+                  "departing_at": "2022-10-18T15:05:00",
+                  "destination": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "FRA",
+                      "iata_code": "FRA",
+                      "iata_country_code": "DE",
+                      "icao_code": null,
+                      "id": "cit_fra_de",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "Frankfurt",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "Frankfurt",
+                    "iata_city_code": "FRA",
+                    "iata_code": "FRA",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDF",
+                    "id": "arp_fra_de",
+                    "latitude": 50.034866,
+                    "longitude": 8.567755,
+                    "name": "Frankfurt am Main Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "2",
+                  "distance": null,
+                  "duration": "PT1H45M",
+                  "id": "seg_0000AM52GZUS8KjFtxnvJ3",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0910",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0910",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ]
+        },
+        "updated_at": "2022-08-01T09:52:40.368106Z"
+      },
+      {
+        "available_payment_types": [
+          "card",
+          "balance"
+        ],
+        "change_total_amount": "222.10",
+        "change_total_currency": "GBP",
+        "created_at": "2022-08-01T09:52:40.371803Z",
+        "expires_at": "2022-08-01T10:22:40Z",
+        "id": "oco_0000AM52gctaJrZslA2wcz",
+        "live_mode": false,
+        "new_total_amount": "0.00",
+        "new_total_currency": "GBP",
+        "order_change_id": null,
+        "penalty_total_amount": "0.00",
+        "penalty_total_currency": "GBP",
+        "refund_to": "original_form_of_payment",
+        "slices": {
+          "add": [
+            {
+              "destination": {
+                "city": null,
+                "city_name": "Stuttgart",
+                "iata_city_code": "STR",
+                "iata_code": "STR",
+                "iata_country_code": "DE",
+                "icao_code": "EDDS",
+                "id": "arp_str_de",
+                "latitude": 48.688717,
+                "longitude": 9.204025,
+                "name": "Stuttgart Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H40M",
+              "fare_brand_name": "Business",
+              "id": "sli_0000AM52gciayimsD4uAUq",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "319",
+                    "id": "arc_00009VMF8AgpV5sdO0xXAn",
+                    "name": "Airbus A319"
+                  },
+                  "arriving_at": "2022-08-30T20:05:00",
+                  "departing_at": "2022-08-30T17:25:00",
+                  "destination": {
+                    "city": null,
+                    "city_name": "Stuttgart",
+                    "iata_city_code": "STR",
+                    "iata_code": "STR",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDS",
+                    "id": "arp_str_de",
+                    "latitude": 48.688717,
+                    "longitude": 9.204025,
+                    "name": "Stuttgart Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "3",
+                  "distance": null,
+                  "duration": "PT1H40M",
+                  "id": "seg_0000AM52gciF02VIByjswv",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0920",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0920",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ],
+          "remove": [
+            {
+              "destination": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "FRA",
+                  "iata_code": "FRA",
+                  "iata_country_code": "DE",
+                  "icao_code": null,
+                  "id": "cit_fra_de",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "Frankfurt",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "Frankfurt",
+                "iata_city_code": "FRA",
+                "iata_code": "FRA",
+                "iata_country_code": "DE",
+                "icao_code": "EDDF",
+                "id": "arp_fra_de",
+                "latitude": 50.034866,
+                "longitude": 8.567755,
+                "name": "Frankfurt am Main Airport",
+                "time_zone": "Europe/Berlin",
+                "type": "airport"
+              },
+              "destination_type": "airport",
+              "duration": "PT1H45M",
+              "fare_brand_name": null,
+              "id": "sli_0000AM52GZXHxmzu2l8Bj4",
+              "origin": {
+                "city": {
+                  "city_name": null,
+                  "iata_city_code": "LON",
+                  "iata_code": "LON",
+                  "iata_country_code": "GB",
+                  "icao_code": null,
+                  "id": "cit_lon_gb",
+                  "latitude": null,
+                  "longitude": null,
+                  "name": "London",
+                  "time_zone": null,
+                  "type": "city"
+                },
+                "city_name": "London",
+                "iata_city_code": "LON",
+                "iata_code": "LHR",
+                "iata_country_code": "GB",
+                "icao_code": "EGLL",
+                "id": "arp_lhr_gb",
+                "latitude": 51.470311,
+                "longitude": -0.458118,
+                "name": "Heathrow Airport",
+                "time_zone": "Europe/London",
+                "type": "airport"
+              },
+              "origin_type": "airport",
+              "segments": [
+                {
+                  "aircraft": {
+                    "iata_code": "32N",
+                    "id": "arc_00009lcSPZuSbgKG1u4Pkn",
+                    "name": "Airbus A320neo"
+                  },
+                  "arriving_at": "2022-10-18T17:50:00",
+                  "departing_at": "2022-10-18T15:05:00",
+                  "destination": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "FRA",
+                      "iata_code": "FRA",
+                      "iata_country_code": "DE",
+                      "icao_code": null,
+                      "id": "cit_fra_de",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "Frankfurt",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "Frankfurt",
+                    "iata_city_code": "FRA",
+                    "iata_code": "FRA",
+                    "iata_country_code": "DE",
+                    "icao_code": "EDDF",
+                    "id": "arp_fra_de",
+                    "latitude": 50.034866,
+                    "longitude": 8.567755,
+                    "name": "Frankfurt am Main Airport",
+                    "time_zone": "Europe/Berlin",
+                    "type": "airport"
+                  },
+                  "destination_terminal": "2",
+                  "distance": null,
+                  "duration": "PT1H45M",
+                  "id": "seg_0000AM52GZUS8KjFtxnvJ3",
+                  "marketing_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "marketing_carrier_flight_number": "0910",
+                  "operating_carrier": {
+                    "iata_code": "BA",
+                    "id": "arl_00009VME7DBKeMags5CliQ",
+                    "logo_lockup_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-lockup/BA.svg",
+                    "logo_symbol_url": "https://assets.duffel.com/img/airlines/for-light-background/full-color-logo/BA.svg",
+                    "name": "British Airways"
+                  },
+                  "operating_carrier_flight_number": "0910",
+                  "origin": {
+                    "city": {
+                      "city_name": null,
+                      "iata_city_code": "LON",
+                      "iata_code": "LON",
+                      "iata_country_code": "GB",
+                      "icao_code": null,
+                      "id": "cit_lon_gb",
+                      "latitude": null,
+                      "longitude": null,
+                      "name": "London",
+                      "time_zone": null,
+                      "type": "city"
+                    },
+                    "city_name": "London",
+                    "iata_city_code": "LON",
+                    "iata_code": "LHR",
+                    "iata_country_code": "GB",
+                    "icao_code": "EGLL",
+                    "id": "arp_lhr_gb",
+                    "latitude": 51.470311,
+                    "longitude": -0.458118,
+                    "name": "Heathrow Airport",
+                    "time_zone": "Europe/London",
+                    "type": "airport"
+                  },
+                  "origin_terminal": "5"
+                }
+              ]
+            }
+          ]
+        },
+        "updated_at": "2022-08-01T09:52:40.371803Z"
+      }
+    ],
+    "order_id": "ord_0000AM52GZUS8KjFtxnvIz",
+    "slices": {
+      "add": [
+        {
+          "cabin_class": "economy",
+          "departure_date": "2022-08-30",
+          "destination": "STR",
+          "origin": "LHR"
+        }
+      ],
+      "remove": [
+        {
+          "slice_id": "sli_0000AM52GZXHxmzu2l8Bj4"
+        }
+      ]
+    },
+    "updated_at": "2022-08-01T09:52:40.327225Z"
+  },
+  "meta": null
+}

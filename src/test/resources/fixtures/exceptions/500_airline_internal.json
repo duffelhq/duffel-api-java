@@ -1,0 +1,16 @@
+{
+  "errors": [
+    {
+      "code": "airline_internal",
+      "documentation_url": "https://duffel.com/docs/api/overview/errors",
+      "message": "The airline responded with an internal_error error. Please contact us.",
+      "source": "british_airways",
+      "title": "Internal Airline Error",
+      "type": "airline_error"
+    }
+  ],
+  "meta": {
+    "request_id": "FwcwZMVj9l-NZioABISl",
+    "status": 500
+  }
+}

@@ -6,6 +6,7 @@ public enum RefundDestination {
     balance,
     card,
     voucher,
-    awaiting_payment
+    awaiting_payment,
+    original_form_of_payment
 
 }
