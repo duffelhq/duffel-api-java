@@ -1,5 +1,6 @@
 package com.duffel.model.response.orderchange;
 
+import com.duffel.model.Data;
 import com.duffel.model.RefundDestination;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
@@ -9,10 +10,10 @@ import lombok.ToString;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class OrderChangeOffer {
+public class OrderChangeOffer extends Data<OrderChangeOffer> {
 
     ///  <summary>
     ///  The amount that will be charged or returned to the original payment method if refunded, determined according
