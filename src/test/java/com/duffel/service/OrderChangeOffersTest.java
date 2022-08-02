@@ -4,11 +4,14 @@ import com.duffel.DuffelApiClient;
 import com.duffel.model.CabinClass;
 import com.duffel.model.OrderChangeSlices;
 import com.duffel.model.request.OrderChange;
+import com.duffel.model.response.orderchange.OrderChangeOffer;
+import com.duffel.model.response.orderchange.OrderChangeOfferCollection;
 import com.duffel.model.response.orderchange.OrderChangeResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.junit.jupiter.MockServerExtension;
+import org.mockserver.model.Parameter;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -22,46 +25,29 @@ class OrderChangeOffersTest {
 
     @Test
     void getById(MockServerClient mockClient) {
-        mockClient.when(request().withMethod("GET").withPath("/air/order_change_requests/ocr_0000AM52gchB3zeY8gF2Hp"))
-                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_change_requests.json")));
+        mockClient.when(request().withMethod("GET").withPath("/air/order_change_offers/oco_0000AM7U7HUJw3fr768XdC"))
+                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_change_offer.json")));
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        OrderChangeResponse orderChangeResponse = client.orderChangeRequestService.getById("ocr_0000AM52gchB3zeY8gF2Hp");
+        OrderChangeOffer offer = client.orderChangeOffersService.getById("oco_0000AM7U7HUJw3fr768XdC");
 
-        assertEquals("ocr_0000AM52gchB3zeY8gF2Hp", orderChangeResponse.getId());
-        assertEquals(6, orderChangeResponse.getOrderChangeOffers().size());
-        assertEquals(new BigDecimal("81.60"), orderChangeResponse.getOrderChangeOffers().get(0).getChangeTotalAmount());
+        assertEquals("oco_0000AM7U7HUJw3fr768XdC", offer.getId());
+        assertEquals(new BigDecimal("216.40"), offer.getChangeTotalAmount());
     }
 
     @Test
-    void post(MockServerClient mockClient) {
-        mockClient.when(request().withMethod("POST").withPath("/air/order_change_requests"))
-                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_change_requests.json")));
+    void page(MockServerClient mockClient) {
+        mockClient.when(request().withMethod("GET").withPath("/air/order_change_offers")
+                        .withQueryStringParameter(Parameter.param("limit", "50"))
+                        .withQueryStringParameter("order_change_request_id", "ocr_0000AM7U7HTxxNOH5zyG4x"))
+                .respond(response().withStatusCode(200).withBody(FixtureHelper.readFixture(this.getClass(), "/fixtures/order_change_offers.json")));
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        OrderChangeSlices.ChangeSlice addSlice = new OrderChangeSlices.ChangeSlice();
-        addSlice.setOrigin("LHR");
-        addSlice.setDestination("STR");
-        addSlice.setCabinClass(CabinClass.economy);
-        addSlice.setDepartureDate("2022-08-30");
+        OrderChangeOfferCollection offers = client.orderChangeOffersService.getPage(null, null, null, "ocr_0000AM7U7HTxxNOH5zyG4x");
 
-        OrderChangeSlices.SliceId removeSlice = new OrderChangeSlices.SliceId();
-        removeSlice.setSliceId("sli_0000AM52GZXHxmzu2l8Bj4");
-
-        OrderChangeSlices orderChangeSlices = new OrderChangeSlices();
-        orderChangeSlices.setAdd(List.of(addSlice));
-        orderChangeSlices.setRemove(List.of(removeSlice));
-
-        OrderChange orderChange = new OrderChange();
-        orderChange.setOrderId("ord_0000AM52GZUS8KjFtxnvIz");
-        orderChange.setSlices(orderChangeSlices);
-
-        OrderChangeResponse orderChangeResponse = client.orderChangeRequestService.post(orderChange);
-
-        assertEquals("ocr_0000AM52gchB3zeY8gF2Hp", orderChangeResponse.getId());
-        assertEquals(6, orderChangeResponse.getOrderChangeOffers().size());
-        assertEquals(new BigDecimal("81.60"), orderChangeResponse.getOrderChangeOffers().get(0).getChangeTotalAmount());
+        assertEquals(1, offers.getData().size());
+        assertEquals("oco_0000AM7U7HUJw3fr768XdC", offers.getData().get(0).getId());
     }
 }
