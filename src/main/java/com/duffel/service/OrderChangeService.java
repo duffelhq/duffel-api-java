@@ -1,12 +1,13 @@
 package com.duffel.service;
 
+import com.duffel.model.PagedData;
 import com.duffel.model.request.OrderChangePaymentRequest;
 import com.duffel.model.request.PendingOrderChange;
 import com.duffel.model.request.PostData;
 import com.duffel.model.response.orderchange.OrderChangeOffer;
 import com.duffel.net.ApiClient;
 
-public class OrderChangeService extends PostResource<OrderChangeOffer, OrderChangeOffer> {
+public class OrderChangeService extends PostResource<OrderChangeOffer, PagedData<OrderChangeOffer>, OrderChangeOffer> {
 
     private static final String ENDPOINT = "/air/order_changes";
 

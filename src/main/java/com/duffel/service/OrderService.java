@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 
-public class OrderService extends PostResource<Order, OrderCollection> {
+public class OrderService extends PostResource<Order, OrderCollection, Order> {
 
     private static final String ENDPOINT = "/air/orders";
 

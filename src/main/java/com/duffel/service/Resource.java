@@ -13,8 +13,9 @@ import static com.duffel.DuffelApiClient.DEFAULT_GET_ALL_PAGE_SIZE;
 Basic resource that supports a GET operation and paging of data
 T get request body type
 U get request paged body type
+V get request paged body content type
 */
-public class Resource<T, U> {
+public class Resource<T, U extends PagedData<V>, V> {
 
     protected final ApiClient apiClient;
 
@@ -49,11 +50,11 @@ public class Resource<T, U> {
         return apiClient.get(endpoint + queryParam, clazz);
     }
 
-    protected List<T> getAll(Class<U> clazz) {
-        PagedData<T> page = (PagedData<T>) getPage(clazz, null, null, DEFAULT_GET_ALL_PAGE_SIZE);
-        List<T> response = new ArrayList<>(page.getData());
+    protected List<V> getAll(Class<U> clazz) {
+        U page = getPage(clazz, null, null, DEFAULT_GET_ALL_PAGE_SIZE);
+        List<V> response = new ArrayList<>(page.getData());
         while (page.getAfter() != null) {
-            page = (PagedData<T>) getPage(clazz, null, page.getAfter(), DEFAULT_GET_ALL_PAGE_SIZE);
+            page = getPage(clazz, null, page.getAfter(), DEFAULT_GET_ALL_PAGE_SIZE);
             response.addAll(page.getData());
         }
         return response;

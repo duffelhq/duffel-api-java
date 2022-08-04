@@ -1,11 +1,12 @@
 package com.duffel.service;
 
+import com.duffel.model.PagedData;
 import com.duffel.model.request.OfferRequest;
 import com.duffel.model.request.PostData;
 import com.duffel.model.response.OfferResponse;
 import com.duffel.net.ApiClient;
 
-public class OfferRequestService extends PostResource<OfferResponse, OfferResponse> {
+public class OfferRequestService extends PostResource<OfferResponse, PagedData<OfferResponse>, OfferResponse> {
 
     private static final String ENDPOINT = "/air/offer_requests";
 

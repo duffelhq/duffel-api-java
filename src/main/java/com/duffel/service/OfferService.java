@@ -4,7 +4,7 @@ import com.duffel.model.OfferCollection;
 import com.duffel.model.response.Offer;
 import com.duffel.net.ApiClient;
 
-public class OfferService extends Resource<Offer, OfferCollection> {
+public class OfferService extends Resource<Offer, OfferCollection, Offer> {
 
     private static final String ENDPOINT = "/air/offers";
 

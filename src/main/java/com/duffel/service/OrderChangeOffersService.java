@@ -6,7 +6,7 @@ import com.duffel.net.ApiClient;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-public class OrderChangeOffersService extends Resource<OrderChangeOffer, OrderChangeOfferCollection> {
+public class OrderChangeOffersService extends Resource<OrderChangeOffer, OrderChangeOfferCollection, OrderChangeOffer> {
 
     private static final String ENDPOINT = "/air/order_change_offers";
 

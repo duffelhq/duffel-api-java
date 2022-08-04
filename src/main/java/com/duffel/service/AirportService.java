@@ -7,7 +7,7 @@ import com.duffel.net.ApiClient;
 
 import java.util.List;
 
-public class AirportService extends Resource<Location, LocationCollection> {
+public class AirportService extends Resource<Location, LocationCollection, Location> {
 
     private static final String ENDPOINT = "/air/airports";
 

@@ -6,7 +6,7 @@ import com.duffel.net.ApiClient;
 
 import java.util.List;
 
-public class AircraftService extends Resource<Aircraft, AircraftCollection> {
+public class AircraftService extends Resource<Aircraft, AircraftCollection, Aircraft> {
 
     private static final String ENDPOINT = "/air/aircraft";
 

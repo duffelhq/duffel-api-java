@@ -6,7 +6,7 @@ import com.duffel.model.request.PostData;
 import com.duffel.model.response.OrderCancellation;
 import com.duffel.net.ApiClient;
 
-public class OrderCancellationService extends PostResource<OrderCancellationRequest, OrderCancellationCollection> {
+public class OrderCancellationService extends PostResource<OrderCancellationRequest, OrderCancellationCollection, OrderCancellation> {
 
     private static final String ENDPOINT = "/air/order_cancellations";
 
