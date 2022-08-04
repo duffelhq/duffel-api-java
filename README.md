@@ -15,7 +15,7 @@ A Java client library for the [Duffel API](https://duffel.com/docs/api).
 
 ## Installation
 
-In most cases, you'll want to add `Duffel SDK` to your project as a dependency by adding it to your `build.gradle` or `settings.xml` file.
+In most cases, you'll want to add `Duffel SDK` to your project as a dependency by adding it to your `build.gradle` or `pom.xml` file.
 
 #### Gradle
 ```groovy

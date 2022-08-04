@@ -15,6 +15,7 @@ public class DuffelApiClient {
     public static final String API_VERSION = "beta";
     public static final String USER_AGENT = "Duffel/beta duffel_api_java";
     public static final Integer DEFAULT_PAGE_LIMIT = 50;
+    public static final Integer DEFAULT_GET_ALL_PAGE_SIZE = 200;
     public static final String DUFFEL_AIR_IATA = "ZZ";
 
     private static final String NO_API_KEY_MESSAGE = "Failed to provide API key, please generate one at " + DUFFEL_TOKEN_URL;
