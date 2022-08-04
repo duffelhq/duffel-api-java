@@ -41,8 +41,8 @@ public class Service {
             property = "type"
     )
     @JsonSubTypes({
-            @JsonSubTypes.Type(value = BaggageMetadata.class, name = "baggage"),
-            @JsonSubTypes.Type(value = SeatMetadata.class, name = "seat")
+            @JsonSubTypes.Type(value = BaggageMetadata.class, name = ServiceType.BAGGAGE),
+            @JsonSubTypes.Type(value = SeatMetadata.class, name = ServiceType.SEAT)
     })
     private Metadata metadata;
 
@@ -81,6 +81,6 @@ public class Service {
     ///  future. We won't consider adding new service types a breaking change.
     ///  </summary>
     @JsonProperty("type")
-    private String serviceType;
+    private ServiceType.Type serviceType;
 
 }

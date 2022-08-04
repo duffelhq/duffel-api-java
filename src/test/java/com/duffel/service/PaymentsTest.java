@@ -1,5 +1,6 @@
-package com.duffel;
+package com.duffel.service;
 
+import com.duffel.DuffelApiClient;
 import com.duffel.model.PaymentType;
 import com.duffel.model.request.Payment;
 import com.duffel.model.request.PaymentRequest;

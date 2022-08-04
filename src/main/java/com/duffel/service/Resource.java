@@ -1,7 +1,13 @@
 package com.duffel.service;
 
 import com.duffel.DuffelApiClient;
+import com.duffel.model.PagedData;
 import com.duffel.net.ApiClient;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.duffel.DuffelApiClient.DEFAULT_GET_ALL_PAGE_SIZE;
 
 // T get request body type
 // U get request paged body type
@@ -38,5 +44,15 @@ public class Resource<T, U> {
         Integer limitParam = limit == null ? DuffelApiClient.DEFAULT_PAGE_LIMIT : limit;
         String queryParam = "?limit=" + limitParam + beforeParam + afterParam + query;
         return apiClient.get(endpoint + queryParam, clazz);
+    }
+
+    protected List<T> getAll(Class<U> clazz) {
+        PagedData<T> page = (PagedData<T>) getPage(clazz, null, null, DEFAULT_GET_ALL_PAGE_SIZE);
+        List<T> response = new ArrayList<>(page.getData());
+        while (page.getAfter() != null) {
+            page = (PagedData<T>) getPage(clazz, null, page.getAfter(), DEFAULT_GET_ALL_PAGE_SIZE);
+            response.addAll(page.getData());
+        }
+        return response;
     }
 }

@@ -107,9 +107,9 @@ public class ApiClient {
 
     private void addBasicHeaders() {
         headers.put("Accept", APPLICATION_JSON);
-        headers.put("User-Agent", DuffelApiClient.USER_AGENT);
-        headers.put("Duffel-Version", DuffelApiClient.API_VERSION);
         headers.put("Content-Type", APPLICATION_JSON);
+        headers.put("Duffel-Version", DuffelApiClient.API_VERSION);
+        headers.put("User-Agent", DuffelApiClient.USER_AGENT);
     }
 
     public <T> T get(String endpoint, Class<T> clazz) {

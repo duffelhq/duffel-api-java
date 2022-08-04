@@ -1,5 +1,6 @@
-package com.duffel;
+package com.duffel.service;
 
+import com.duffel.DuffelApiClient;
 import com.duffel.exception.DuffelException;
 import com.duffel.model.request.OfferRequest;
 import org.junit.jupiter.api.Test;

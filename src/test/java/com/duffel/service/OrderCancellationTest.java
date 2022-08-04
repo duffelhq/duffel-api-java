@@ -1,5 +1,6 @@
-package com.duffel;
+package com.duffel.service;
 
+import com.duffel.DuffelApiClient;
 import com.duffel.model.OrderCancellationCollection;
 import com.duffel.model.RefundDestination;
 import com.duffel.model.request.OrderCancellationRequest;

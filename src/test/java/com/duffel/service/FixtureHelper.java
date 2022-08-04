@@ -1,4 +1,4 @@
-package com.duffel;
+package com.duffel.service;
 
 import com.google.common.io.CharStreams;
 

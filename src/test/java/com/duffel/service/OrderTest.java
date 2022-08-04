@@ -1,5 +1,6 @@
-package com.duffel;
+package com.duffel.service;
 
+import com.duffel.DuffelApiClient;
 import com.duffel.model.OrderCollection;
 import com.duffel.model.OrderType;
 import com.duffel.model.PassengerType;
@@ -9,7 +10,6 @@ import com.duffel.model.request.OrderUpdate;
 import com.duffel.model.response.Order;
 import com.duffel.model.response.order.metadata.BaggageMetadata;
 import com.duffel.model.response.order.metadata.SeatMetadata;
-import com.duffel.service.OrderService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockserver.client.MockServerClient;

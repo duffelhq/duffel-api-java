@@ -4,6 +4,8 @@ import com.duffel.model.Aircraft;
 import com.duffel.model.AircraftCollection;
 import com.duffel.net.ApiClient;
 
+import java.util.List;
+
 public class AircraftService extends Resource<Aircraft, AircraftCollection> {
 
     private static final String ENDPOINT = "/air/aircraft";
@@ -26,5 +28,9 @@ public class AircraftService extends Resource<Aircraft, AircraftCollection> {
 
     public AircraftCollection getPage(String before, String after, Integer limit) {
         return super.getPage(AircraftCollection.class, before, after, limit);
+    }
+
+    public List<Aircraft> getAll() {
+        return super.getAll(AircraftCollection.class);
     }
 }
