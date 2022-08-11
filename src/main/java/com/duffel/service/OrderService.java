@@ -89,11 +89,11 @@ public class OrderService extends PostResource<Order, OrderCollection> {
     @Getter
     @AllArgsConstructor
     public static class SortOptions {
-        private final SortBy sortby;
+        private final SortBy sortBy;
         private final SortDirection direction;
 
         public String getSortQueryString() {
-            return "&sort=" + ((direction == SortDirection.descending) ? "-" : "") + sortby;
+            return "&sort=" + ((direction == SortDirection.descending) ? "-" : "") + sortBy;
         }
     }
 

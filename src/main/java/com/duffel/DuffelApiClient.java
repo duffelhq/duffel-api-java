@@ -25,7 +25,10 @@ public class DuffelApiClient {
     public final AirportService airportService;
     public final OfferService offerService;
     public final OfferRequestService offerRequestService;
+    public final OrderChangeService orderChangeService;
+    public final OrderChangeOffersService orderChangeOffersService;
     public final OrderCancellationService orderCancellationService;
+    public final OrderChangeRequestService orderChangeRequestService;
     public final OrderService orderService;
     public final PaymentsService paymentsService;
     public final SeatMapsService seatMapsService;
@@ -51,7 +54,10 @@ public class DuffelApiClient {
         airportService = new AirportService(apiClient);
         offerService = new OfferService(apiClient);
         offerRequestService = new OfferRequestService(apiClient);
+        orderChangeService = new OrderChangeService(apiClient);
+        orderChangeOffersService = new OrderChangeOffersService(apiClient);
         orderCancellationService = new OrderCancellationService(apiClient);
+        orderChangeRequestService = new OrderChangeRequestService(apiClient);
         orderService = new OrderService(apiClient);
         paymentsService = new PaymentsService(apiClient);
         seatMapsService = new SeatMapsService(apiClient);

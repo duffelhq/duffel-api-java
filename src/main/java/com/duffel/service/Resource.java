@@ -9,8 +9,11 @@ import java.util.List;
 
 import static com.duffel.DuffelApiClient.DEFAULT_GET_ALL_PAGE_SIZE;
 
-// T get request body type
-// U get request paged body type
+/*
+Basic resource that supports a GET operation and paging of data
+T get request body type
+U get request paged body type
+*/
 public class Resource<T, U> {
 
     protected final ApiClient apiClient;
