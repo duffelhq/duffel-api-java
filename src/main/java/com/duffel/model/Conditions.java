@@ -31,6 +31,9 @@ public class Conditions {
     @JsonProperty("refund_before_departure")
     private Condition refundBeforeDeparture;
 
+    @EqualsAndHashCode
+    @Getter
+    @ToString
     public static class Condition {
         ///  <summary>
         ///  Whether this kind of modification is allowed post-booking

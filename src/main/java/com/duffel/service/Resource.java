@@ -29,6 +29,10 @@ public class Resource<T, U> {
         return apiClient.get(endpoint, clazz);
     }
 
+    protected U get(Class<U> clazz, String params) {
+        return apiClient.get(endpoint + params, clazz);
+    }
+
     protected T getById(Class<T> clazz, String id) {
         return apiClient.get(endpoint + "/" + id, clazz);
     }
