@@ -1,0 +1,14 @@
+{
+  "data": {
+    "active": true,
+    "created_at": "2022-08-12T10:34:22.215985Z",
+    "events": [
+      "order.created"
+    ],
+    "id": "end_0000AMRu3m28KGtNP1o01Y",
+    "live_mode": false,
+    "secret": "VqdUDXVyGhUDdsxyF08F6g==",
+    "updated_at": "2022-08-12T10:34:22.215985Z",
+    "url": "https://test.com/webhook"
+  }
+}

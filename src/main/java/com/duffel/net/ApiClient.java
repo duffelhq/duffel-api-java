@@ -155,7 +155,12 @@ public class ApiClient {
 
         try {
             if (response.statusCode() >= 200 && response.statusCode() < 300) {
-                return objectMapper.readValue(response.body(), responseType);
+                if (response.body().isBlank() || "{}".equals(response.body())) {
+                    LOG.debug("Duffel returned an empty response body, returning null");
+                    return null;
+                } else {
+                    return objectMapper.readValue(response.body(), responseType);
+                }
             } else {
                 LOG.debug("Duffel returned an error with status code " + response.statusCode());
                 throw objectMapper.readValue(response.body(), DuffelException.class);
