@@ -42,7 +42,7 @@ class OrderChangeTest {
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
         PendingOrderChange pendingOrderChange = new PendingOrderChange();
-        pendingOrderChange.setSelectedOrderChangeOffer("oco_0000AM7QARj78b4nVSve4G");
+        pendingOrderChange.setSelectedOrderChangeOfferId("oco_0000AM7QARj78b4nVSve4G");
 
         OrderChangeOffer orderChangeOffer = client.orderChangeService.post(pendingOrderChange);
         assertEquals("oce_0000AM7QBMJYkHVH0iPXeK", orderChangeOffer.getId());
