@@ -2,14 +2,12 @@ package com.duffel.example;
 
 import com.duffel.DuffelApiClient;
 import com.duffel.model.*;
-import com.duffel.model.request.OfferRequest;
-import com.duffel.model.request.OrderCancellationRequest;
-import com.duffel.model.request.OrderRequest;
-import com.duffel.model.request.Payment;
+import com.duffel.model.request.*;
 import com.duffel.model.response.Offer;
 import com.duffel.model.response.OfferResponse;
 import com.duffel.model.response.Order;
-import com.duffel.model.response.OrderCancellation;
+import com.duffel.model.response.orderchange.OrderChangeOffer;
+import com.duffel.model.response.orderchange.OrderChangeResponse;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -27,7 +25,6 @@ public class BookAndChangeIT {
     @Test
     void bookAndChange() {
         String testApiKey = System.getenv("DUFFEL_ACCESS_TOKEN");
-        testApiKey = "duffel_test_opbVnrL-pihnqp-SkYssn2xtPhVsjHzn21SA8uGzPAy";
 
         DuffelApiClient client = new DuffelApiClient(testApiKey);
         LOG.info("🚀 Created a Duffel client");
@@ -45,7 +42,7 @@ public class BookAndChangeIT {
 
         OfferRequest request = new OfferRequest();
         request.setMaxConnections(0);
-        request.setCabinClass(CabinClass.economy.name());
+        request.setCabinClass(CabinClass.economy);
         request.setSlices(List.of(slice));
         request.setPassengers(List.of(passenger));
 
@@ -82,10 +79,50 @@ public class BookAndChangeIT {
         orderRequest.setPassengers(List.of(orderPassenger));
 
         Order order = client.orderService.post(orderRequest);
-        LOG.info("🎉 Booked order {} with PNR {} successfully", order.getId(), order.getBookingReference());
+        LOG.info("🎉 Booked order {} with PNR {} for date {} successfully",
+                order.getId(), order.getBookingReference(), order.getSlices().get(0).getSegments().get(0).getDepartingAt());
 
         // Do a search for changing this order
-        // TODO
+        OrderChangeSlices.ChangeSlice addSlice = new OrderChangeSlices.ChangeSlice();
+        addSlice.setCabinClass(CabinClass.economy);
+        addSlice.setOrigin("LHR");
+        addSlice.setDestination("STR");
+        addSlice.setDepartureDate(LocalDate.now().plusDays(28).format(DateTimeFormatter.ISO_DATE));
+
+        OrderChangeSlices.SliceId removeSlice = new OrderChangeSlices.SliceId();
+        removeSlice.setSliceId(order.getSlices().get(0).getId());
+
+        OrderChangeSlices orderChangeSlices = new OrderChangeSlices();
+        orderChangeSlices.setAdd(List.of(addSlice));
+        orderChangeSlices.setRemove(List.of(removeSlice));
+
+        OrderChange orderChange = new OrderChange();
+        orderChange.setOrderId(order.getId());
+        orderChange.setSlices(orderChangeSlices);
+        OrderChangeResponse orderChangeResponse = client.orderChangeRequestService.post(orderChange);
+        LOG.info("🔜 Looking to change flight date, got {} offers for alternatives",
+                orderChangeResponse.getOrderChangeOffers().size());
+
+        List<OrderChangeOffer> orderChangeOffers = orderChangeResponse.getOrderChangeOffers();
+
+        PendingOrderChange pendingOrderChange = new PendingOrderChange();
+        pendingOrderChange.setSelectedOrderChangeOfferId(orderChangeOffers.get(0).getId());
+
+        OrderChangeOffer orderChangeOffer = client.orderChangeService.post(pendingOrderChange);
+        LOG.info("♻️ Going to replace slice with new flight for {}{}",
+                orderChangeOffer.getChangeTotalCurrency(), orderChangeOffer.getChangeTotalAmount());
+
+        payment = new Payment();
+        payment.setAmount(orderChangeOffer.getChangeTotalAmount());
+        payment.setCurrency(orderChangeOffer.getChangeTotalCurrency());
+        payment.setType(PaymentType.balance);
+
+        OrderChangePaymentRequest changePaymentRequest = new OrderChangePaymentRequest();
+        changePaymentRequest.setPayment(payment);
+        client.orderChangeService.confirm(orderChangeOffer.getId(), changePaymentRequest);
+
+        order = client.orderService.getById(order.getId());
+        LOG.info("✈️ New flight date of {} for order {}", order.getSlices().get(0).getSegments().get(0).getDepartingAt(), order.getId());
     }
 
 }

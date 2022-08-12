@@ -16,8 +16,6 @@ import javax.net.ssl.TrustManager;
 import javax.net.ssl.X509TrustManager;
 import java.io.IOException;
 import java.math.BigDecimal;
-import java.net.InetSocketAddress;
-import java.net.ProxySelector;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.http.HttpClient;
@@ -31,7 +29,7 @@ import java.util.Map;
 
 public class ApiClient {
 
-    private static final Logger logger = LogManager.getLogger(ApiClient.class);
+    private static final Logger LOG = LogManager.getLogger(ApiClient.class);
 
     private static final TrustManager[] trustAllCerts = new TrustManager[]{
             new X509TrustManager() {
@@ -143,7 +141,7 @@ public class ApiClient {
         try {
             request = prepareRequest(endpoint, httpMethod, requestBody);
         } catch (IOException | URISyntaxException e) {
-            logger.error("Failed to create API request", e);
+            LOG.error("Failed to create API request", e);
             throw new RuntimeException(e);
         }
 
@@ -151,21 +149,19 @@ public class ApiClient {
         try {
             response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException e) {
-            logger.error("Failed to send API request", e);
+            LOG.error("Failed to send API request", e);
             throw new RuntimeException(e);
         }
-
-        logger.info(response.body());
 
         try {
             if (response.statusCode() >= 200 && response.statusCode() < 300) {
                 return objectMapper.readValue(response.body(), responseType);
             } else {
-                logger.debug("Duffel returned an error with status code " + response.statusCode());
+                LOG.debug("Duffel returned an error with status code " + response.statusCode());
                 throw objectMapper.readValue(response.body(), DuffelException.class);
             }
         } catch (JsonProcessingException e) {
-            logger.error("Failed to deserialize the response body", e);
+            LOG.error("Failed to deserialize the response body", e);
             throw new RuntimeException(e);
         }
     }
