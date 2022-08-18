@@ -33,6 +33,7 @@ public class DuffelApiClient {
     public final OrderService orderService;
     public final PaymentsService paymentsService;
     public final SeatMapsService seatMapsService;
+    public final WebhookService webhookService;
 
     public DuffelApiClient(String apiKey) {
         this(apiKey, DUFFEL_URL);
@@ -63,6 +64,7 @@ public class DuffelApiClient {
         orderService = new OrderService(apiClient);
         paymentsService = new PaymentsService(apiClient);
         seatMapsService = new SeatMapsService(apiClient);
+        webhookService = new WebhookService(apiClient);
     }
 
 }

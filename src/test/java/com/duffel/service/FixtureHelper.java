@@ -10,7 +10,7 @@ import java.util.Objects;
 
 public class FixtureHelper {
 
-    public static String readFixture(Class clazz, String fixture) {
+    public static String readFixture(Class<?> clazz, String fixture) {
         String text;
         try (InputStream stream = clazz.getResourceAsStream(fixture)) {
             try (Reader reader = new InputStreamReader(Objects.requireNonNull(stream))) {
