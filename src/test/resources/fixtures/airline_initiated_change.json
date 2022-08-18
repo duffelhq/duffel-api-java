@@ -1,0 +1,478 @@
+{
+  "data": {
+    "action_taken": "accepted",
+    "action_taken_at": "2022-08-05T15:06:54.762761Z",
+    "added": [
+      {
+        "air_order_id": "ord_0000AKYBzDGHUWCx9taLiK",
+        "changeable": null,
+        "conditions": [
+          {
+            "air_order_id": null,
+            "air_order_slice_id": "sli_0000AL2mD32SmgrUeMkINt",
+            "allowed": true,
+            "id": "con_0000AL2mD3EA5CDfEeDdcO",
+            "inserted_at": "2022-07-01T09:46:31.381495Z",
+            "penalty_amount": "40.00",
+            "penalty_currency": "GBP",
+            "type": "change_before_departure",
+            "updated_at": "2022-07-01T09:46:31.381495Z"
+          }
+        ],
+        "deleted_at": null,
+        "destination": {
+          "alternative_names": [],
+          "city": {
+            "iata_code": "LON",
+            "iata_country_code": "GB",
+            "id": "cit_lon_gb",
+            "inserted_at": "2019-07-30T16:30:57.629192Z",
+            "name": "London",
+            "updated_at": "2019-07-30T16:30:57.629192Z"
+          },
+          "city_name": "London",
+          "disabled_at": null,
+          "iata_city_code": "LON",
+          "iata_code": "LTN",
+          "iata_country_code": "GB",
+          "icao_code": "EGGW",
+          "id": "arp_ltn_gb",
+          "inserted_at": "2022-05-12T16:42:04.758087Z",
+          "latitude": 51.875482,
+          "longitude": -0.37004,
+          "name": "London Luton Airport",
+          "source_type": "ALGORITHM_AND_MANUAL_REVIEW",
+          "time_zone": "Europe/London",
+          "updated_at": "2022-05-12T16:42:04.758087Z"
+        },
+        "destination_id": "arp_ltn_gb",
+        "duration": "PT42M",
+        "id": "sli_0000AMDmMZfSm6FzQaq1ej",
+        "inserted_at": "2022-07-01T09:46:31.379214Z",
+        "link_id": "ZZFAKE",
+        "origin": {
+          "alternative_names": [],
+          "city": {
+            "iata_code": "LON",
+            "iata_country_code": "GB",
+            "id": "cit_lon_gb",
+            "inserted_at": "2019-07-30T16:30:57.629192Z",
+            "name": "London",
+            "updated_at": "2019-07-30T16:30:57.629192Z"
+          },
+          "city_name": "London",
+          "disabled_at": null,
+          "iata_city_code": "LON",
+          "iata_code": "LHR",
+          "iata_country_code": "GB",
+          "icao_code": "EGLL",
+          "id": "arp_lhr_gb",
+          "inserted_at": "2022-05-12T16:42:04.678805Z",
+          "latitude": 51.470311,
+          "longitude": -0.458118,
+          "name": "Heathrow Airport",
+          "source_type": "ALGORITHM",
+          "time_zone": "Europe/London",
+          "updated_at": "2022-05-12T16:42:04.678805Z"
+        },
+        "origin_id": "arp_lhr_gb",
+        "segments": [
+          {
+            "air_order_slice_id": "sli_0000AL2mD32SmgrUeMkINt",
+            "aircraft": {
+              "iata_code": "773",
+              "id": "arc_00009VMF8AhXSSRnQDI6HE",
+              "inserted_at": "2019-10-23T08:46:14.294793Z",
+              "jet_fuel_consumption": {
+                "1000": "15250.5101",
+                "125": "2472.0870",
+                "1500": "22611.7103",
+                "200": "3700.4144",
+                "2000": "30091.7455",
+                "250": "4491.1828",
+                "2500": "37351.6873",
+                "3000": "44933.8726",
+                "3500": "52197.9963",
+                "4000": "59959.5372",
+                "4500": "67249.9589",
+                "500": "8043.4897",
+                "5000": "78024.9748",
+                "5500": "85514.4233",
+                "750": "11676.9731",
+                "lto": "2350.4400"
+              },
+              "name": "Boeing 777-300",
+              "updated_at": "2019-10-23T08:46:14.294793Z"
+            },
+            "aircraft_id": "arc_00009VMF8AhXSSRnQDI6HE",
+            "arrival_datetime": "2022-06-23T04:42:00",
+            "arrival_terminal": "1",
+            "deleted_at": null,
+            "departure_datetime": "2022-06-23T04:00:00",
+            "departure_terminal": "2",
+            "destination": {
+              "alternative_names": [],
+              "city": {
+                "iata_code": "LON",
+                "iata_country_code": "GB",
+                "id": "cit_lon_gb",
+                "inserted_at": "2019-07-30T16:30:57.629192Z",
+                "name": "London",
+                "updated_at": "2019-07-30T16:30:57.629192Z"
+              },
+              "city_name": "London",
+              "disabled_at": null,
+              "iata_city_code": "LON",
+              "iata_code": "LTN",
+              "iata_country_code": "GB",
+              "icao_code": "EGGW",
+              "id": "arp_ltn_gb",
+              "inserted_at": "2022-05-12T16:42:04.758087Z",
+              "latitude": 51.875482,
+              "longitude": -0.37004,
+              "name": "London Luton Airport",
+              "source_type": "ALGORITHM_AND_MANUAL_REVIEW",
+              "time_zone": "Europe/London",
+              "updated_at": "2022-05-12T16:42:04.758087Z"
+            },
+            "destination_id": "arp_ltn_gb",
+            "distance": "95.47334793496904",
+            "duration": "PT42M",
+            "id": "seg_0000AMDmMZfSm6FzQaq1ei",
+            "inserted_at": "2022-07-01T09:46:31.383946Z",
+            "link_id": "ZZFAKE",
+            "marketing_carrier": {
+              "accounting_code": null,
+              "active": true,
+              "aliases": null,
+              "call_sign": "DUFFEL",
+              "country": "United Kingdom",
+              "disabled_at": null,
+              "iata_code": "ZZ",
+              "icao_code": "DUF",
+              "id": "arl_00009VME7D6ivUu8dn35WK",
+              "inserted_at": "2022-06-07T15:13:20.518910Z",
+              "logo_lockup_url": null,
+              "logo_symbol_url": null,
+              "name": "Duffel Airways",
+              "updated_at": "2022-06-07T15:13:20.518910Z"
+            },
+            "marketing_carrier_flight_number": "8700",
+            "marketing_carrier_id": "arl_00009VME7D6ivUu8dn35WK",
+            "operating_carrier": {
+              "accounting_code": null,
+              "active": true,
+              "aliases": null,
+              "call_sign": "DUFFEL",
+              "country": "United Kingdom",
+              "disabled_at": null,
+              "iata_code": "ZZ",
+              "icao_code": "DUF",
+              "id": "arl_00009VME7D6ivUu8dn35WK",
+              "inserted_at": "2022-06-07T15:13:20.518910Z",
+              "logo_lockup_url": null,
+              "logo_symbol_url": null,
+              "name": "Duffel Airways",
+              "updated_at": "2022-06-07T15:13:20.518910Z"
+            },
+            "operating_carrier_code": null,
+            "operating_carrier_flight_number": "8700",
+            "operating_carrier_id": "arl_00009VME7D6ivUu8dn35WK",
+            "operating_carrier_name": null,
+            "origin": {
+              "alternative_names": [],
+              "city": {
+                "iata_code": "LON",
+                "iata_country_code": "GB",
+                "id": "cit_lon_gb",
+                "inserted_at": "2019-07-30T16:30:57.629192Z",
+                "name": "London",
+                "updated_at": "2019-07-30T16:30:57.629192Z"
+              },
+              "city_name": "London",
+              "disabled_at": null,
+              "iata_city_code": "LON",
+              "iata_code": "LHR",
+              "iata_country_code": "GB",
+              "icao_code": "EGLL",
+              "id": "arp_lhr_gb",
+              "inserted_at": "2022-05-12T16:42:04.678805Z",
+              "latitude": 51.470311,
+              "longitude": -0.458118,
+              "name": "Heathrow Airport",
+              "source_type": "ALGORITHM",
+              "time_zone": "Europe/London",
+              "updated_at": "2022-05-12T16:42:04.678805Z"
+            },
+            "origin_id": "arp_lhr_gb",
+            "passengers": [
+              {
+                "air_order_passenger_id": "pas_0000AKYBwJe9IOLa5nMrvW",
+                "air_order_segment_id": "seg_0000AL2mD32SmgrUeMkINs",
+                "baggages": [
+                  {
+                    "id": "fa164f08-9ff0-462e-9db2-34b6503eaa6e",
+                    "quantity": 1,
+                    "type": "checked"
+                  }
+                ],
+                "cabin_class": "economy",
+                "cabin_class_marketing_name": "Economy",
+                "id": "osp_0000AL2mD3DS7peVCRt4Vt",
+                "inserted_at": "2022-07-01T09:46:31.386489Z",
+                "provided_id": null,
+                "seat": null,
+                "updated_at": "2022-07-01T09:46:31.386489Z"
+              }
+            ],
+            "sid": "SG1",
+            "updated_at": "2022-07-01T09:46:31.383946Z"
+          }
+        ],
+        "sid": "SI1",
+        "updated_at": "2022-07-01T09:46:31.379214Z"
+      }
+    ],
+    "available_actions": [
+      "accept",
+      "cancel",
+      "change"
+    ],
+    "created_at": "2022-08-05T15:02:10.285054Z",
+    "id": "aic_0000AMDmMaJsLqaDRvkIe8",
+    "order_id": "ord_0000AKYBzDGHUWCx9taLiK",
+    "removed": [
+      {
+        "air_order_id": "ord_0000AKYBzDGHUWCx9taLiK",
+        "changeable": null,
+        "conditions": [
+          {
+            "air_order_id": null,
+            "air_order_slice_id": "sli_0000AL2mD32SmgrUeMkINt",
+            "allowed": true,
+            "id": "con_0000AL2mD3EA5CDfEeDdcO",
+            "inserted_at": "2022-07-01T09:46:31.381495Z",
+            "penalty_amount": "40.00",
+            "penalty_currency": "GBP",
+            "type": "change_before_departure",
+            "updated_at": "2022-07-01T09:46:31.381495Z"
+          }
+        ],
+        "deleted_at": null,
+        "destination": {
+          "alternative_names": [],
+          "city": {
+            "iata_code": "LON",
+            "iata_country_code": "GB",
+            "id": "cit_lon_gb",
+            "inserted_at": "2019-07-30T16:30:57.629192Z",
+            "name": "London",
+            "updated_at": "2019-07-30T16:30:57.629192Z"
+          },
+          "city_name": "London",
+          "disabled_at": null,
+          "iata_city_code": "LON",
+          "iata_code": "LTN",
+          "iata_country_code": "GB",
+          "icao_code": "EGGW",
+          "id": "arp_ltn_gb",
+          "inserted_at": "2022-05-12T16:42:04.758087Z",
+          "latitude": 51.875482,
+          "longitude": -0.37004,
+          "name": "London Luton Airport",
+          "source_type": "ALGORITHM_AND_MANUAL_REVIEW",
+          "time_zone": "Europe/London",
+          "updated_at": "2022-05-12T16:42:04.758087Z"
+        },
+        "destination_id": "arp_ltn_gb",
+        "duration": "PT42M",
+        "id": "sli_0000AL2mD32SmgrUeMkINt",
+        "inserted_at": "2022-07-01T09:46:31.379214Z",
+        "link_id": "ZZFAKE",
+        "origin": {
+          "alternative_names": [],
+          "city": {
+            "iata_code": "LON",
+            "iata_country_code": "GB",
+            "id": "cit_lon_gb",
+            "inserted_at": "2019-07-30T16:30:57.629192Z",
+            "name": "London",
+            "updated_at": "2019-07-30T16:30:57.629192Z"
+          },
+          "city_name": "London",
+          "disabled_at": null,
+          "iata_city_code": "LON",
+          "iata_code": "LHR",
+          "iata_country_code": "GB",
+          "icao_code": "EGLL",
+          "id": "arp_lhr_gb",
+          "inserted_at": "2022-05-12T16:42:04.678805Z",
+          "latitude": 51.470311,
+          "longitude": -0.458118,
+          "name": "Heathrow Airport",
+          "source_type": "ALGORITHM",
+          "time_zone": "Europe/London",
+          "updated_at": "2022-05-12T16:42:04.678805Z"
+        },
+        "origin_id": "arp_lhr_gb",
+        "segments": [
+          {
+            "air_order_slice_id": "sli_0000AL2mD32SmgrUeMkINt",
+            "aircraft": {
+              "iata_code": "773",
+              "id": "arc_00009VMF8AhXSSRnQDI6HE",
+              "inserted_at": "2019-10-23T08:46:14.294793Z",
+              "jet_fuel_consumption": {
+                "1000": "15250.5101",
+                "125": "2472.0870",
+                "1500": "22611.7103",
+                "200": "3700.4144",
+                "2000": "30091.7455",
+                "250": "4491.1828",
+                "2500": "37351.6873",
+                "3000": "44933.8726",
+                "3500": "52197.9963",
+                "4000": "59959.5372",
+                "4500": "67249.9589",
+                "500": "8043.4897",
+                "5000": "78024.9748",
+                "5500": "85514.4233",
+                "750": "11676.9731",
+                "lto": "2350.4400"
+              },
+              "name": "Boeing 777-300",
+              "updated_at": "2019-10-23T08:46:14.294793Z"
+            },
+            "aircraft_id": "arc_00009VMF8AhXSSRnQDI6HE",
+            "arrival_datetime": "2022-06-23T03:42:00",
+            "arrival_terminal": "1",
+            "deleted_at": null,
+            "departure_datetime": "2022-06-23T03:00:00",
+            "departure_terminal": "2",
+            "destination": {
+              "alternative_names": [],
+              "city": {
+                "iata_code": "LON",
+                "iata_country_code": "GB",
+                "id": "cit_lon_gb",
+                "inserted_at": "2019-07-30T16:30:57.629192Z",
+                "name": "London",
+                "updated_at": "2019-07-30T16:30:57.629192Z"
+              },
+              "city_name": "London",
+              "disabled_at": null,
+              "iata_city_code": "LON",
+              "iata_code": "LTN",
+              "iata_country_code": "GB",
+              "icao_code": "EGGW",
+              "id": "arp_ltn_gb",
+              "inserted_at": "2022-05-12T16:42:04.758087Z",
+              "latitude": 51.875482,
+              "longitude": -0.37004,
+              "name": "London Luton Airport",
+              "source_type": "ALGORITHM_AND_MANUAL_REVIEW",
+              "time_zone": "Europe/London",
+              "updated_at": "2022-05-12T16:42:04.758087Z"
+            },
+            "destination_id": "arp_ltn_gb",
+            "distance": "95.47334793496904",
+            "duration": "PT42M",
+            "id": "seg_0000AL2mD32SmgrUeMkINs",
+            "inserted_at": "2022-07-01T09:46:31.383946Z",
+            "link_id": "ZZFAKE",
+            "marketing_carrier": {
+              "accounting_code": null,
+              "active": true,
+              "aliases": null,
+              "call_sign": "DUFFEL",
+              "country": "United Kingdom",
+              "disabled_at": null,
+              "iata_code": "ZZ",
+              "icao_code": "DUF",
+              "id": "arl_00009VME7D6ivUu8dn35WK",
+              "inserted_at": "2022-06-07T15:13:20.518910Z",
+              "logo_lockup_url": null,
+              "logo_symbol_url": null,
+              "name": "Duffel Airways",
+              "updated_at": "2022-06-07T15:13:20.518910Z"
+            },
+            "marketing_carrier_flight_number": "8700",
+            "marketing_carrier_id": "arl_00009VME7D6ivUu8dn35WK",
+            "operating_carrier": {
+              "accounting_code": null,
+              "active": true,
+              "aliases": null,
+              "call_sign": "DUFFEL",
+              "country": "United Kingdom",
+              "disabled_at": null,
+              "iata_code": "ZZ",
+              "icao_code": "DUF",
+              "id": "arl_00009VME7D6ivUu8dn35WK",
+              "inserted_at": "2022-06-07T15:13:20.518910Z",
+              "logo_lockup_url": null,
+              "logo_symbol_url": null,
+              "name": "Duffel Airways",
+              "updated_at": "2022-06-07T15:13:20.518910Z"
+            },
+            "operating_carrier_code": null,
+            "operating_carrier_flight_number": "8700",
+            "operating_carrier_id": "arl_00009VME7D6ivUu8dn35WK",
+            "operating_carrier_name": null,
+            "origin": {
+              "alternative_names": [],
+              "city": {
+                "iata_code": "LON",
+                "iata_country_code": "GB",
+                "id": "cit_lon_gb",
+                "inserted_at": "2019-07-30T16:30:57.629192Z",
+                "name": "London",
+                "updated_at": "2019-07-30T16:30:57.629192Z"
+              },
+              "city_name": "London",
+              "disabled_at": null,
+              "iata_city_code": "LON",
+              "iata_code": "LHR",
+              "iata_country_code": "GB",
+              "icao_code": "EGLL",
+              "id": "arp_lhr_gb",
+              "inserted_at": "2022-05-12T16:42:04.678805Z",
+              "latitude": 51.470311,
+              "longitude": -0.458118,
+              "name": "Heathrow Airport",
+              "source_type": "ALGORITHM",
+              "time_zone": "Europe/London",
+              "updated_at": "2022-05-12T16:42:04.678805Z"
+            },
+            "origin_id": "arp_lhr_gb",
+            "passengers": [
+              {
+                "air_order_passenger_id": "pas_0000AKYBwJe9IOLa5nMrvW",
+                "air_order_segment_id": "seg_0000AL2mD32SmgrUeMkINs",
+                "baggages": [
+                  {
+                    "id": "fa164f08-9ff0-462e-9db2-34b6503eaa6e",
+                    "quantity": 1,
+                    "type": "checked"
+                  }
+                ],
+                "cabin_class": "economy",
+                "cabin_class_marketing_name": "Economy",
+                "id": "osp_0000AL2mD3DS7peVCRt4Vt",
+                "inserted_at": "2022-07-01T09:46:31.386489Z",
+                "provided_id": null,
+                "seat": null,
+                "updated_at": "2022-07-01T09:46:31.386489Z"
+              }
+            ],
+            "sid": "SG1",
+            "updated_at": "2022-07-01T09:46:31.383946Z"
+          }
+        ],
+        "sid": "SI1",
+        "updated_at": "2022-07-01T09:46:31.379214Z"
+      }
+    ],
+    "updated_at": "2022-08-05T15:02:10.285054Z"
+  },
+  "meta": null
+}

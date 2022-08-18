@@ -29,6 +29,10 @@ public class Resource<T, U> {
         return apiClient.get(endpoint, clazz);
     }
 
+    protected U get(Class<U> clazz, String params) {
+        return apiClient.get(endpoint + params, clazz);
+    }
+
     protected T getById(Class<T> clazz, String id) {
         return apiClient.get(endpoint + "/" + id, clazz);
     }
@@ -49,6 +53,13 @@ public class Resource<T, U> {
         return apiClient.get(endpoint + queryParam, clazz);
     }
 
+    // So, this is messy. But in the cases where we do a getAll, we need to parse it as a PagedData object here in
+    // order to know the pointer to the next page. All the service implementations using this use U as a class
+    // that implements PagedData<T>, but the type system doesn't guarantee this. Looked at adding a 3rd class
+    // type T, U explicitly extending PagedData<V>, and V the paged data content type. This made it a whole lot more
+    // complex to read though.
+    // TODO: let's revisit this and attempt to make it explicit in the type system
+    @SuppressWarnings("unchecked")
     protected List<T> getAll(Class<U> clazz) {
         PagedData<T> page = (PagedData<T>) getPage(clazz, null, null, DEFAULT_GET_ALL_PAGE_SIZE);
         List<T> response = new ArrayList<>(page.getData());

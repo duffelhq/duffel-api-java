@@ -1,5 +1,6 @@
 package com.duffel.model;
 
+import com.duffel.model.response.ChangeSlice;
 import com.duffel.model.response.order.OrderSlice;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
@@ -9,10 +10,10 @@ import lombok.ToString;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class AirlineInitiatedChange {
+public class AirlineInitiatedChange extends Data<AirlineInitiatedChange> {
 
     ///  <summary>
     ///  The action taken in response to this airline-initiated change.
@@ -34,7 +35,7 @@ public class AirlineInitiatedChange {
     ///  as a result of the changes.
     ///  </summary>
     @JsonProperty("added")
-    private List<OrderSlice> added;
+    private List<ChangeSlice> added;
 
     ///  <summary>
     ///  The available actions you can take on this Airline-Initiated Change through our API.
@@ -69,7 +70,7 @@ public class AirlineInitiatedChange {
     ///  List of slices and segments as they were before the change.
     ///  </summary>
     @JsonProperty("removed")
-    private List<OrderSlice> removed;
+    private List<ChangeSlice> removed;
 
     ///  <summary>
     ///  The associated Travel Agent Ticket, if any, for this Airline-Initiated Change. This value will be present for
@@ -91,9 +92,4 @@ public class AirlineInitiatedChange {
         update
     }
 
-    public enum AirlineInitiatedChangeActionTaken {
-        accepted,
-        cancelled,
-        changed
-    }
 }

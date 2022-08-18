@@ -1,5 +1,6 @@
 package com.duffel.model.request;
 
+import com.duffel.model.CabinClass;
 import com.duffel.model.Data;
 import com.duffel.model.Passenger;
 import com.duffel.model.response.Offer;
@@ -28,7 +29,7 @@ public class OfferRequest extends Data<Offer> {
     /// The cabin that the passengers want to travel in
     /// </summary>
     @JsonProperty("cabin_class")
-    private String cabinClass;
+    private CabinClass cabinClass;
 
     /// <summary>
     /// The slices that make up this offer request. One-way journeys can be expressed using one slice, whereas return

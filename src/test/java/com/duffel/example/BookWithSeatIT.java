@@ -49,7 +49,7 @@ public class BookWithSeatIT {
 
         OfferRequest request = new OfferRequest();
         request.setMaxConnections(0);
-        request.setCabinClass(CabinClass.economy.name());
+        request.setCabinClass(CabinClass.economy);
         request.setSlices(List.of(slice));
         request.setPassengers(List.of(passenger));
 
