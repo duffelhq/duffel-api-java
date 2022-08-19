@@ -1,0 +1,36 @@
+name: Deploy artifacts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [FLIN-2385-sonatype]
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      DUFFEL_ACCESS_TOKEN: ${{ secrets.DUFFEL_ACCESS_TOKEN }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+          java-version: '11'
+          distribution: 'temurin'
+      - name: Validate Gradle wrapper
+        uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
+      - name: Build with Gradle
+        uses: gradle/gradle-build-action@0d13054264b0bb894ded474f08ebb30921341cee
+        with:
+          arguments: build publish
+      - name: Upload built artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: |
+            build/libs
+            build/reports
