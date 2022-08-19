@@ -2,6 +2,8 @@ plugins {
     id 'idea'
     id 'java'
     id 'jvm-test-suite'
+    id 'maven-publish'
+    id 'signing'
     id "io.freefair.lombok" version "6.5.0.3"
 }
 
@@ -23,8 +25,8 @@ dependencies {
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion"
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
     testImplementation 'org.mock-server:mockserver-junit-jupiter-no-dependencies:5.13.2'
-    testImplementation 'org.apache.logging.log4j:log4j-api:2.17.2'
-    testImplementation 'org.apache.logging.log4j:log4j-core:2.17.2'
+    testImplementation 'org.apache.logging.log4j:log4j-api:2.18.0'
+    testImplementation 'org.apache.logging.log4j:log4j-core:2.18.0'
 }
 
 tasks.named('test') {
@@ -70,7 +72,68 @@ configurations {
     exampleRuntimeOnly.extendsFrom(testRuntimeOnly)
 }
 
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            pom {
+                name = 'Duffel SDK'
+                description = 'Java SDK for Duffel'
+                url = 'http://www.duffel.com'
+
+                scm {
+                    url = 'https://github.com/duffelhq/duffel-api-java'
+                }
+
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'https://github.com/duffelhq/duffel-api-java/blob/main/LICENSE'
+                    }
+                }
+
+                developers {
+                    developer {
+                        id = 'Duffel'
+                        name = 'Duffel'
+                        email = 'client-libraries@duffel.com'
+                    }
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+            credentials {
+                username = findProperty("sonatypeUsername")
+                password = findProperty("sonatypePassword")
+            }
+        }
+    }
+}
+
+signing {
+    def signingKeyId = findProperty("signingKeyId")
+    def signingKey = findProperty("signingKey")
+    def signingPassword = findProperty("signingPassword")
+    useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
+    sign publishing.publications.mavenJava
+}
+
+javadoc {
+    options.addBooleanOption('html5', true)
+}
+
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 group = "com.duffel"
+archivesBaseName = "duffel-sdk"
 version = "0.0.1"
