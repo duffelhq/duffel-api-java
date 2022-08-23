@@ -82,14 +82,16 @@ publishing {
     publications {
         release(MavenPublication) {
             from components.java
-            signing {
-                useInMemoryPgpKeys(
-                    findProperty('SIGNING_KEY_ID'),
-                    findProperty('SIGNING_KEY'),
-                    findProperty('SIGNING_PASSWORD')
-                )
-                sign publishing.publications.release
-                sign configurations.archives
+            if (project.hasProperty('sign')) {
+                signing {
+                    useInMemoryPgpKeys(
+                            findProperty('SIGNING_KEY_ID'),
+                            findProperty('SIGNING_KEY'),
+                            findProperty('SIGNING_PASSWORD')
+                    )
+                    sign publishing.publications.release
+                    sign configurations.archives
+                }
             }
             pom {
                 name = 'api'
@@ -134,7 +136,6 @@ publishing {
 
 javadoc {
     options.addBooleanOption('html5', true)
-//    source = sourceSets.main.allJava
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
