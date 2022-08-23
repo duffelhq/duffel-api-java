@@ -86,9 +86,9 @@ publishing {
             if (project.hasProperty('sign')) {
                 signing {
                     useInMemoryPgpKeys(
-                            findProperty('SIGNING_KEY_ID'),
-                            findProperty('SIGNING_KEY'),
-                            findProperty('SIGNING_PASSWORD')
+                        property('SIGNING_KEY_ID'),
+                        property('SIGNING_KEY'),
+                        property('SIGNING_PASSWORD')
                     )
                     sign publishing.publications.release
                     sign configurations.archives
@@ -137,6 +137,7 @@ publishing {
 
 javadoc {
     options.addBooleanOption('html5', true)
+    options.addStringOption('Xdoclint:all,-missing', '-quiet')
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
