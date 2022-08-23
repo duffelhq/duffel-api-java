@@ -5,6 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Exception with a string source.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString

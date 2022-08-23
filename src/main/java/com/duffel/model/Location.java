@@ -7,119 +7,125 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * Location details for a city or airport.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
-public class Location  extends Data<Location> {
+public class Location extends Data<Location> {
 
-    ///  <summary>
-    ///  The name of the city (or cities separated by a /) where the airport is located
-    ///  </summary>
+    /**
+     * The name of the city (or cities separated by a /) where the airport is located
+     */
     @JsonProperty("city_name")
     private String cityName;
 
-    ///  <summary>
-    ///  The 3-letter IATA code for the city where the place is located. Only present for airports which are registered
-    ///  with IATA as belonging to a metropolitan area.
-    ///  </summary>
+    /**
+     * The 3-letter IATA code for the city where the place is located. Only present for airports which are registered
+     * with IATA as belonging to a metropolitan area.
+     */
     @JsonProperty("iata_city_code")
     private String iataCityCode;
 
-    ///  <summary>
-    ///  The 3-letter IATA code for the place
-    ///  </summary>
+    /**
+     * The 3-letter IATA code for the place
+     */
     @JsonProperty("iata_code")
     private String iataCode;
 
-    ///  <summary>
-    ///  The ISO 3166-1 alpha-2 code for the country where the city is located
-    ///  </summary>
+    /**
+     * The ISO 3166-1 alpha-2 code for the country where the city is located
+     */
     @JsonProperty("iata_country_code")
     private String iataCountryCode;
 
-    ///  <summary>
-    ///  The four-character ICAO code for the airport
-    ///  </summary>
+    /**
+     * The four-character ICAO code for the airport
+     */
     @JsonProperty("icao_code")
     private String icaoCode;
 
-    ///  <summary>
-    ///  Duffel's unique identifier for the place
-    ///  </summary>
+    /**
+     * Duffel's unique identifier for the place
+     */
     @JsonProperty("id")
     private String id;
 
-    ///  <summary>
-    ///  The latitude position of the airport represented in Decimal degrees with 6 decimal points with a range
-    ///  between -90° and 90°
-    ///  </summary>
+    /**
+     * The latitude position of the airport represented in Decimal degrees with 6 decimal points with a range
+     * between -90° and 90°
+     */
     @JsonProperty("latitude")
     private Double latitude;
 
-    ///  <summary>
-    ///  The longitude position of the airport represented in Decimal degrees with 6 decimal points with a range
-    ///  between -180° and 180°
-    ///  </summary>
+    /**
+     * The longitude position of the airport represented in Decimal degrees with 6 decimal points with a range
+     * between -180° and 180°
+     */
     @JsonProperty("longitude")
     private Double longitude;
 
-    ///  <summary>
-    ///  The name of the place
-    ///  </summary>
+    /**
+     * The name of the place
+     */
     @JsonProperty("name")
     private String name;
 
-    ///  <summary>
-    ///  The time zone of the airport, specified by name from the tz database
-    ///  </summary>
+    /**
+     * The time zone of the airport, specified by name from the tz database
+     */
     @JsonProperty("time_zone")
     private String timeZone;
 
-    ///  <summary>
-    ///  The type of the place
-    ///  </summary>
+    /**
+     * The type of the place
+     */
     @JsonProperty("type")
     private LocationType type;
 
-    ///  <summary>
-    ///  The metropolitan area where the airport is located. Only present for airports which are registered with IATA
-    ///  as belonging to a metropolitan area.
-    ///  </summary>
+    /**
+     * The metropolitan area where the airport is located. Only present for airports which are registered with IATA
+     * as belonging to a metropolitan area.
+     */
     @JsonProperty("city")
     private CityDetail city;
 
-    ///  <summary>
-    ///  The airports associated to a city. This will only be provided where the type is city.
-    ///  </summary>
+    /**
+     * The airports associated to a city. This will only be provided where the type is city.
+     */
     @JsonProperty("airports")
     private List<Location> airports;
 
+    /**
+     * Properties specific to a city.
+     */
     @EqualsAndHashCode
     @Getter
     @ToString
     public static class CityDetail {
 
-        ///  <summary>
-        ///  The three-character IATA code for the city
-        ///  </summary>
+        /**
+         * The three-character IATA code for the city
+         */
         @JsonProperty("iata_code")
         private String iataCode;
 
-        ///  <summary>
-        ///  The ISO 3166-1 alpha-2 code for the country where the city is located
-        ///  </summary>
+        /**
+         * The ISO 3166-1 alpha-2 code for the country where the city is located
+         */
         @JsonProperty("iata_country_code")
         private String iataCountryCode;
 
-        ///  <summary>
-        ///  Duffel's unique identifier for the city
-        ///  </summary>
+        /**
+         * Duffel's unique identifier for the city
+         */
         @JsonProperty("id")
         private String id;
 
-        ///  <summary>
-        ///  The name of the city
-        ///  </summary>
+        /**
+         * The name of the city
+         */
         @JsonProperty("name")
         private String name;
 

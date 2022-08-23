@@ -1,5 +1,8 @@
 package com.duffel.model;
 
+/**
+ * Destination for a refund. Airlines support different refund destinations.
+ */
 public enum RefundDestination {
 
     arc_bsp_cash,

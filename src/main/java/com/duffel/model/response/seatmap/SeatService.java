@@ -7,35 +7,38 @@ import lombok.ToString;
 
 import java.math.BigDecimal;
 
+/**
+ * Service that is available for a seat.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class SeatService {
 
-    ///  <summary>
-    ///  Duffel's unique identifier for the service
-    ///  </summary>
-    ///  <example>ase_00009UhD4ongolulWd9123</example>
+    /**
+     * Duffel's unique identifier for the service
+     * e.g. ase_00009UhD4ongolulWd9123
+     */
     @JsonProperty("id")
     private String id;
 
-    ///  <summary>
-    ///  The passenger that this seat is for
-    ///  </summary>
+    /**
+     * The passenger that this seat is for
+     */
     @JsonProperty("passenger_id")
     private String passengerId;
 
-    ///  <summary>
-    ///  The total price of the seat, including taxes
-    ///  </summary>
+    /**
+     * The total price of the seat, including taxes
+     */
     @JsonProperty("total_amount")
     private BigDecimal totalAmount;
 
-    ///  <summary>
-    ///  The currency of the total_amount, as an ISO 4217 currency code. It will match your organisation's billing
-    ///  currency unless you're using Duffel as an accredited IATA agent, in which case it will be in the currency
-    ///  provided by the airline (which will usually be based on the country where your IATA agency is registered).
-    ///  </summary>
+    /**
+     * The currency of the total_amount, as an ISO 4217 currency code. It will match your organisation's billing
+     * currency unless you're using Duffel as an accredited IATA agent, in which case it will be in the currency
+     * provided by the airline (which will usually be based on the country where your IATA agency is registered).
+     */
     @JsonProperty("total_currency")
     private String totalCurrency;
 

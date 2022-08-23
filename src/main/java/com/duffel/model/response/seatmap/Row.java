@@ -7,15 +7,18 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * Seat map row of elements.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class Row {
 
-    /// <summary>
-    /// A list of sections.
-    /// Each row is divided into sections by one or more aisles.
-    /// </summary>
+    /**
+    * A list of sections.
+    * Each row is divided into sections by one or more aisles.
+    */
     @JsonProperty("sections")
     private List<RowSection> sections;
 

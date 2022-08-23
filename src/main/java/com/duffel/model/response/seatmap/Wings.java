@@ -5,20 +5,23 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Wing locations on an airplane.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class Wings {
 
-    ///  <summary>
-    ///  The index of the first row which is overwing, starting from the front of the aircraft.
-    ///  </summary>
+    /**
+     * The index of the first row which is overwing, starting from the front of the aircraft.
+     */
     @JsonProperty("first_row_index")
     private Integer firstRowIndex;
 
-    ///  <summary>
-    ///  The index of the last row which is overwing, starting from the front of the aircraft.
-    ///  </summary>
+    /**
+     * The index of the last row which is overwing, starting from the front of the aircraft.
+     */
     @JsonProperty("last_row_index")
     private Integer lastRowIndex;
 

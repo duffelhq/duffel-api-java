@@ -1,2 +1,2 @@
-rootProject.name = 'Duffel SDK'
+rootProject.name = 'api'
 include('src')

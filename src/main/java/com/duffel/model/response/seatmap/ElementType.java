@@ -1,5 +1,8 @@
 package com.duffel.model.response.seatmap;
 
+/**
+ * Seat map elements.
+ */
 public enum ElementType {
 
     bassinet,

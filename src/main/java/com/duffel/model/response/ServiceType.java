@@ -1,5 +1,8 @@
 package com.duffel.model.response;
 
+/**
+ * Type of service.
+ */
 public class ServiceType {
 
     public static final String BAGGAGE = "baggage";

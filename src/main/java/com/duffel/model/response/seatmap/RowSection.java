@@ -12,14 +12,17 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * Section of a seat map row.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class RowSection {
 
-    /// <summary>
-    /// The elements that make up this section
-    /// </summary>
+    /**
+     * The elements that make up this section
+     */
     @JsonProperty("elements")
     @JsonTypeInfo(
             use = JsonTypeInfo.Id.NAME,

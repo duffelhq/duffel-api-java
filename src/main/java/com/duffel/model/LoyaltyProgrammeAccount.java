@@ -5,20 +5,23 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Airline loyalty account information for loyalty programmes e.g. Miles and More details
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class LoyaltyProgrammeAccount {
 
-    ///  <summary>
-    ///  The passenger's account number for this Loyalty Programme Account
-    ///  </summary>
+    /**
+     * The passenger's account number for this Loyalty Programme Account
+     */
     @JsonProperty("account_number")
     private String accountNumber;
 
-    ///  <summary>
-    ///  The IATA code for the airline that this Loyalty Programme Account belongs to
-    ///  </summary>
+    /**
+     * The IATA code for the airline that this Loyalty Programme Account belongs to
+     */
     @JsonProperty("airline_iata_code")
     private String airlineIataCode;
 
