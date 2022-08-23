@@ -1,5 +1,10 @@
 # Duffel API Java client library
 
+[![Build and test](https://github.com/duffelhq/duffel-api-java/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/duffelhq/duffel-api-java/actions/workflows/build.yml)
+[![Maven Central](https://img.shields.io/maven-central/v/com.duffel/duffel-api.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.duffel/duffel-api)
+![Duffel SDK Version](https://img.shields.io/github/v/release/duffelhq/duffel-api-java)
+![Duffel API Version](https://img.shields.io/badge/Duffel%20API%20Version-beta-green)
+
 A Java client library for the [Duffel API](https://duffel.com/docs/api).
 
 ## Contents
