@@ -94,9 +94,9 @@ publishing {
                 }
             }
             pom {
-                name = 'api'
+                name = 'duffel-api'
                 group = 'com.duffel'
-                version = gitVersion()
+                version = gitVersion(null)
                 description = 'Java SDK for Duffel'
                 url = 'http://www.duffel.com'
 
