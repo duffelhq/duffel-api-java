@@ -1,6 +1,6 @@
 package com.duffel.service;
 
-import org.apache.logging.log4j.core.util.IOUtils;
+import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;

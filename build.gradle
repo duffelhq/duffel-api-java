@@ -24,6 +24,7 @@ dependencies {
     implementation "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
     implementation "com.fasterxml.jackson.core:jackson-databind:$jacksonDatabindVersion"
     implementation "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$jacksonVersion"
+    testImplementation 'commons-io:commons-io:2.11.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.0'
     testImplementation 'org.mock-server:mockserver-junit-jupiter-no-dependencies:5.14.0'
     testImplementation 'org.apache.logging.log4j:log4j-api:2.18.0'
