@@ -1,6 +1,6 @@
 package com.duffel.service;
 
-import com.google.common.io.CharStreams;
+import org.apache.commons.io.IOUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,7 +14,7 @@ public class FixtureHelper {
         String text;
         try (InputStream stream = clazz.getResourceAsStream(fixture)) {
             try (Reader reader = new InputStreamReader(Objects.requireNonNull(stream))) {
-                text = CharStreams.toString(reader);
+                text = IOUtils.toString(reader);
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
