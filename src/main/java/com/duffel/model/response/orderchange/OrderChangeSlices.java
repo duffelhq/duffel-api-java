@@ -7,20 +7,23 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * Slices to add and remove on an order.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class OrderChangeSlices {
 
-    ///  <summary>
-    ///  The slices that will be added to the order
-    ///  </summary>
+    /**
+     * The slices that will be added to the order
+     */
     @JsonProperty("add")
     private List<OrderChangeSlice> add;
 
-    ///  <summary>
-    ///  The slices that will be removed from the order
-    ///  </summary>
+    /**
+     * The slices that will be removed from the order
+     */
     @JsonProperty("remove")
     private List<OrderChangeSlice> remove;
 

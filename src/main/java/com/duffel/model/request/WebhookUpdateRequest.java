@@ -10,23 +10,26 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * Update request for a webhook.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @ToString
 public class WebhookUpdateRequest extends Data<WebhookUpdateRequest> {
 
-    ///  <summary>
-    ///  The desired active status of the webhook
-    ///  Example: true
-    ///  </summary>
+    /**
+    *  The desired active status of the webhook
+    *  Example: true
+    */
     @JsonProperty("active")
     private boolean active;
 
-    ///  <summary>
-    ///  The URL where your webhook will be received
-    ///  Example: "https://example.com/duffel/webhook"
-    ///  </summary>
+    /**
+    *  The URL where your webhook will be received
+    *  Example: https://example.com/duffel/webhook
+    */
     @JsonProperty("url")
     private String url;
 

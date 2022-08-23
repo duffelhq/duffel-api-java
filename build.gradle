@@ -4,6 +4,7 @@ plugins {
     id 'jvm-test-suite'
     id 'maven-publish'
     id 'signing'
+    id 'com.palantir.git-version' version "0.15.0"
     id "io.freefair.lombok" version "6.5.0.3"
 }
 
@@ -79,10 +80,21 @@ java {
 
 publishing {
     publications {
-        mavenJava(MavenPublication) {
+        release(MavenPublication) {
             from components.java
+            signing {
+                useInMemoryPgpKeys(
+                    findProperty('SIGNING_KEY_ID'),
+                    findProperty('SIGNING_KEY'),
+                    findProperty('SIGNING_PASSWORD')
+                )
+                sign publishing.publications.release
+                sign configurations.archives
+            }
             pom {
-                name = 'Duffel SDK'
+                name = 'api'
+                group = 'com.duffel'
+                version = gitVersion()
                 description = 'Java SDK for Duffel'
                 url = 'http://www.duffel.com'
 
@@ -113,27 +125,20 @@ publishing {
             def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
             url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
             credentials {
-                username = findProperty("sonatypeUsername")
-                password = findProperty("sonatypePassword")
+                username = findProperty("SONATYPE_USERNAME")
+                password = findProperty("SONATYPE_PASSWORD")
             }
         }
     }
 }
 
-signing {
-    def signingKeyId = findProperty("signingKeyId")
-    def signingKey = findProperty("signingKey")
-    def signingPassword = findProperty("signingPassword")
-    useInMemoryPgpKeys(signingKeyId, signingKey, signingPassword)
-    sign publishing.publications.mavenJava
-}
-
 javadoc {
     options.addBooleanOption('html5', true)
+//    source = sourceSets.main.allJava
 }
 
 sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 group = "com.duffel"
-archivesBaseName = "duffel-sdk"
+archivesBaseName = "api"
 version = "0.0.1"

@@ -10,22 +10,25 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * Create request for a new webhook.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @ToString
 public class WebhookCreateRequest extends Data<WebhookCreateRequest> {
 
-    ///  <summary>
-    ///  The events that this webhook will be subscribed to
-    ///  Example: ["order.created","order.airline_initiated_change_detected"]
-    ///  </summary>
+    /**
+     * The events that this webhook will be subscribed to
+     * Example: ["order.created","order.airline_initiated_change_detected"]
+     */
     @JsonProperty("events")
     private List<WebhookEvent> events;
 
-    ///  <summary>
-    ///  The URL where your webhook will be received
-    ///  </summary>
+    /**
+     * The URL where your webhook will be received
+     */
     @JsonProperty("url")
     private String url;
 

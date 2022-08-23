@@ -10,35 +10,38 @@ import lombok.ToString;
 import java.time.Duration;
 import java.util.List;
 
+/**
+ * Slice of an order change.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class OrderChangeSlice {
 
-    ///  <summary>
-    ///  The city or airport where this slice ends
-    ///  </summary>
+    /**
+     * The city or airport where this slice ends
+     */
     @JsonProperty("destination")
     private Location destination;
 
     @JsonProperty("duration")
     private Duration duration;
 
-    ///  <summary>
-    ///  Duffel's unique identifier for the slice. It identifies the slice of an order (i.e. the same slice across orders will have different ids.
-    ///  </summary>
+    /**
+     * Duffel's unique identifier for the slice. It identifies the slice of an order (i.e. the same slice across orders will have different ids.
+     */
     @JsonProperty("id")
     private String id;
 
-    ///  <summary>
-    ///  The city or airport where this slice begins
-    ///  </summary>
+    /**
+     * The city or airport where this slice begins
+     */
     @JsonProperty("origin")
     private Location origin;
 
-    ///  <summary>
-    ///  The segments - that is, specific flights - that the airline is offering to get the passengers from the origin to the destination
-    ///  </summary>
+    /**
+     * The segments - that is, specific flights - that the airline is offering to get the passengers from the origin to the destination
+     */
     @JsonProperty("segments")
     private List<Segment> segments;
 

@@ -8,15 +8,18 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Order cancellation request.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @ToString
 public class OrderCancellationRequest extends Data<OrderCancellation> {
 
-    ///  <summary>
-    ///  Duffel's unique identifier for the order
-    ///  </summary>
+    /**
+     * Duffel's unique identifier for the order
+     */
     @JsonProperty("order_id")
     private String orderId;
 

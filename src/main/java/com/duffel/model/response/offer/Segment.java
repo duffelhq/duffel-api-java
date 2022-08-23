@@ -12,105 +12,110 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.List;
 
+/**
+ * Segment of a flight.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public class Segment {
 
-    ///  <summary>
-    ///  Additional segment-specific information about the passengers included in the offer (e.g. their baggage allowance and the cabin class they will be travelling in)
-    ///  </summary>
+    /**
+     * Additional segment-specific information about the passengers included in the offer (e.g. their baggage allowance and the cabin class they will be travelling in)
+     */
     @JsonProperty("passengers")
     private List<SegmentPassenger> passengers;
 
-    ///  <summary>
-    ///  The terminal at the origin airport from which the segment is scheduled to depart
-    ///  Nullable
-    ///  </summary>
+    /**
+     * The terminal at the origin airport from which the segment is scheduled to depart
+     * Nullable
+     */
     @JsonProperty("origin_terminal")
     private String originTerminal;
 
-    ///  <summary>
-    ///  The airport from which the flight is scheduled to depart
-    ///  </summary>
+    /**
+     * The airport from which the flight is scheduled to depart
+     */
     @JsonProperty("origin")
     private Location origin;
 
-    ///  <summary>
-    ///  The flight number assigned by the <see cref="OperatingCarrier"/>.
-    ///  This may not be present, in which case you should display the <see cref="MarketingCarrier"/>'s information and the <see cref="MarketingCarrierFlightNumber"/>,
-    ///  and simply state the name of the operating_carrier.
-    ///  </summary>
+    /**
+     * The flight number assigned by the OperatingCarrier.
+     * This may not be present, in which case you should display the MarketingCarrier's information and the
+     * MarketingCarrierFlightNumber, and simply state the name of the operating_carrier.
+     */
     @JsonProperty("operating_carrier_flight_number")
     private String operatingCarrierFlightNumber;
 
-    ///  <summary>
-    ///  The airline actually operating this segment. This may differ from the <see cref="MarketingCarrier"/> in the case of a "codeshare", where one airline sells flights operated by another airline.
-    ///  </summary>
+    /**
+     * The airline actually operating this segment. This may differ from the MarketingCarrier in the case of a
+     * "codeshare", where one airline sells flights operated by another airline.
+     */
     @JsonProperty("operating_carrier")
     private Airline operatingCarrier;
 
-    ///  <summary>
-    ///  The flight number assigned by the marketing carrier
-    ///  </summary>
+    /**
+     * The flight number assigned by the marketing carrier
+     */
     @JsonProperty("marketing_carrier_flight_number")
     private String marketingCarrierFlightNumber;
 
-    ///  <summary>
-    ///  The airline selling the tickets for this segment.
-    ///  This may differ from the <see cref="OperatingCarrier"/> in the case of a "codeshare", where one airline sells flights operated by another airline.
-    ///  </summary>
+    /**
+     * The airline selling the tickets for this segment.
+     * This may differ from the OperatingCarrier in the case of a "codeshare", where one airline sells flights
+     * operated by another airline.
+     */
     @JsonProperty("marketing_carrier")
     private Airline marketingCarrier;
 
-    ///  <summary>
-    ///  Duffel's unique identifier for the segment. It identifies the segment of an offer (i.e. the same segment across
-    ///  offers will have different ids).
-    ///  </summary>
+    /**
+     * Duffel's unique identifier for the segment. It identifies the segment of an offer (i.e. the same segment across
+     * offers will have different ids).
+     */
     @JsonProperty("id")
     private String id;
 
-    ///  <summary>
-    ///  The duration of the segment, represented as a ISO 8601 duration
-    ///  </summary>
+    /**
+     * The duration of the segment, represented as a ISO 8601 duration
+     */
     @JsonProperty("duration")
     private Duration duration;
 
-    ///  <summary>
-    ///  The distance of the segment in kilometres
-    ///  </summary>
+    /**
+     * The distance of the segment in kilometres
+     */
     @JsonProperty("distance")
     private String distance;
 
-    ///  <summary>
-    ///  The terminal at the <see cref="Destination"/>  <see cref="Airport"/> where the segment is scheduled to
-    ///  </summary>
+    /**
+     * The terminal at the Destination Airport where the segment is scheduled to
+     */
     @JsonProperty("destination_terminal")
     private String destinationTerminal;
 
-    ///  <summary>
-    ///  The terminal at the <see cref="Destination"/>  <see cref="Airport"/> where the segment is scheduled to
-    ///  </summary>
+    /**
+     * The terminal at the Destination Airport where the segment is scheduled to
+     */
     @JsonProperty("destination")
     private Location destination;
 
-    ///  <summary>
-    ///  The ISO 8601 datetime at which the segment is scheduled to depart, in the origin airport timezone
-    ///  (see origin.timezone)
-    ///  </summary>
+    /**
+     * The ISO 8601 datetime at which the segment is scheduled to depart, in the origin airport timezone
+     * (see origin.timezone)
+     */
     @JsonProperty("departing_at")
     private LocalDateTime departingAt;
 
-    ///  <summary>
-    ///  The ISO 8601 datetime at which the segment is scheduled to arrive, in the destination airport timezone
-    ///  (see destination.timezone)
-    ///  </summary>
+    /**
+     * The ISO 8601 datetime at which the segment is scheduled to arrive, in the destination airport timezone
+     * (see destination.timezone)
+     */
     @JsonProperty("arriving_at")
     private LocalDateTime arrivingAt;
 
-    ///  <summary>
-    ///  The aircraft that the operating carrier will use to operate this segment
-    ///  </summary>
+    /**
+     * The aircraft that the operating carrier will use to operate this segment
+     */
     @JsonProperty("aircraft")
     private Aircraft aircraft;
 

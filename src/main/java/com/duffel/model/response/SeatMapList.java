@@ -7,6 +7,9 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * List of seat maps for an offer or an order.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString

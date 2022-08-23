@@ -1,5 +1,8 @@
 package com.duffel.model;
 
+/**
+ * Passenger type.
+ */
 public enum PassengerType {
 
     adult,

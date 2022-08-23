@@ -1,5 +1,8 @@
 package com.duffel.model;
 
+/**
+ * Airline cabin class.
+ */
 public enum CabinClass {
 
     first,

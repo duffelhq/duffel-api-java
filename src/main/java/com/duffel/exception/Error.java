@@ -7,6 +7,9 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Error information.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
@@ -21,33 +24,33 @@ import lombok.ToString;
 })
 public abstract class Error {
 
-    ///  <summary>
-    ///  A machine-readable identifier for this specific error
-    ///  </summary>
+    /**
+     * A machine-readable identifier for this specific error
+     */
     @JsonProperty("code")
     private String code;
 
-    ///  <summary>
-    ///  A URL pointing to a place in our documentation where you can read about the error
-    ///  </summary>
+    /**
+     * A URL pointing to a place in our documentation where you can read about the error
+     */
     @JsonProperty("documentation_url")
     private String documentationUrl;
 
-    ///  <summary>
-    ///  A more detailed human-readable description of what went wrong
-    ///  </summary>
+    /**
+     * A more detailed human-readable description of what went wrong
+     */
     @JsonProperty("message")
     private String message;
 
-    ///  <summary>
-    ///  A quick and simple description of what went wrong
-    ///  </summary>
+    /**
+     * A quick and simple description of what went wrong
+     */
     @JsonProperty("title")
     private String title;
 
-    ///  <summary>
-    ///  A machine-readable identifier for the general category of error
-    ///  </summary>
+    /**
+     * A machine-readable identifier for the general category of error
+     */
     @JsonProperty("type")
     private String errorType;
 

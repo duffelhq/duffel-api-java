@@ -5,6 +5,9 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Validation exceptions have detailed field information to point to the problem area.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString

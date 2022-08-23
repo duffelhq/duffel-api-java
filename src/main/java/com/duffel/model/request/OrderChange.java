@@ -7,23 +7,26 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Order change request.
+ */
 @EqualsAndHashCode
 @Getter
 @Setter
 @ToString
 public class OrderChange {
 
-    ///  <summary>
-    ///  The slices that make up this offer request. One-way journeys can be expressed using one slice,
-    ///  whereas return trips will need two.
-    ///  </summary>
+    /**
+     * The slices that make up this offer request. One-way journeys can be expressed using one slice,
+     * whereas return trips will need two.
+     */
     @JsonProperty("slices")
     private OrderChangeSlices slices;
 
-    ///  <summary>
-    ///  The order ID you wish to change
-    ///  Example: "ord_0000A3bQ8FJIQoEfuC07n6"
-    ///  </summary>
+    /**
+     * The order ID you wish to change
+     * Example: "ord_0000A3bQ8FJIQoEfuC07n6"
+     */
     @JsonProperty("order_id")
     private String orderId;
 

@@ -6,14 +6,17 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Element of a seat map.
+ */
 @EqualsAndHashCode
 @Getter
 @ToString
 public abstract class Element {
 
-    ///  <summary>
-    ///  The type of this element
-    ///  </summary>
+    /**
+     * The type of this element
+     */
     @JsonProperty("type")
     private ElementType type;
 

@@ -1,5 +1,8 @@
 package com.duffel.model;
 
+/**
+ * Type of document e.g. ticket
+ */
 public enum DocumentType {
 
     electronic_ticket,

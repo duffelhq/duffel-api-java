@@ -7,22 +7,25 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Payment information for an order.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @ToString
 public class PaymentRequest extends Data<PaymentRequest> {
 
-    ///  <summary>
-    ///  The id of the order you want to pay for.
-    ///  Example: "ord_00003x8pVDGcS8y2AWCoWv"
-    ///  </summary>
+    /**
+     * The id of the order you want to pay for.
+     * Example: "ord_00003x8pVDGcS8y2AWCoWv"
+     */
     @JsonProperty("order_id")
     private String orderId;
 
-    ///  <summary>
-    ///  The payment details to use to pay for the order
-    ///  </summary>
+    /**
+     * The payment details to use to pay for the order
+     */
     @JsonProperty("payment")
     private Payment payment;
 

@@ -5,26 +5,29 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
+/**
+ * Aircraft information.
+ */
 @EqualsAndHashCode(callSuper = true)
 @Getter
 @ToString
 public class Aircraft extends Data<Aircraft> {
 
-    ///  <summary>
-    ///  The name of the aircraft
-    ///  </summary>
+    /**
+     * The name of the aircraft
+     */
     @JsonProperty("name")
     private String name;
 
-    ///  <summary>
-    ///  Duffel's unique identifier for the aircraft
-    ///  </summary>
+    /**
+     * Duffel's unique identifier for the aircraft
+     */
     @JsonProperty("id")
     private String id;
 
-    ///  <summary>
-    ///  The three-character IATA code for the aircraft
-    ///  </summary>
+    /**
+     * The three-character IATA code for the aircraft
+     */
     @JsonProperty("iata_code")
     private String iataCode;
 
