@@ -3,7 +3,7 @@
 [![Build and test](https://github.com/duffelhq/duffel-api-java/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/duffelhq/duffel-api-java/actions/workflows/build.yml)
 [![Maven Central](https://img.shields.io/maven-central/v/com.duffel/duffel-api.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.duffel/duffel-api)
 ![Duffel SDK Version](https://img.shields.io/github/v/release/duffelhq/duffel-api-java)
-![Duffel API Version](https://img.shields.io/badge/Duffel%20API%20Version-beta-green)
+![Duffel API Version](https://img.shields.io/badge/Duffel%20API%20Version-v1-green)
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/duffelhq/duffel-api-java/main/LICENSE)
 
 

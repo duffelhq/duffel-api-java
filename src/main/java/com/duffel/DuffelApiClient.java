@@ -12,8 +12,8 @@ public class DuffelApiClient {
 
     public static final String DUFFEL_URL = "https://api.duffel.com";
     public static final String DUFFEL_TOKEN_URL = DUFFEL_URL + "/duffel/tokens";
-    public static final String API_VERSION = "beta";
-    public static final String USER_AGENT = "Duffel/beta duffel_api_java";
+    public static final String API_VERSION = "v1";
+    public static final String USER_AGENT = "Duffel/v1 duffel_api_java";
     public static final Integer DEFAULT_PAGE_LIMIT = 50;
     public static final Integer DEFAULT_GET_ALL_PAGE_SIZE = 200;
     public static final String DUFFEL_AIR_IATA = "ZZ";
