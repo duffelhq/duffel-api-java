@@ -4,6 +4,8 @@
 [![Maven Central](https://img.shields.io/maven-central/v/com.duffel/duffel-api.svg?label=Maven%20Central)](https://search.maven.org/artifact/com.duffel/duffel-api)
 ![Duffel SDK Version](https://img.shields.io/github/v/release/duffelhq/duffel-api-java)
 ![Duffel API Version](https://img.shields.io/badge/Duffel%20API%20Version-beta-green)
+[![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/duffelhq/duffel-api-java/main/LICENSE)
+
 
 A Java client library for the [Duffel API](https://duffel.com/docs/api).
 
@@ -174,152 +176,138 @@ It'll look a bit like this:
 
 
 ```java
-
 client.orderCancellationService.confirm("ore_00009qzZWzjDipIkqpaUAj")
-
 ```
 
-[//]: # ()
-[//]: # (In general, these action methods return the record you've acted on.)
 
-[//]: # ()
-[//]: # ()
-[//]: # (#### An exception: pinging a webhook)
+In general, these action methods return the record you've acted on.
 
-[//]: # ()
-[//]: # ()
-[//]: # (Watch out! There is one action in the API which doesn't return the record you've acted on.)
+#### An exception: pinging a webhook
 
-[//]: # ()
-[//]: # ()
-[//]: # (When you ping a webhook with `client.webhooks.ping&#40;"sev_0000AEdmUJKCvFK45qMFBg"&#41;`, it'll return a `DuffelAPI::Services::WebhooksService::PingResult` if successful, or otherwise it'll raise an error.)
+Watch out! There is one action in the API which doesn't return the record you've acted on.
 
-[//]: # ()
-[//]: # ()
-[//]: # (### Handling errors)
 
-[//]: # ()
-[//]: # ()
-[//]: # (When the Duffel API returns an error, the library will raise an exception.)
+When you ping a webhook with `client.webhookService.ping("end_0000AMRu3m28KGtNP1o01Y")`, it returns void or will throw an exception.
 
-[//]: # ()
-[//]: # ()
-[//]: # (We have an exception class for each of the possible `type`s of error which the API can return, documented [here]&#40;https://duffel.com/docs/api/overview/errors&#41; in the API reference. For example, if the API returns an error with `type` `invalid_state_error`, the library will raise a `DuffelAPI::Errors::InvalidStateError` exception.)
 
-[//]: # ()
-[//]: # ()
-[//]: # (You can find all of those error classes [here]&#40;https://github.com/duffelhq/duffel-api-ruby/tree/main/lib/duffel_api/errors&#41;.)
+### Handling errors
 
-[//]: # ()
-[//]: # ()
-[//]: # (You can rescue all of these errors and get important information with them using instances methods: `#message`, `#title`, `#code`, `#request_id`, etc.)
 
-[//]: # ()
-[//]: # ()
-[//]: # (If the client library is unable to connect to Duffel, an appropriate exception will be raised, for example:)
+When the Duffel API returns an error, the library will raise an exception.
 
-[//]: # ()
-[//]: # ()
-[//]: # (* `Faraday::TimeoutError` in case of a timeout)
 
-[//]: # ()
-[//]: # (* `Faraday::ConnectionFailed` in case of a connection issue &#40;e.g. problems with DNS resolution&#41;)
+We have an exception class for each of the possible `type`s of error which the API can return, documented [here](https://duffel.com/docs/api/overview/errors) in the API reference. For example, if the API returns an error with `type` `invalid_state_error`, the library will throw a `DuffelException` exception, with `errors` containing a `StandardError` with type `invalid_state_error`.
 
-[//]: # ()
-[//]: # (* `DuffelAPI::Errors::Error` for `5XX` errors returned from by Duffel's infrastructure, but not by the API itself &#40;e.g. a load balancer&#41;)
 
-[//]: # ()
+
+You can catch these exceptions and inspect the various fields within the `errors` list and `meta` data: `#message`, `#title`, `#code`, `#request_id`, etc.
+
 [//]: # ()
 [//]: # (### Accessing the raw API response)
 
+[//]: # ()
 [//]: # ()
 [//]: # ()
 [//]: # (Sometimes, you might want to get lower-level details about the response you received from the Duffel API - for example the raw body or headers.)
 
 [//]: # ()
 [//]: # ()
+[//]: # ()
 [//]: # (If an error has been raised, you can call `#api_response` on the exception, which returns a `DuffelAPI::APIResponse`. If you're looking at a `ListResponse` or any resource, you can call `#api_response` on that.)
 
+[//]: # ()
 [//]: # ()
 [//]: # ()
 [//]: # (From the `APIResponse`, you can call `#headers`, `#status_code`, `#raw_body`, `#parsed_body`, `#meta` or `#request_id` to get key information from the response.)
 
 [//]: # ()
 [//]: # ()
+[//]: # ()
 [//]: # (### Verifying webhooks)
 
+[//]: # ()
 [//]: # ()
 [//]: # ()
 [//]: # (You can set up [webhooks]&#40;https://duffel.com/docs/guides/receiving-webhooks&#41; with Duffel to receive notifications about events that happen in your Duffel account - for example, when an airline has a schedule change affecting one of your orders.)
 
 [//]: # ()
 [//]: # ()
+[//]: # ()
 [//]: # (These webhook events are signed with a shared secret. This allows you to be sure that any webhook events are genuinely sent from Duffel when you receive them.)
 
+[//]: # ()
 [//]: # ()
 [//]: # ()
 [//]: # (When you create a webhook, you'll set a secret. With that secret in mind, you can verify that a webhook is genuine like this:)
 
 [//]: # ()
 [//]: # ()
+[//]: # ()
 [//]: # (```ruby)
 
+[//]: # ()
 [//]: # ()
 [//]: # (# In Rails, you'd get this with `request.raw_post`.)
 
 [//]: # ()
+[//]: # ()
 [//]: # (request_body = '{"created_at":"2022-01-08T18:44:56.129339Z","data":{"changes":{},"object":{}},"id":"eve_0000AFEsrBKZAcKgGtZCnQ","live_mode":false,"object":"order","type":"order.updated"}')
 
 [//]: # ()
+[//]: # ()
 [//]: # (# In Rails, you'd get this with `request.headers['X-Duffel-Signature']`.)
 
+[//]: # ()
 [//]: # ()
 [//]: # (request_signature = "t=1641667496,v1=691f25ffb1f206c0fda5bb7b1a9d60fafe42c5f42819d44a06a7cfe09486f102")
 
 [//]: # ()
 [//]: # ()
+[//]: # ()
 [//]: # (# Note that this code doesn't require your access token - `DuffelAPI::WebhookEvent`)
 
+[//]: # ()
 [//]: # ()
 [//]: # (# doesn't expect you to have a `Client` initialised)
 
 [//]: # ()
+[//]: # ()
 [//]: # (if DuffelAPI::WebhookEvent.genuine?&#40;)
 
+[//]: # ()
 [//]: # ()
 [//]: # (  request_body: request_body,)
 
 [//]: # ()
+[//]: # ()
 [//]: # (  request_signature: request_signature,)
 
+[//]: # ()
 [//]: # ()
 [//]: # (  webhook_secret: "a_secret")
 
 [//]: # ()
+[//]: # ()
 [//]: # (&#41;)
 
+[//]: # ()
 [//]: # ()
 [//]: # (  puts "This is a real webhook from Duffel 🌟")
 
 [//]: # ()
+[//]: # ()
 [//]: # (else)
 
+[//]: # ()
 [//]: # ()
 [//]: # (  puts "This is a fake webhook! ☠️")
 
 [//]: # ()
+[//]: # ()
 [//]: # (end)
 
+[//]: # ()
 [//]: # ()
 [//]: # (```)
 
 [//]: # ()
-[//]: # ()
-[//]: # (## Learn more)
-
-[//]: # ()
-[//]: # ()
-[//]: # (You can find complete documentation on this library's classes and methods in the in-code)
-
-[//]: # ()
-[//]: # (documentation on [RubyDoc.info]&#40;https://rubydoc.info/github/duffelhq/duffel-api-ruby&#41;.)
