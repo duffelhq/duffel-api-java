@@ -14,7 +14,7 @@ repositories {
 
 ext {
     jacksonVersion = '2.13.4'
-    jacksonDatabindVersion = '2.13.4'
+    jacksonDatabindVersion = '2.13.4.2'
 }
 
 dependencies {
