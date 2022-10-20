@@ -66,6 +66,7 @@ public class BookWithSeatIT {
         List<SeatMap> seatMapList = client.seatMapsService.getById(offer.getId());
         // Let's book a seat on the first segment (there should only be one anyway for this short haul ZZ flight)
         SeatMap seatMap = seatMapList.get(0);
+        LOG.info("🗺 {}", seatMap.prettyPrintSeatMap());
         // Let's just grab every seat element from the plane
         List<Element> seatElements = seatMap.getCabins().get(0).getRows().stream().flatMap(row -> row.getSections().stream().flatMap(section -> section.getElements().stream().filter((e) -> ElementType.seat == e.getType() && !((SeatElement) e).getAvailableServices().isEmpty()))).collect(Collectors.toList());
         // And choose a random seat
