@@ -115,7 +115,7 @@ public class ApiClient {
         HttpResponse<String> response;
         try {
             response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-            LOG.debug("📝 Trace ID {}", response.headers().firstValue("x-request-id").orElse("❌ NOT FOUND"));
+            LOG.debug("📝 Call to {} has trace ID {}", endpoint, response.headers().firstValue("x-request-id").orElse("❌ NOT FOUND"));
         } catch (IOException | InterruptedException e) {
             LOG.error("Failed to send API request", e);
             throw new RuntimeException(e);
