@@ -55,10 +55,10 @@ public class SeatMap {
      */
     public String prettyPrintSeatMap() {
         StringBuilder output = new StringBuilder();
-        output.append("Seat map ").append(getId());
+        output.append("Seat map ").append(getId()).append("\n");
 
         cabins.forEach(cabin -> {
-                    output.append("Cabin, cabin class ").append(cabin.getCabinClass()).append("\n");
+                    output.append("\tCabin class ").append(cabin.getCabinClass()).append("\n");
                     cabin.getRows().stream().map(row -> {
                                 List<String> rowData = new ArrayList<>();
                                 row.getSections().forEach(section -> {
