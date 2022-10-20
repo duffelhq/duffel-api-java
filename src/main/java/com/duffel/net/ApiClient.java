@@ -115,6 +115,7 @@ public class ApiClient {
         HttpResponse<String> response;
         try {
             response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
+            LOG.debug("📝 Call to {} has trace ID {}", endpoint, response.headers().firstValue("x-request-id").orElse("❌ NOT FOUND"));
         } catch (IOException | InterruptedException e) {
             LOG.error("Failed to send API request", e);
             throw new RuntimeException(e);
@@ -129,7 +130,7 @@ public class ApiClient {
                     return objectMapper.readValue(response.body(), responseType);
                 }
             } else {
-                LOG.debug("Duffel returned an error with status code " + response.statusCode());
+                LOG.debug("Duffel returned an error with status code {}", response.statusCode());
                 throw objectMapper.readValue(response.body(), DuffelException.class);
             }
         } catch (JsonProcessingException e) {

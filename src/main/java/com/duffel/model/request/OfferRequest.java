@@ -11,6 +11,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Offer request body.
@@ -48,6 +49,15 @@ public class OfferRequest extends Data<Offer> {
      */
     @JsonProperty("passengers")
     private List<Passenger> passengers;
+
+    /**
+     * The private fare codes for this Offer Request. You can pass in multiple airlines with their specific private fare
+     * codes. The key is the airline's IATA code that provided the private fare code. The corporate_code is provided to
+     * you by the airline and the tracking_reference is to identify your business by the airlines.
+     * Example: {"QF":[{"corporate_code":"FLX53","tracking_reference":"ABN:2345678"}],"UA":[{"corporate_code":"1234"}]}
+     */
+    @JsonProperty("private_fares")
+    private Map<String, List<PrivateFare>> privateFares;
 
     /**
      * Slice information.
