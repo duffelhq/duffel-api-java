@@ -33,6 +33,6 @@ public class OrderChangeServices {
      * The services you want to add onto this order.
      */
     @JsonProperty("add_services")
-    private List<Service> addServices;
+    private List<ServiceRequest> addServices;
 
 }

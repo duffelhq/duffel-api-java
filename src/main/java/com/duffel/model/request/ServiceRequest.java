@@ -10,7 +10,7 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
-public class Service {
+public class ServiceRequest {
     /**
      * The id of the service from the offer's available_services that you want to book
      */

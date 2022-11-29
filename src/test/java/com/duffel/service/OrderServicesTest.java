@@ -4,8 +4,9 @@ import com.duffel.DuffelApiClient;
 import com.duffel.model.PaymentType;
 import com.duffel.model.request.OrderChangeServices;
 import com.duffel.model.request.Payment;
+import com.duffel.model.request.ServiceRequest;
 import com.duffel.model.response.Order;
-import com.duffel.model.response.OrderAvailableService;
+import com.duffel.model.response.Service;
 import com.duffel.model.response.ServiceType;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;
@@ -35,7 +36,7 @@ class OrderServicesTest {
         payment.setAmount(BigDecimal.valueOf(15.99));
         payment.setCurrency("GBP");
 
-        com.duffel.model.request.Service service = new com.duffel.model.request.Service();
+        ServiceRequest service = new ServiceRequest();
         service.setId("aso_0000APrcAFu2Wb53ufbvlK");
         service.setQuantity(1);
 
@@ -57,7 +58,7 @@ class OrderServicesTest {
 
         DuffelApiClient client = new DuffelApiClient("testKey", "http://localhost:" + mockClient.getPort());
 
-        List<OrderAvailableService> services = client.orderServicesService.get("ord_0000AL3E9lRtT7XMqrEHp8");
+        List<Service> services = client.orderServicesService.get("ord_0000AL3E9lRtT7XMqrEHp8");
 
         assertEquals(2, services.size());
         assertEquals(ServiceType.Type.baggage, services.get(0).getServiceType());

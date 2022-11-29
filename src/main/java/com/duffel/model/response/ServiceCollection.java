@@ -5,6 +5,6 @@ import com.duffel.model.PagedData;
 /**
  * Purchasable service.
  */
-public class OrderAvailableServiceCollection extends PagedData<OrderAvailableService> {
+public class ServiceCollection extends PagedData<Service> {
 
 }

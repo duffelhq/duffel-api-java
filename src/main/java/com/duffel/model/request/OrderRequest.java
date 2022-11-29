@@ -35,7 +35,7 @@ public class OrderRequest extends Data<Order> {
      * type is hold, as we do not support services for hold orders yet.
      */
     @JsonProperty("services")
-    private List<Service> services;
+    private List<ServiceRequest> services;
 
     /**
      * The ids of the offers you want to book. You must specify an array containing exactly one selected offer.
