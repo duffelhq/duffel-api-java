@@ -23,9 +23,15 @@ public class OrderChangeServices {
     @JsonProperty("order_id")
     private String orderId;
 
+    /**
+     The payment details to pay for the services.
+     */
     @JsonProperty("payment")
     private Payment payment;
 
+    /**
+     * The services you want to add onto this order.
+     */
     @JsonProperty("add_services")
     private List<Service> addServices;
 
