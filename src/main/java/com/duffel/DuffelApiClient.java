@@ -31,6 +31,7 @@ public class DuffelApiClient {
     public final OrderCancellationService orderCancellationService;
     public final OrderChangeRequestService orderChangeRequestService;
     public final OrderService orderService;
+    public final OrderServicesService orderServicesService;
     public final PaymentsService paymentsService;
     public final SeatMapsService seatMapsService;
     public final WebhookService webhookService;
@@ -43,7 +44,7 @@ public class DuffelApiClient {
         if (apiKey == null || apiKey.isEmpty()) {
             LOG.error(NO_API_KEY_MESSAGE);
             throw new SdkException(NO_API_KEY_MESSAGE);
-        } else if (apiKey.startsWith("duffel_test_")) {
+        } else if (apiKey.startsWith("duffel_test_") || apiKey.startsWith("test_duffel_")) {
             LOG.info("🚧 Using test API key");
         } else {
             LOG.info("⚡️ Using live API key");
@@ -62,6 +63,7 @@ public class DuffelApiClient {
         orderCancellationService = new OrderCancellationService(apiClient);
         orderChangeRequestService = new OrderChangeRequestService(apiClient);
         orderService = new OrderService(apiClient);
+        orderServicesService = new OrderServicesService(apiClient);
         paymentsService = new PaymentsService(apiClient);
         seatMapsService = new SeatMapsService(apiClient);
         webhookService = new WebhookService(apiClient);

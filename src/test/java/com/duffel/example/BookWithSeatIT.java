@@ -5,6 +5,7 @@ import com.duffel.model.*;
 import com.duffel.model.request.OfferRequest;
 import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.Payment;
+import com.duffel.model.request.Service;
 import com.duffel.model.response.Offer;
 import com.duffel.model.response.OfferResponse;
 import com.duffel.model.response.Order;
@@ -95,7 +96,7 @@ public class BookWithSeatIT {
         payment.setCurrency(offer.getTotalCurrency());
 
         // We want to add this seat to the order
-        OrderRequest.Service selectedService = new OrderRequest.Service();
+        Service selectedService = new Service();
         selectedService.setId(seatService.getId());
         selectedService.setQuantity(1);
 

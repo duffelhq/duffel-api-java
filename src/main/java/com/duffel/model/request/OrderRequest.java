@@ -69,21 +69,4 @@ public class OrderRequest extends Data<Order> {
     @JsonProperty("metadata")
     private Map<String, String> metadata;
 
-    @EqualsAndHashCode
-    @Getter
-    @Setter
-    @ToString
-    public static class Service {
-        /**
-         * The id of the service from the offer's available_services that you want to book
-         */
-        @JsonProperty("id")
-        private String id;
-
-        /**
-         * The quantity of the service to book. This will always be 1 for seat services.
-         */
-        @JsonProperty("quantity")
-        private Integer quantity;
-    }
 }

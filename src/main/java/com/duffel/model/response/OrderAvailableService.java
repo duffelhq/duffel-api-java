@@ -1,11 +1,6 @@
 package com.duffel.model.response;
 
-import com.duffel.model.response.order.metadata.BaggageMetadata;
-import com.duffel.model.response.order.metadata.Metadata;
-import com.duffel.model.response.order.metadata.SeatMetadata;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
@@ -19,7 +14,7 @@ import java.util.List;
 @EqualsAndHashCode
 @Getter
 @ToString
-public class Service {
+public class OrderAvailableService {
 
     /**
      * Duffel's unique identifier for the service
@@ -33,21 +28,6 @@ public class Service {
      */
     @JsonProperty("maximum_quantity")
     private Integer maximumQuantity;
-
-    /**
-     * An object containing metadata about the service, like the maximum weight and dimensions of the baggage.
-     */
-    @JsonProperty("metadata")
-    @JsonTypeInfo(
-            use = JsonTypeInfo.Id.NAME,
-            include = JsonTypeInfo.As.EXTERNAL_PROPERTY,
-            property = "type"
-    )
-    @JsonSubTypes({
-            @JsonSubTypes.Type(value = BaggageMetadata.class, name = ServiceType.BAGGAGE),
-            @JsonSubTypes.Type(value = SeatMetadata.class, name = ServiceType.SEAT)
-    })
-    private Metadata metadata;
 
     /**
      * The list of passenger ids the service applies to. If you add this service to an order it will apply to all the

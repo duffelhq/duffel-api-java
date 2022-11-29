@@ -1,0 +1,31 @@
+{
+  "meta": null,
+  "data": [
+    {
+      "type": "baggage",
+      "total_currency": "GBP",
+      "total_amount": "27.49",
+      "segment_ids": [
+        "seg_0000APEU0iPJJZHccjjxIK"
+      ],
+      "passenger_ids": [
+        "pas_0000APETypB5AfNn2jBRNC"
+      ],
+      "maximum_quantity": 3,
+      "id": "aso_0000APrcAFu2Wb53ufbvlK"
+    },
+    {
+      "type": "baggage",
+      "total_currency": "GBP",
+      "total_amount": "20.49",
+      "segment_ids": [
+        "seg_0000APEU0iPJJZHccjjxIK"
+      ],
+      "passenger_ids": [
+        "pas_0000APETypB5AfNn2jBRNC"
+      ],
+      "maximum_quantity": 3,
+      "id": "aso_0000APrcAFuOVHMdvlmDJY"
+    }
+  ]
+}
