@@ -1,0 +1,45 @@
+{
+  "meta": null,
+  "data": [
+    {
+      "type": "baggage",
+      "total_currency": "GBP",
+      "total_amount": "27.49",
+      "segment_ids": [
+        "seg_0000AQ5wNMdnVDUJs5yrVw"
+      ],
+      "passenger_ids": [
+        "pas_0000AQ5wJ1pAxJkq9UEeP2"
+      ],
+      "metadata": {
+        "type": "checked",
+        "maximum_weight_kg": 23,
+        "maximum_length_cm": null,
+        "maximum_height_cm": null,
+        "maximum_depth_cm": null
+      },
+      "maximum_quantity": 3,
+      "id": "aso_0000AQ60G4rdb68eWlEe3e"
+    },
+    {
+      "type": "baggage",
+      "total_currency": "GBP",
+      "total_amount": "20.49",
+      "segment_ids": [
+        "seg_0000AQ5wNMdnVDUJs5yrVw"
+      ],
+      "passenger_ids": [
+        "pas_0000AQ5wJ1pAxJkq9UEeP2"
+      ],
+      "metadata": {
+        "type": "checked",
+        "maximum_weight_kg": 15,
+        "maximum_length_cm": null,
+        "maximum_height_cm": null,
+        "maximum_depth_cm": null
+      },
+      "maximum_quantity": 3,
+      "id": "aso_0000AQ60G4rdb68eWlEe3f"
+    }
+  ]
+}

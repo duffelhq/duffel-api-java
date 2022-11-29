@@ -5,6 +5,7 @@ import com.duffel.model.*;
 import com.duffel.model.request.OfferRequest;
 import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.Payment;
+import com.duffel.model.request.ServiceRequest;
 import com.duffel.model.response.*;
 import com.duffel.model.response.order.metadata.BaggageMetadata;
 import org.apache.logging.log4j.LogManager;
@@ -82,7 +83,7 @@ public class BookWithExtraBaggageIT {
         payment.setCurrency(offer.getTotalCurrency());
 
         // We want to add this seat to the order
-        OrderRequest.Service selectedService = new OrderRequest.Service();
+        ServiceRequest selectedService = new ServiceRequest();
         selectedService.setId(bagService.getId());
         selectedService.setQuantity(1);
 
