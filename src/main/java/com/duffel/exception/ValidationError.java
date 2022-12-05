@@ -10,7 +10,7 @@ import lombok.ToString;
  */
 @EqualsAndHashCode(callSuper = true)
 @Getter
-@ToString
+@ToString(callSuper = true)
 public class ValidationError extends Error {
 
     @JsonProperty("source")
