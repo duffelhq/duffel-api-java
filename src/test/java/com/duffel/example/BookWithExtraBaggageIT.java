@@ -78,11 +78,11 @@ public class BookWithExtraBaggageIT {
 
         Payment payment = new Payment();
         payment.setType(PaymentType.balance);
-        // New order total is the offer total plus the cost of the seat
+        // New order total is the offer total plus the cost of the bag
         payment.setAmount(newOrderTotalCost);
         payment.setCurrency(offer.getTotalCurrency());
 
-        // We want to add this seat to the order
+        // We want to add this bag to the order
         ServiceRequest selectedService = new ServiceRequest();
         selectedService.setId(bagService.getId());
         selectedService.setQuantity(1);
