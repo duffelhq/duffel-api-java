@@ -31,6 +31,6 @@ public class CancelForAnyReasonMetadata implements Metadata {
      * Text for merchants.
      */
     @JsonProperty("merchant_copy")
-    private String maximumWeightKg;
+    private String merchantCopy;
 
 }
