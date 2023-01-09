@@ -1,3 +1,5 @@
+package com.duffel.example;
+
 import com.duffel.DuffelApiClient;
 import com.duffel.model.*;
 import com.duffel.model.request.*;

@@ -1,3 +1,5 @@
+package com.duffel.example;
+
 import com.duffel.DuffelApiClient;
 import com.duffel.model.*;
 import com.duffel.model.request.OfferRequest;
@@ -23,6 +25,7 @@ public class BookWithCancelForAnyReasonIT {
     @Test
     void bookWithCancelForAnyReason() {
         String testApiKey = System.getenv("DUFFEL_ACCESS_TOKEN");
+
         DuffelApiClient client = new DuffelApiClient(testApiKey);
         LOG.info("🚀 Created a Duffel client");
 
