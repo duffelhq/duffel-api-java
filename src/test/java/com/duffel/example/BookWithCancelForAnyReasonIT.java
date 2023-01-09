@@ -7,7 +7,6 @@ import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.Payment;
 import com.duffel.model.request.ServiceRequest;
 import com.duffel.model.response.*;
-import com.duffel.model.response.order.metadata.BaggageMetadata;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -19,12 +18,12 @@ import java.util.List;
 
 import static com.duffel.DuffelApiClient.DUFFEL_AIR_IATA;
 
-public class BookWithExtraBaggageIT {
+public class BookWithCancelForAnyReasonIT {
 
     private static final Logger LOG = LogManager.getLogger();
 
     @Test
-    void bookWithExtraBaggage() {
+    void bookWithCancelForAnyReason() {
         String testApiKey = System.getenv("DUFFEL_ACCESS_TOKEN");
 
         DuffelApiClient client = new DuffelApiClient(testApiKey);
@@ -32,9 +31,9 @@ public class BookWithExtraBaggageIT {
 
         // Create an offer request
         OfferRequest.Slice slice = new OfferRequest.Slice();
-        slice.setDepartureDate(LocalDate.now().plusDays(14).format(DateTimeFormatter.ISO_DATE));
-        slice.setOrigin("LHR");
-        slice.setDestination("STR");
+        slice.setDepartureDate(LocalDate.now().plusDays(60).format(DateTimeFormatter.ISO_DATE));
+        slice.setOrigin("LGW");
+        slice.setDestination("CDG");
 
         Passenger passenger = new Passenger();
         passenger.setType(PassengerType.adult);
@@ -58,11 +57,12 @@ public class BookWithExtraBaggageIT {
 
         // Fetch the offer details, and request additional services
         offer = client.offerService.getById(offer.getId(), true);
-        Service bagService = offer.getAvailableServices().stream().filter(s -> ServiceType.Type.baggage == s.getServiceType()).findAny().orElseThrow();
-        LOG.info("🎒 Can purchase an additional {}kg bag for {}{}",
-                ((BaggageMetadata) bagService.getMetadata()).getMaximumWeightKg(), bagService.getTotalCurrency(), bagService.getTotalAmount());
-        BigDecimal newOrderTotalCost = offer.getTotalAmount().add(bagService.getTotalAmount());
-        LOG.info("💳 Cost of flight offer plus selected baggage option is {}{}", offer.getTotalCurrency(), newOrderTotalCost);
+
+        Service cfar = offer.getAvailableServices().stream().filter(s -> ServiceType.Type.cancel_for_any_reason == s.getServiceType()).findFirst().orElseThrow();
+        LOG.info("🧨 Cancel For Any Reason service available with cost {}{}", cfar.getTotalCurrency(), cfar.getTotalAmount());
+
+        BigDecimal newOrderTotalCost = offer.getTotalAmount().add(cfar.getTotalAmount());
+        LOG.info("💳 Cost of flight offer plus CFAR is {}{}", offer.getTotalCurrency(), newOrderTotalCost);
 
         // Create an order
         OrderPassenger orderPassenger = new OrderPassenger();
@@ -78,25 +78,23 @@ public class BookWithExtraBaggageIT {
 
         Payment payment = new Payment();
         payment.setType(PaymentType.balance);
-        // New order total is the offer total plus the cost of the bag
+        // New order total is the offer total plus the cost of the cfar
         payment.setAmount(newOrderTotalCost);
         payment.setCurrency(offer.getTotalCurrency());
 
-        // We want to add this bag to the order
-        ServiceRequest selectedService = new ServiceRequest();
-        selectedService.setId(bagService.getId());
-        selectedService.setQuantity(1);
+        ServiceRequest cfarService = new ServiceRequest();
+        cfarService.setId(cfar.getId());
+        cfarService.setQuantity(1);
 
         OrderRequest orderRequest = new OrderRequest();
         orderRequest.setType(OrderType.instant);
         orderRequest.setPayments(List.of(payment));
         orderRequest.setSelectedOffers(List.of(offer.getId()));
         orderRequest.setPassengers(List.of(orderPassenger));
-        orderRequest.setServices(List.of(selectedService));
+        orderRequest.setServices(List.of(cfarService));
 
         Order order = client.orderService.post(orderRequest);
-        LOG.info("🎉 Booked order {} with additional {}kg of baggage under PNR {} successfully",
-                order.getId(), ((BaggageMetadata) bagService.getMetadata()).getMaximumWeightKg(), order.getBookingReference());
+        LOG.info("🎉 Booked order {} under PNR {} successfully", order.getId(), order.getBookingReference());
     }
 
 }

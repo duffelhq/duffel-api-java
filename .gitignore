@@ -31,3 +31,5 @@ build
 .DS_Store
 .idea/
 *.iml
+.vscode/
+bin/
