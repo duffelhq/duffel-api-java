@@ -24,8 +24,8 @@ public class CancelForAnyReasonMetadata implements Metadata {
     /**
      * Link to Terms and Conditions
      */
-    @JsonProperty("terms_and_conditions_link")
-    private String termsAndConditionsLink;
+    @JsonProperty("terms_and_conditions_url")
+    private String termsAndConditionsUrl;
 
     /**
      * Text for merchants.
