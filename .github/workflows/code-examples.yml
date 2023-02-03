@@ -29,11 +29,11 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build example
+          arguments: build --scan example
       - name: Upload built artifacts
         uses: actions/upload-artifact@v3
         with:
           name: Package
           path: |
-            build/libs
-            build/reports
+            build/libs/
+            build/reports/
