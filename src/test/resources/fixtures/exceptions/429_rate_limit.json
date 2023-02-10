@@ -1,0 +1,15 @@
+{
+  "meta": {
+    "status": 429,
+    "request_id": "F0J5ZCaJVEn580QADT4B"
+  },
+  "errors": [
+    {
+      "type": "rate_limit_error",
+      "title": "Rate limit exceeded",
+      "message": "Too many requests hit the API too quickly. Please retry your request after the time specified in the `ratelimit-reset` header.",
+      "documentation_url": "https://duffel.com/docs/api/overview/errors",
+      "code": "rate_limit_exceeded"
+    }
+  ]
+}
