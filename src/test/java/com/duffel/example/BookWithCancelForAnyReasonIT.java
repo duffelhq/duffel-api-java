@@ -7,6 +7,7 @@ import com.duffel.model.request.OrderRequest;
 import com.duffel.model.request.Payment;
 import com.duffel.model.request.ServiceRequest;
 import com.duffel.model.response.*;
+import com.duffel.model.response.order.metadata.CancelForAnyReasonMetadata;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -31,14 +32,14 @@ public class BookWithCancelForAnyReasonIT {
 
         // Create an offer request
         OfferRequest.Slice slice = new OfferRequest.Slice();
-        slice.setDepartureDate(LocalDate.now().plusDays(60).format(DateTimeFormatter.ISO_DATE));
-        slice.setOrigin("LGW");
-        slice.setDestination("CDG");
+        slice.setDepartureDate(LocalDate.now().plusDays(100).format(DateTimeFormatter.ISO_DATE));
+        slice.setOrigin("LHR");
+        slice.setDestination("FRA");
 
         Passenger passenger = new Passenger();
         passenger.setType(PassengerType.adult);
         passenger.setGivenName("Test");
-        passenger.setFamilyName("User");
+        passenger.setFamilyName("Cancel");
 
         OfferRequest request = new OfferRequest();
         request.setMaxConnections(0);
@@ -60,6 +61,8 @@ public class BookWithCancelForAnyReasonIT {
 
         Service cfar = offer.getAvailableServices().stream().filter(s -> ServiceType.Type.cancel_for_any_reason == s.getServiceType()).findFirst().orElseThrow();
         LOG.info("🧨 Cancel For Any Reason service available with cost {}{}", cfar.getTotalCurrency(), cfar.getTotalAmount());
+        LOG.info("🔐 T&Cs {}", ((CancelForAnyReasonMetadata) cfar.getMetadata()).getTermsAndConditionsUrl());
+        LOG.info("📝 Copy {}", ((CancelForAnyReasonMetadata) cfar.getMetadata()).getMerchantCopy());
 
         BigDecimal newOrderTotalCost = offer.getTotalAmount().add(cfar.getTotalAmount());
         LOG.info("💳 Cost of flight offer plus CFAR is {}{}", offer.getTotalCurrency(), newOrderTotalCost);
@@ -68,7 +71,7 @@ public class BookWithCancelForAnyReasonIT {
         OrderPassenger orderPassenger = new OrderPassenger();
         orderPassenger.setEmail("test@duffel.com");
         orderPassenger.setGivenName("Test");
-        orderPassenger.setFamilyName("User");
+        orderPassenger.setFamilyName("Cancel");
         orderPassenger.setTitle("Ms");
         orderPassenger.setBornOn("1990-01-01");
         orderPassenger.setPassengerType(PassengerType.adult);
