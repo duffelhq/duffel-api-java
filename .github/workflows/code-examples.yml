@@ -29,8 +29,9 @@ jobs:
       - name: Build with Gradle
         uses: gradle/gradle-build-action@v2
         with:
-          arguments: build --scan example
+          arguments: build example
       - name: Upload built artifacts
+        if: success() || failure()
         uses: actions/upload-artifact@v3
         with:
           name: Package
