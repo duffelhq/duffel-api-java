@@ -18,7 +18,7 @@ ext {
 }
 
 dependencies {
-    implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+    implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
     implementation "com.fasterxml.jackson.core:jackson-annotations:$jacksonVersion"
     implementation "com.fasterxml.jackson.core:jackson-core:$jacksonVersion"
@@ -27,7 +27,7 @@ dependencies {
     testImplementation 'commons-io:commons-io:2.11.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
     testImplementation 'org.mock-server:mockserver-junit-jupiter-no-dependencies:5.15.0'
-    testImplementation 'org.apache.logging.log4j:log4j-api:2.18.0'
+    testImplementation 'org.apache.logging.log4j:log4j-api:2.20.0'
     testImplementation 'org.apache.logging.log4j:log4j-core:2.20.0'
 }
 
