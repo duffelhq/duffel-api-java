@@ -2,6 +2,7 @@ package com.duffel.net;
 
 import com.duffel.DuffelApiClient;
 import com.duffel.exception.DuffelException;
+import com.duffel.exception.RateLimitException;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -18,6 +19,8 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +31,7 @@ public class ApiClient {
     private final HttpClient HTTP_CLIENT;
 
     private static final String APPLICATION_JSON = "application/json";
+    private static final String RATE_LIMIT_HEADER = "ratelimit-reset";
     private final Map<String, String> headers;
     private final String baseEndpoint;
 
@@ -90,7 +94,7 @@ public class ApiClient {
         return executeCall(endpoint, RequestMethod.POST.name(), clazz, postObject);
     }
 
-    public <T,O > T patch(String endpoint, Class<T> clazz, O postObject) {
+    public <T, O> T patch(String endpoint, Class<T> clazz, O postObject) {
         return executeCall(endpoint, RequestMethod.PATCH.name(), clazz, postObject);
     }
 
@@ -129,6 +133,14 @@ public class ApiClient {
                 } else {
                     return objectMapper.readValue(response.body(), responseType);
                 }
+            } else if (response.statusCode() == 429) {
+                LocalDateTime rateLimitReset = (response.headers().firstValue(RATE_LIMIT_HEADER).isPresent()) ?
+                        LocalDateTime.parse(response.headers().firstValue(RATE_LIMIT_HEADER).get(), DateTimeFormatter.RFC_1123_DATE_TIME)
+                        : null;
+                LOG.debug("Duffel returned an rate limit response with a reset of {}", rateLimitReset);
+                RateLimitException exception = objectMapper.readValue(response.body(), RateLimitException.class);
+                exception.setRateLimitReset(rateLimitReset);
+                throw exception;
             } else {
                 LOG.debug("Duffel returned an error with status code {}", response.statusCode());
                 throw objectMapper.readValue(response.body(), DuffelException.class);

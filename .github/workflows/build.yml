@@ -28,9 +28,10 @@ jobs:
         with:
           arguments: build
       - name: Upload built artifacts
+        if: success() || failure()
         uses: actions/upload-artifact@v3
         with:
           name: Package
           path: |
-            build/libs
-            build/reports
+            build/libs/
+            build/reports/
