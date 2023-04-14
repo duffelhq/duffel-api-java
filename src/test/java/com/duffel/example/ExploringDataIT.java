@@ -4,6 +4,7 @@ import com.duffel.DuffelApiClient;
 import com.duffel.model.Aircraft;
 import com.duffel.model.Airline;
 import com.duffel.model.Location;
+import com.duffel.model.LocationCollection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Test;
@@ -36,6 +37,11 @@ public class ExploringDataIT {
         LOG.info("🇪🇺 Fetched {} airlines", airlines.size());
         Airline airline = airlines.get(204);
         LOG.info("🎫 Airline {} has IATA code {}", airline.getName(), airline.getIataCode());
+
+        LocationCollection placeSuggestions = client.placesService.get("heath");
+        LOG.info("🔎️ Place suggestions found {} suggestions", placeSuggestions.getData().size());
+        Location place = placeSuggestions.getData().get(0);
+        LOG.info("🗺 Suggestions found {} - {} {} in {}", place.getId(), place.getName(), place.getType(), place.getCityName());
     }
 
 }
