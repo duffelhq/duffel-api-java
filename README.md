@@ -43,7 +43,7 @@ dependencies {
 
 ## Usage
 
-You can see a complete end-to-end example of searching and booking using the client library in [`example/com.duffel.example.SearchAndBookIT.java`](https://github.com/duffelhq/duffel-api-java/blob/main/examples/search_and_book.java).
+You can see a complete end-to-end example of searching and booking using the client library in [`example/com.duffel.example.SearchAndBookIT.java`](https://github.com/duffelhq/duffel-api-java/blob/main/src/test/java/com/duffel/example/SearchAndBookIT.java).
 
 ### Initialising the client
 
