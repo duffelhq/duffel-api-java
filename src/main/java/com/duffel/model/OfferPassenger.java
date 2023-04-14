@@ -11,11 +11,11 @@ import java.util.List;
 /**
  * Passenger details.
  */
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = true)
 @Getter
 @Setter
 @ToString
-public class OfferPassenger {
+public class OfferPassenger extends Data<OfferPassenger>{
 
     /**
      * The passenger's family name. Only space, -, ', and letters from the ASCII, Latin-1 Supplement and

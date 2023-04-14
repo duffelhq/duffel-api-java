@@ -57,14 +57,14 @@ public class BookWithLoyaltyAndExtraBaggageIT {
                 offer.getId(), offer.getOwner().getIataCode(), offer.getTotalCurrency(), offer.getTotalAmount());
 
         LoyaltyProgrammeAccount loyalty = new LoyaltyProgrammeAccount();
-        loyalty.setAirlineIataCode("AF");
+        loyalty.setAirlineIataCode("ZZ");
         loyalty.setAccountNumber("12345");
 
         OfferPassenger offerPassenger = new OfferPassenger();
         offerPassenger.setGivenName("Test");
         offerPassenger.setFamilyName("Family");
         offerPassenger.setLoyaltyProgrammeAccountList(List.of(loyalty));
-        offer = client.offerService.patch(offer.getId(), offer.getPassengers().get(0).getId(), offerPassenger);
+        client.offerPassengerService.patch(offer.getId(), offer.getPassengers().get(0).getId(), offerPassenger);
 
         // Fetch the offer details, and request additional services
         offer = client.offerService.getById(offer.getId(), true);
@@ -78,7 +78,7 @@ public class BookWithLoyaltyAndExtraBaggageIT {
         OrderPassenger orderPassenger = new OrderPassenger();
         orderPassenger.setEmail("test@duffel.com");
         orderPassenger.setGivenName("Test");
-        orderPassenger.setFamilyName("User");
+        orderPassenger.setFamilyName("Family");
         orderPassenger.setTitle("Ms");
         orderPassenger.setBornOn("1990-01-01");
         orderPassenger.setPassengerType(PassengerType.adult);
