@@ -3,6 +3,7 @@ package com.duffel.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 /**
@@ -10,6 +11,7 @@ import lombok.ToString;
  */
 @EqualsAndHashCode
 @Getter
+@Setter
 @ToString
 public class LoyaltyProgrammeAccount {
 
