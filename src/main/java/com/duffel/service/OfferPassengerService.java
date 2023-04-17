@@ -13,7 +13,7 @@ public class OfferPassengerService extends PostResource<OfferPassenger, OfferCol
         super(apiClient, ENDPOINT);
     }
 
-    public OfferPassenger patch(String id, String offerPassengerId, OfferPassenger offerPassenger) {
-        return super.patch(OfferPassenger.class, id + "/passengers/" + offerPassengerId, new PostData<>(offerPassenger)).getData();
+    public OfferPassenger patch(String offerId, String offerPassengerId, OfferPassenger offerPassenger) {
+        return super.patch(OfferPassenger.class, offerId + "/passengers/" + offerPassengerId, new PostData<>(offerPassenger)).getData();
     }
 }
