@@ -13,6 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -23,6 +24,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.zip.GZIPInputStream;
 
 public class ApiClient {
 
@@ -32,6 +34,7 @@ public class ApiClient {
 
     private static final String APPLICATION_JSON = "application/json";
     private static final String GZIP = "gzip";
+    private static final String CONTENT_ENCODING_HEADER = "content-encoding";
     private static final String RATE_LIMIT_HEADER = "ratelimit-reset";
     private final Map<String, String> headers;
     private final String baseEndpoint;
@@ -118,34 +121,52 @@ public class ApiClient {
             throw new RuntimeException(e);
         }
 
-        HttpResponse<String> response;
+        HttpResponse<InputStream> response;
         try {
-            response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
+            response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofInputStream());
             LOG.debug("📝 Call to {} has trace ID {}", endpoint, response.headers().firstValue("x-request-id").orElse("❌ NOT FOUND"));
         } catch (IOException | InterruptedException e) {
             LOG.error("Failed to send API request", e);
             throw new RuntimeException(e);
         }
 
+        String body;
+        String contentEncoding = response.headers().firstValue(CONTENT_ENCODING_HEADER).orElse("");
+        if (GZIP.equals(contentEncoding)) {
+            try (GZIPInputStream stream = new GZIPInputStream(response.body())) {
+                body = new String(stream.readAllBytes());
+            } catch (IOException e) {
+                LOG.error("Failed to decompress response body", e);
+                throw new RuntimeException(e);
+            }
+        } else {
+            try (InputStream stream = response.body()) {
+                body = new String(stream.readAllBytes());
+            } catch (IOException e) {
+                LOG.error("Failed to read uncompressed response body", e);
+                throw new RuntimeException(e);
+            }
+        }
+
         try {
             if (response.statusCode() >= 200 && response.statusCode() < 300) {
-                if (response.body().isBlank() || "{}".equals(response.body())) {
+                if (body.isBlank() || "{}".equals(body)) {
                     LOG.debug("Duffel returned an empty response body, returning null");
                     return null;
                 } else {
-                    return objectMapper.readValue(response.body(), responseType);
+                    return objectMapper.readValue(body, responseType);
                 }
             } else if (response.statusCode() == 429) {
                 LocalDateTime rateLimitReset = (response.headers().firstValue(RATE_LIMIT_HEADER).isPresent()) ?
                         LocalDateTime.parse(response.headers().firstValue(RATE_LIMIT_HEADER).get(), DateTimeFormatter.RFC_1123_DATE_TIME)
                         : null;
                 LOG.debug("Duffel returned an rate limit response with a reset of {}", rateLimitReset);
-                RateLimitException exception = objectMapper.readValue(response.body(), RateLimitException.class);
+                RateLimitException exception = objectMapper.readValue(body, RateLimitException.class);
                 exception.setRateLimitReset(rateLimitReset);
                 throw exception;
             } else {
                 LOG.debug("Duffel returned an error with status code {}", response.statusCode());
-                throw objectMapper.readValue(response.body(), DuffelException.class);
+                throw objectMapper.readValue(body, DuffelException.class);
             }
         } catch (JsonProcessingException e) {
             LOG.error("Failed to deserialize the response body", e);
