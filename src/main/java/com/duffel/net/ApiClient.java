@@ -132,8 +132,7 @@ public class ApiClient {
         }
 
         String body;
-        String contentEncoding = response.headers().firstValue(CONTENT_ENCODING_HEADER).orElse("");
-        if (GZIP.equals(contentEncoding)) {
+        if (GZIP.equals(response.headers().firstValue(CONTENT_ENCODING_HEADER).orElse(""))) {
             try (GZIPInputStream stream = new GZIPInputStream(response.body())) {
                 body = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
             } catch (IOException e) {
