@@ -20,6 +20,7 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -134,14 +135,14 @@ public class ApiClient {
         String contentEncoding = response.headers().firstValue(CONTENT_ENCODING_HEADER).orElse("");
         if (GZIP.equals(contentEncoding)) {
             try (GZIPInputStream stream = new GZIPInputStream(response.body())) {
-                body = new String(stream.readAllBytes());
+                body = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
             } catch (IOException e) {
                 LOG.error("Failed to decompress response body", e);
                 throw new RuntimeException(e);
             }
         } else {
             try (InputStream stream = response.body()) {
-                body = new String(stream.readAllBytes());
+                body = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
             } catch (IOException e) {
                 LOG.error("Failed to read uncompressed response body", e);
                 throw new RuntimeException(e);
