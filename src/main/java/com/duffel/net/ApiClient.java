@@ -31,6 +31,7 @@ public class ApiClient {
     private final HttpClient HTTP_CLIENT;
 
     private static final String APPLICATION_JSON = "application/json";
+    private static final String GZIP = "gzip";
     private static final String RATE_LIMIT_HEADER = "ratelimit-reset";
     private final Map<String, String> headers;
     private final String baseEndpoint;
@@ -81,6 +82,7 @@ public class ApiClient {
 
     private void addBasicHeaders() {
         headers.put("Accept", APPLICATION_JSON);
+        headers.put("Accept-Encoding", GZIP);
         headers.put("Content-Type", APPLICATION_JSON);
         headers.put("Duffel-Version", DuffelApiClient.API_VERSION);
         headers.put("User-Agent", DuffelApiClient.USER_AGENT);
