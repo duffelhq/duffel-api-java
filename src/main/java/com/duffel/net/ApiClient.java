@@ -12,8 +12,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.math.BigDecimal;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -122,9 +122,9 @@ public class ApiClient {
             throw new RuntimeException(e);
         }
 
-        HttpResponse<InputStream> response;
+        HttpResponse<byte[]> response;
         try {
-            response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofInputStream());
+            response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofByteArray());
             LOG.debug("📝 Call to {} has trace ID {}", endpoint, response.headers().firstValue("x-request-id").orElse("❌ NOT FOUND"));
         } catch (IOException | InterruptedException e) {
             LOG.error("Failed to send API request", e);
@@ -133,19 +133,14 @@ public class ApiClient {
 
         String body;
         if (GZIP.equals(response.headers().firstValue(CONTENT_ENCODING_HEADER).orElse(""))) {
-            try (GZIPInputStream stream = new GZIPInputStream(response.body())) {
+            try (GZIPInputStream stream = new GZIPInputStream(new ByteArrayInputStream(response.body()))) {
                 body = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
             } catch (IOException e) {
                 LOG.error("Failed to decompress response body", e);
                 throw new RuntimeException(e);
             }
         } else {
-            try (InputStream stream = response.body()) {
-                body = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
-            } catch (IOException e) {
-                LOG.error("Failed to read uncompressed response body", e);
-                throw new RuntimeException(e);
-            }
+            body = new String(response.body(), StandardCharsets.UTF_8);
         }
 
         try {
