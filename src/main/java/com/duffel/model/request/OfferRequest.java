@@ -27,7 +27,7 @@ public class OfferRequest extends Data<Offer> {
      * have a single segment within each slice and 1 means a maximum of two segments within each slice of the offer.
      */
     @JsonProperty("max_connections")
-    private int maxConnections;
+    private int maxConnections = 1;
 
     /**
      * The cabin that the passengers want to travel in
