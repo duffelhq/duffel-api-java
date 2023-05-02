@@ -12,6 +12,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.net.URI;
@@ -19,10 +20,12 @@ import java.net.URISyntaxException;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.zip.GZIPInputStream;
 
 public class ApiClient {
 
@@ -31,6 +34,8 @@ public class ApiClient {
     private final HttpClient HTTP_CLIENT;
 
     private static final String APPLICATION_JSON = "application/json";
+    private static final String GZIP = "gzip";
+    private static final String CONTENT_ENCODING_HEADER = "content-encoding";
     private static final String RATE_LIMIT_HEADER = "ratelimit-reset";
     private final Map<String, String> headers;
     private final String baseEndpoint;
@@ -81,6 +86,7 @@ public class ApiClient {
 
     private void addBasicHeaders() {
         headers.put("Accept", APPLICATION_JSON);
+        headers.put("Accept-Encoding", GZIP);
         headers.put("Content-Type", APPLICATION_JSON);
         headers.put("Duffel-Version", DuffelApiClient.API_VERSION);
         headers.put("User-Agent", DuffelApiClient.USER_AGENT);
@@ -116,34 +122,46 @@ public class ApiClient {
             throw new RuntimeException(e);
         }
 
-        HttpResponse<String> response;
+        HttpResponse<byte[]> response;
         try {
-            response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
+            response = HTTP_CLIENT.send(request, HttpResponse.BodyHandlers.ofByteArray());
             LOG.debug("📝 Call to {} has trace ID {}", endpoint, response.headers().firstValue("x-request-id").orElse("❌ NOT FOUND"));
         } catch (IOException | InterruptedException e) {
             LOG.error("Failed to send API request", e);
             throw new RuntimeException(e);
         }
 
+        String body;
+        if (GZIP.equals(response.headers().firstValue(CONTENT_ENCODING_HEADER).orElse(""))) {
+            try (GZIPInputStream stream = new GZIPInputStream(new ByteArrayInputStream(response.body()))) {
+                body = new String(stream.readAllBytes(), StandardCharsets.UTF_8);
+            } catch (IOException e) {
+                LOG.error("Failed to decompress response body", e);
+                throw new RuntimeException(e);
+            }
+        } else {
+            body = new String(response.body(), StandardCharsets.UTF_8);
+        }
+
         try {
             if (response.statusCode() >= 200 && response.statusCode() < 300) {
-                if (response.body().isBlank() || "{}".equals(response.body())) {
+                if (body.isBlank() || "{}".equals(body)) {
                     LOG.debug("Duffel returned an empty response body, returning null");
                     return null;
                 } else {
-                    return objectMapper.readValue(response.body(), responseType);
+                    return objectMapper.readValue(body, responseType);
                 }
             } else if (response.statusCode() == 429) {
                 LocalDateTime rateLimitReset = (response.headers().firstValue(RATE_LIMIT_HEADER).isPresent()) ?
                         LocalDateTime.parse(response.headers().firstValue(RATE_LIMIT_HEADER).get(), DateTimeFormatter.RFC_1123_DATE_TIME)
                         : null;
                 LOG.debug("Duffel returned an rate limit response with a reset of {}", rateLimitReset);
-                RateLimitException exception = objectMapper.readValue(response.body(), RateLimitException.class);
+                RateLimitException exception = objectMapper.readValue(body, RateLimitException.class);
                 exception.setRateLimitReset(rateLimitReset);
                 throw exception;
             } else {
                 LOG.debug("Duffel returned an error with status code {}", response.statusCode());
-                throw objectMapper.readValue(response.body(), DuffelException.class);
+                throw objectMapper.readValue(body, DuffelException.class);
             }
         } catch (JsonProcessingException e) {
             LOG.error("Failed to deserialize the response body", e);
