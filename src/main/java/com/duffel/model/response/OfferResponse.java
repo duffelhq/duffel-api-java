@@ -27,7 +27,7 @@ public class OfferResponse extends Data<OfferResponse> {
 
     /**
      * Client key for use authenticating with
-     * <a href="https://www.duffel.com/docs/ancillaries-component">Duffel Ancillaries Component</a>
+     * <a href="https://duffel.com/docs/guides/ancillaries-component">Duffel Ancillaries Component</a>
      */
     @JsonProperty("client_key")
     private String clientKey;
