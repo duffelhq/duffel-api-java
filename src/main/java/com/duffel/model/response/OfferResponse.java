@@ -26,6 +26,13 @@ public class OfferResponse extends Data<OfferResponse> {
     private String id;
 
     /**
+     * Client key for use authenticating with
+     * <a href="https://www.duffel.com/docs/ancillaries-component">Duffel Ancillaries Component</a>
+     */
+    @JsonProperty("client_key")
+    private String clientKey;
+
+    /**
      * The cabin that the passengers want to travel in
      * Possible values: "first", "business", "premium_economy", or "economy"
      */
