@@ -17,6 +17,10 @@ public class OfferRequestService extends PostResource<OfferResponse, OfferRespon
         return super.post(OfferResponse.class, new PostData<>(request)).getData();
     }
 
+    public OfferResponse post(OfferRequest request, boolean returnOffers) {
+        return super.post(OfferResponse.class, "?return_offers=" + returnOffers, new PostData<>(request)).getData();
+    }
+
     public OfferResponse getById(String id) {
         return super.getById(OfferResponse.class, id).getData();
     }
