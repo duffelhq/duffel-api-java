@@ -49,7 +49,7 @@ public class OrderPassenger {
      * passenger_identity_documents_required is set to true, then an identity document must be provided.
      */
     @JsonProperty("identity_documents")
-    private List<String> identityDocuments;
+    private List<IdentityDocument> identityDocuments;
 
     /**
      * The id of the passenger, returned when the OffersRequest was created
@@ -86,5 +86,37 @@ public class OrderPassenger {
      */
     @JsonProperty("born_on")
     private String bornOn;
+
+    @EqualsAndHashCode
+    @Getter
+    @Setter
+    @ToString
+    public static class IdentityDocument {
+
+        /**
+         * The type of the identity document. Currently, the only supported types are passport, tax_id, known_traveler_number, and passenger_redress_number. The identity document's type supported by the airline can be found in the offer's supported_passenger_identity_document_types.
+         */
+        @JsonProperty("type")
+        private IdentityDocumentType identityDocumentType;
+
+        /**
+         * Must only be provided for passport type. The date on which the identity document expires
+         */
+        @JsonProperty("expires_on")
+        private String expiresOn;
+
+        /**
+         * Must only be provided for passport, known_traveler_number, and passenger_redress_number types. The ISO 3166-1 alpha-2 code of the country that issued this identity document
+         */
+        @JsonProperty("issuing_country_code")
+        private String issuingCountryCode;
+
+        /**
+         * The unique identifier of the identity document. e.g. the passport number.
+         */
+        @JsonProperty("unique_identifier")
+        private String uniqueIdentifier;
+
+    }
 
 }
