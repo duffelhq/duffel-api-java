@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -31,7 +31,7 @@ public class AirlineInitiatedChange extends Data<AirlineInitiatedChange> {
      * The ISO 8601 datetime at which an action was taken
      */
     @JsonProperty("action_taken_at")
-    private LocalDateTime actionTakenAt;
+    private ZonedDateTime actionTakenAt;
 
     /**
      * List of updated slices and segments following the change. These slices and segments may each have a new ID
@@ -55,7 +55,7 @@ public class AirlineInitiatedChange extends Data<AirlineInitiatedChange> {
      * The ISO 8601 datetime at which we detected the airline-initiated change
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * Duffel's unique identifier for the airline-initiated change
@@ -86,7 +86,7 @@ public class AirlineInitiatedChange extends Data<AirlineInitiatedChange> {
      * The ISO 8601 datetime at which the airline-initiated change was last updated
      */
     @JsonProperty("updated_at")
-    private LocalDateTime updatedAt;
+    private ZonedDateTime updatedAt;
 
     /**
      * Actions that can be taken for this change.
