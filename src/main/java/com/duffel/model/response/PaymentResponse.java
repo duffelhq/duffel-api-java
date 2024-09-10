@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Payment response.
@@ -30,7 +30,7 @@ public class PaymentResponse extends Data<PaymentResponse> {
      * Example: "2020-04-11T15:48:11.642Z"
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The currency of the amount, as an ISO 4217 currency code. It will match your organisation's billing currency

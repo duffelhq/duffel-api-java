@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -22,7 +22,7 @@ public class OrderChangeResponse extends Data<OrderChangeResponse> {
      * The ISO 8601 datetime at which the order change request was created
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The ID of your order change request
@@ -59,6 +59,6 @@ public class OrderChangeResponse extends Data<OrderChangeResponse> {
      * The ISO 8601 datetime at which the order change request was last updated
      */
     @JsonProperty("updated_at")
-    private LocalDateTime updatedAt;
+    private ZonedDateTime updatedAt;
 
 }

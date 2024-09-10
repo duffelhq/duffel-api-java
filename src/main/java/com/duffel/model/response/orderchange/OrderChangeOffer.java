@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Change order possible offer.
@@ -38,13 +38,13 @@ public class OrderChangeOffer extends Data<OrderChangeOffer> {
      * The ISO 8601 datetime at which the offer was created
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The ISO 8601 datetime at which the offer will expire and no longer be usable to create an order
      */
     @JsonProperty("expires_at")
-    private LocalDateTime expiresAt;
+    private ZonedDateTime expiresAt;
 
     /**
      * Duffel's unique identifier for the order change offer
@@ -107,7 +107,7 @@ public class OrderChangeOffer extends Data<OrderChangeOffer> {
      * The ISO 8601 datetime at which the offer was last updated
      */
     @JsonProperty("updated_at")
-    private LocalDateTime updatedAt;
+    private ZonedDateTime updatedAt;
 
     /**
      * The slices within an order change that are being added to and/or removed from the order

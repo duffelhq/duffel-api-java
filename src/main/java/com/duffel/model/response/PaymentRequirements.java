@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Payment requirements for an order.
@@ -22,7 +22,7 @@ public class PaymentRequirements {
      * Example: "2020-01-17T10:42:14Z"
      */
     @JsonProperty("payment_required_by")
-    private LocalDateTime paymentRequiredBy;
+    private ZonedDateTime paymentRequiredBy;
 
     /**
      * The ISO 8601 datetime at which the price associated with the order will no longer be guaranteed by the airline
@@ -30,7 +30,7 @@ public class PaymentRequirements {
      * Example: "2020-01-17T10:42:14"
      */
     @JsonProperty("price_guarantee_expires_at")
-    private LocalDateTime priceGuaranteeExpiresAt;
+    private ZonedDateTime priceGuaranteeExpiresAt;
 
     /**
      * When payment is required at the time of booking this will be true and payment_required_by and

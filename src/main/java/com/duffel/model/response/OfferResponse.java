@@ -7,7 +7,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -44,7 +44,7 @@ public class OfferResponse extends Data<OfferResponse> {
      * Example: "2020-02-12T15:21:01.927Z"
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * Whether the offer request was created in live mode. This field will be set to true if the offer request was

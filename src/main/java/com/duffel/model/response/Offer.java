@@ -11,7 +11,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -73,7 +73,7 @@ public class Offer extends Data<Offer> {
      * Example: "2020-01-17T10:12:14.545Z"
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The ISO 8601 datetime expiry of the offer before which the traveller should use this offer to create an order.
@@ -81,7 +81,7 @@ public class Offer extends Data<Offer> {
      * Example: "2020-01-17T10:42:14.545Z"
      */
     @JsonProperty("expires_at")
-    private LocalDateTime expiresAt;
+    private ZonedDateTime expiresAt;
 
     /**
      * Duffel's unique identifier for the offer
@@ -189,6 +189,6 @@ public class Offer extends Data<Offer> {
      * Example: "2020-01-17T10:12:14.545Z"
      */
     @JsonProperty("updated_at")
-    private LocalDateTime updatedAt;
+    private ZonedDateTime updatedAt;
 
 }

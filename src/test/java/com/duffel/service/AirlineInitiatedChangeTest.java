@@ -12,7 +12,7 @@ import org.mockserver.junit.jupiter.MockServerExtension;
 import org.mockserver.model.Parameter;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -67,7 +67,7 @@ class AirlineInitiatedChangeTest {
 
         assertEquals("aic_0000AMPr4lUGju0EEBrHCC", airlineInitiatedChange.getId());
         assertEquals(AirlineInitiatedChangeActionTaken.cancelled, airlineInitiatedChange.getActionTaken());
-        assertEquals(LocalDateTime.parse("2022-08-11T10:51:30.702393"), airlineInitiatedChange.getUpdatedAt());
+        assertEquals(ZonedDateTime.parse("2022-08-11T10:51:30.702393Z"), airlineInitiatedChange.getUpdatedAt());
     }
 
 }

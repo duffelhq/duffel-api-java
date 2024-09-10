@@ -10,7 +10,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -60,7 +60,7 @@ public class Order extends Data<Order> {
      * e.g. "2020-04-11T15:48:11.642Z"
      */
     @JsonProperty("cancelled_at")
-    private LocalDateTime cancelledAt;
+    private ZonedDateTime cancelledAt;
 
     /**
      * The conditions associated with this order, describing the kinds of modifications you can make to it and any
@@ -78,7 +78,7 @@ public class Order extends Data<Order> {
      * e.g. "2020-04-11T15:48:11.642Z"
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The documents issued for this order
@@ -146,7 +146,7 @@ public class Order extends Data<Order> {
      * datetime is in the last minute you can consider the order up to date.
      */
     @JsonProperty("synced_at")
-    private LocalDateTime syncedAt;
+    private ZonedDateTime syncedAt;
 
     /**
      * The amount of tax payable on the order for all the flights booked

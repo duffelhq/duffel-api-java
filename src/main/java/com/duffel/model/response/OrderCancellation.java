@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.ToString;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Order cancellation.
@@ -21,19 +21,19 @@ public class OrderCancellation {
      * The ISO 8601 datetime that indicates when the order cancellation was confirmed
      */
     @JsonProperty("confirmed_at")
-    private LocalDateTime confirmedAt;
+    private ZonedDateTime confirmedAt;
 
     /**
      * The ISO 8601 datetime at which the order cancellation was created
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The ISO 8601 datetime by which this cancellation must be confirmed
      */
     @JsonProperty("expires_at")
-    private LocalDateTime expiresAt;
+    private ZonedDateTime expiresAt;
 
     /**
      * Duffel's unique identifier for the order cancellation

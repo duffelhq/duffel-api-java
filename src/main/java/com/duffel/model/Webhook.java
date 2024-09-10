@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 /**
@@ -29,7 +29,7 @@ public class Webhook extends Data<Webhook> {
      * Example: "2020-04-11T15:48:11.642Z"
      */
     @JsonProperty("created_at")
-    private LocalDateTime createdAt;
+    private ZonedDateTime createdAt;
 
     /**
      * The events that this webhook will be subscribed to
@@ -59,7 +59,7 @@ public class Webhook extends Data<Webhook> {
      * Example: "2020-04-11T15:48:11.642Z"
      */
     @JsonProperty("updated_at")
-    private LocalDateTime updatedAt;
+    private ZonedDateTime updatedAt;
 
     /**
      * The URL where your webhook will be received

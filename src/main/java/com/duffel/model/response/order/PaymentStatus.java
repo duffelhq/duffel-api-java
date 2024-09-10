@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
-import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 /**
  * Status of an order payment.
@@ -28,13 +28,13 @@ public class PaymentStatus {
     * where awaiting_payment is false.
     */
     @JsonProperty("payment_required_by")
-    private LocalDateTime paymentRequiredBy;
+    private ZonedDateTime paymentRequiredBy;
 
     /**
     *  The ISO 8601 datetime at which the price associated with the order will no longer be guaranteed by the airline
     *  and the order will need to be repriced before payment. This will be null when there is no price guarantee.
     */
     @JsonProperty("price_guarantee_expires_at")
-    private LocalDateTime priceGuaranteeExpiresAt;
+    private ZonedDateTime priceGuaranteeExpiresAt;
 
 }
